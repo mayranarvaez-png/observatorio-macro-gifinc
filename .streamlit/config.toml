@@ -1,0 +1,20 @@
+[theme]
+primaryColor = "#E91D26"   # rojo del logo de GIFINC
+font = "sans serif"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F3F3F5"
+textColor = "#2B2B2E"
+
+# Letra más grande para lectura cómoda en clase y en proyector (por defecto: 16).
+baseFontSize = 18
+metricValueFontSize = "2.4rem"
+
+[theme.sidebar]
+backgroundColor = "#F3F3F5"
+secondaryBackgroundColor = "#E8E8EB"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

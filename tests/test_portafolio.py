@@ -1,0 +1,126 @@
+"""Pruebas de los indicadores y del portafolio con series sintéticas de resultado conocido."""
+import math
+import sys
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from nucleo import portafolio as pf  # noqa: E402
+from nucleo import yahoo  # noqa: E402
+
+
+def serie(valores):
+    return pd.Series(valores, index=pd.date_range("2020-01-03", periods=len(valores), freq="W-FRI"))
+
+
+def test_cagr_de_retorno_constante():
+    r = serie([0.01] * 52)
+    assert math.isclose(pf.cagr(r), 1.01 ** 52 - 1)
+
+
+def test_volatilidad_anualiza_con_raiz_de_52():
+    r = serie([0.01, -0.01] * 26)
+    assert math.isclose(pf.vol_anual(r), r.std(ddof=1) * math.sqrt(52))
+
+
+def test_caida_maxima():
+    # sube 10 %, cae 50 %, sube 10 %: la caída desde el pico es −50 %
+    assert math.isclose(pf.caida_maxima(serie([0.10, -0.50, 0.10])), -0.5)
+
+
+def test_var_y_cvar_historicos():
+    r = serie(list(np.linspace(-0.10, 0.10, 101)))
+    assert math.isclose(pf.var_historico(r, 0.95), 0.09, abs_tol=1e-9)
+    assert pf.cvar_historico(r, 0.95) > pf.var_historico(r, 0.95)
+
+
+def test_beta_de_activo_apalancado_dos_veces():
+    rng = np.random.default_rng(3)
+    m = serie(rng.normal(0.002, 0.02, 300))
+    ba = pf.beta_alfa(2 * m, m, rf=0.0)
+    assert math.isclose(ba["beta"], 2.0, rel_tol=1e-9)
+    assert math.isclose(ba["corr"], 1.0, rel_tol=1e-9)
+    assert abs(ba["alfa"]) < 1e-9
+
+
+def test_sharpe_signo_y_valor():
+    r = serie([0.01, 0.00] * 26)
+    esperado = (r.mean() * 52 - 0.02) / (r.std(ddof=1) * math.sqrt(52))
+    assert math.isclose(pf.sharpe(r, 0.02), esperado)
+
+
+def test_pesos_se_normalizan_y_rechazan_negativos():
+    assert math.isclose(pf.pesos_validos([2, 2]).sum(), 1.0)
+    try:
+        pf.pesos_validos([1, -1])
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("debía rechazar pesos negativos")
+
+
+def test_n_efectivo_y_diversificacion():
+    assert math.isclose(pf.n_efectivo([1, 1, 1, 1]), 4.0)
+    assert math.isclose(pf.n_efectivo([1, 0, 0, 0]), 1.0)
+    cov = np.array([[0.04, 0.04], [0.04, 0.04]])          # correlación perfecta
+    assert math.isclose(pf.ratio_diversificacion(cov, [0.5, 0.5]), 1.0)
+    cov0 = np.array([[0.04, 0.0], [0.0, 0.04]])           # sin correlación
+    assert math.isclose(pf.ratio_diversificacion(cov0, [0.5, 0.5]), math.sqrt(2))
+
+
+def test_contribucion_al_riesgo_suma_uno():
+    cov = np.array([[0.04, 0.01, 0.0], [0.01, 0.09, 0.02], [0.0, 0.02, 0.16]])
+    c = pf.contribucion_riesgo(cov, [0.3, 0.3, 0.4])
+    assert math.isclose(c.sum(), 1.0)
+    assert c[2] > 0.4          # el activo más volátil aporta más que su peso
+
+
+def test_minima_varianza_elige_el_activo_sin_correlacion_de_menor_riesgo():
+    mu = np.array([0.08, 0.10])
+    cov = np.array([[0.01, 0.0], [0.0, 0.04]])
+    w = pf.optimos(mu, cov, 0.02)["minima_varianza"]
+    # solución analítica: w1 = σ2²/(σ1²+σ2²) = 0.8
+    assert math.isclose(w[0], 0.8, abs_tol=0.03)
+
+
+def test_maximo_sharpe_supera_al_igual_ponderado():
+    mu = np.array([0.05, 0.12, 0.09])
+    cov = np.array([[0.02, 0.0, 0.0], [0.0, 0.06, 0.01], [0.0, 0.01, 0.04]])
+    w = pf.optimos(mu, cov, 0.02)["maximo_sharpe"]
+    sh = lambda x: (x @ mu - 0.02) / math.sqrt(x @ cov @ x)
+    assert sh(w) >= sh(np.ones(3) / 3) - 1e-9
+    assert math.isclose(w.sum(), 1.0) and (w >= 0).all()
+
+
+def test_retornos_por_periodo():
+    idx = pd.date_range("2018-01-05", "2024-06-28", freq="W-FRI")
+    p = pd.DataFrame({"A": np.linspace(100, 200, len(idx))}, index=idx)
+    t = pf.retornos_por_periodo(p)
+    assert t.loc["A", "1 año"] > 0 and t.loc["A", "5 años (anual)"] > 0
+    assert t.loc["A", "1 mes"] < t.loc["A", "1 año"]
+
+
+def test_parsear_chart_y_perfil_con_respuestas_de_ejemplo():
+    js = {"chart": {"result": [{"meta": {"currency": "COP"}, "timestamp": [1700000000, 1700600000, 1701200000],
+                                "indicators": {"quote": [{"close": [100, 101, 103]}],
+                                               "adjclose": [{"adjclose": [95, 96, 98]}]}}]}}
+    df, meta = yahoo.parsear_chart(js)
+    assert list(df.columns) == ["cierre", "ajustado"] and meta["currency"] == "COP" and len(df) == 3
+    sj = {"quoteSummary": {"result": [{"price": {"currency": "USD", "longName": "X"},
+                                       "summaryDetail": {"trailingPE": {"raw": 8.0}},
+                                       "defaultKeyStatistics": {"priceToBook": {"raw": 0.0075}},
+                                       "financialData": {"debtToEquity": {"raw": 102.0}, "returnOnEquity": {"raw": 0.17}}}]}}
+    p = yahoo.parsear_perfil(sj, "X")
+    assert math.isclose(p["de"], 1.02) and p["pe"] == 8.0
+    assert any("P/B dudoso" in b for b in p["banderas"])      # el caso real de los ADR
+
+
+def test_a_semanal_descarta_la_semana_en_curso():
+    hoy = pd.Timestamp.now(tz="UTC").tz_localize(None).normalize()
+    idx = pd.date_range(hoy - pd.Timedelta(days=20), hoy, freq="D")
+    df = pd.DataFrame({"cierre": range(len(idx)), "ajustado": range(len(idx))}, index=idx)
+    sem = yahoo.a_semanal(df)
+    assert (sem.index <= hoy).all()

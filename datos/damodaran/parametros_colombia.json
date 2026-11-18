@@ -1,0 +1,22 @@
+{
+  "pais": "Colombia",
+  "fecha_archivo": "2026-01-01",
+  "erp_madura": 0.0423,
+  "erp_eeuu": 0.0446,
+  "multiplicador_volatilidad": 1.5233781316153723,
+  "calificacion_moodys": "Baa3",
+  "spread_default_calificacion": 0.018677954087398564,
+  "crp_calificacion": 0.028453586800058932,
+  "erp_total_calificacion": 0.07075358680005893,
+  "cds_neto": 0.032,
+  "crp_cds": 0.04874810021169192,
+  "erp_total_cds": 0.0910481002116919,
+  "tasa_impositiva_marginal": 0.35,
+  "fechas_betas": {
+    "emergentes": "2026-01-05",
+    "global": "2026-01-05",
+    "eeuu": "2026-01-05"
+  },
+  "fecha_multiplos": "2026-01-05",
+  "descargado": "2026-10-26"
+}

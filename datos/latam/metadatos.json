@@ -1,0 +1,24 @@
+{
+  "fecha_corrida": "2026-11-18",
+  "fuente": "Yahoo Finance, retornos logarítmicos semanales en USD, historial completo de cada acción (mínimo 3 años), contra el ETF de su país; promedio balanceado por país; desapalancado con el D/E y la caja de Damodaran (emergentes).",
+  "acciones_total": 585,
+  "acciones_incluidas": 380,
+  "sectores": 80,
+  "sectores_5_o_mas": 27,
+  "paises": [
+    "Argentina",
+    "Bahamas",
+    "Bermudas",
+    "Brasil",
+    "Chile",
+    "Colombia",
+    "Costa Rica",
+    "Islas Caimán",
+    "México",
+    "Panamá",
+    "Perú",
+    "Uruguay"
+  ],
+  "tau": 0.17777061467866612,
+  "sectores_sin_equivalente_en_damodaran": []
+}

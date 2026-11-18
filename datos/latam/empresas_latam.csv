@@ -1,0 +1,586 @@
+ticker,empresa,pais_es,industria,beta_vs_indice_pais,r2,anios,incluir,motivo_exclusion
+BBAR.BA,Banco BBVA Argentina S.A.,Argentina,Bank (Money Center),1.33273362289373,0.4536395181518659,15.73076923076923,True,
+BHIP.BA,Banco Hipotecario S.A.,Argentina,Bank (Money Center),1.169314743559263,0.3276542963097394,15.73076923076923,False,retornos extremos
+BMA.BA,Banco Macro S.A.,Argentina,Bank (Money Center),1.335468103292258,0.4575475804725193,15.73076923076923,False,retornos extremos
+BPAT.BA,Banco Patagonia S.A.,Argentina,Bank (Money Center),0.9912641276582858,0.2834626442406102,15.73076923076923,True,
+GGAL.BA,Grupo Financiero Galicia S.A.,Argentina,Bank (Money Center),1.329116428693144,0.4901358201437328,15.73076923076923,False,retornos extremos
+SUPV.BA,Grupo Supervielle S.A.,Argentina,Bank (Money Center),1.396014558369215,0.4148497472790198,10.5,True,
+GCLA.BA,Grupo Clarín S.A.,Argentina,Broadcasting,0.6274807382065085,0.1155958697026842,15.73076923076923,True,
+FERR.BA,Ferrum S.A. de Cerámica y Metalurgia,Argentina,Building Materials,0.6502591395762646,0.1319497962229578,15.73076923076923,True,
+CVH.BA,Cablevisión Holding S.A.,Argentina,Cable TV,0.9034862213938896,0.2459626489142516,9.211538461538462,True,
+BIOX,Bioceres Crop Solutions Corp.,Argentina,Chemical (Specialty),0.4249805597431918,0.05296279970851336,8.653846153846153,True,
+GAMI.BA,B-Gaming S.A.,Argentina,Computer Services,0.1653213919850816,0.02413619619543261,15.73076923076923,False,iliquidez
+HARG.BA,Holcim (Argentina) S.A.,Argentina,Construction Supplies,0.6116648381333227,0.1054698034988534,15.73076923076923,False,retornos extremos
+GARO.BA,Garovaglio y Zorraquín S.A.,Argentina,Diversified,0.5373253620881067,0.08535568080814326,15.73076923076923,False,retornos extremos
+ROSE.BA,Instituto Rosenbusch S.A.,Argentina,Drugs (Pharmaceutical),0.3628201386313291,0.03516790228935884,15.73076923076923,False,retornos extremos
+POLL.BA,"Polledo Sociedad Anonima, Industrial, Constructora y Financiera",Argentina,Engineering/Construction,0.4204592521998911,0.04001156452629351,15.73076923076923,True,
+AGRO.BA,Agrometal S.A.I.,Argentina,Farming/Agriculture,0.8170099075318197,0.1537566371411798,15.73076923076923,False,retornos extremos
+CADO.BA,Carlos Casado S.A.,Argentina,Farming/Agriculture,0.4227773487859509,0.09814193933620186,15.73076923076923,True,
+CRES.BA,"Cresud Sociedad Anónima, Comercial, Inmobiliaria, Financiera y Agropecuaria",Argentina,Farming/Agriculture,0.8719662746571853,0.2587108193189702,15.73076923076923,True,
+LEDE.BA,Ledesma Sociedad Anónima Agrícola Industrial,Argentina,Farming/Agriculture,0.6501332439597188,0.1594478357076634,15.73076923076923,True,
+MOLA.BA,Molinos Agro S.A.,Argentina,Farming/Agriculture,0.722691478201526,0.1542685900561709,9.384615384615385,True,
+A3.BA,A3 Mercados S.A.,Argentina,Financial Svcs. (Non-bank & Insurance),0.1779151275927741,0.01979113172322944,10.92307692307692,False,iliquidez; retornos extremos
+BYMA.BA,Bolsas y Mercados Argentinos S.A.,Argentina,Financial Svcs. (Non-bank & Insurance),0.8399710746223827,0.2263020273464126,9.384615384615385,True,
+INTR.BA,Compañía Introductora de Buenos Aires S.A.,Argentina,Food Processing,0.4923386836477283,0.09027232873072244,15.73076923076923,False,iliquidez
+INVJ.BA,Inversora Juramento S.A.,Argentina,Food Processing,0.6664750590072533,0.1371688280813701,13.67307692307692,True,
+MOLI.BA,Molinos Rio de la Plata S.A.,Argentina,Food Processing,0.7415195252539324,0.1630702953948573,15.73076923076923,True,
+MORI.BA,Morixe Hermanos S.A.C.I.,Argentina,Food Processing,0.7553613062791248,0.09955952797886258,15.73076923076923,False,retornos extremos
+SAMI.BA,S.A. San Miguel A.G.I.C.I. y F.,Argentina,Food Processing,0.7802882914227137,0.1671113942434986,15.73076923076923,False,retornos extremos
+SEMI.BA,Molinos Juan Semino S.A.,Argentina,Food Processing,0.7111620346454277,0.1507791695587934,15.73076923076923,True,
+DOME.BA,DOMEC Compañía de Artefactos Domésticos S.A.I.C.y F.,Argentina,Furn/Home Furnishings,0.3110831703487957,0.02665826977254093,15.73076923076923,False,iliquidez; retornos extremos
+LONG.BA,Longvie S.A.,Argentina,Furn/Home Furnishings,0.6688046026665078,0.1328519292478835,15.73076923076923,False,retornos extremos
+MIRG.BA,"Mirgor Sociedad Anónima, Comercial, Industrial, Financiera, Inmobiliaria y Agropecuaria",Argentina,Furn/Home Furnishings,0.761282262298775,0.1620102694644014,15.73076923076923,True,
+GCDI.BA,GCDI S.A.,Argentina,Homebuilding,0.7441701162493615,0.1368151060878926,15.73076923076923,False,iliquidez; retornos extremos
+BOLT.BA,Boldt S.A.,Argentina,Hotel/Gaming,0.7967463387472696,0.1570241860032497,15.73076923076923,False,retornos extremos
+VALO.BA,Banco de Valores S.A.,Argentina,Investments & Asset Management,0.624163959059836,0.1180685868777399,15.73076923076923,False,iliquidez; retornos extremos
+ALUA.BA,Aluar Aluminio Argentino S.A.I.C.,Argentina,Metals & Mining,0.5815196119098154,0.1289528431496315,15.73076923076923,True,
+YPFD.BA,YPF Sociedad Anónima,Argentina,Oil/Gas (Integrated),1.105187075760269,0.3570476122061534,15.73076923076923,False,retornos extremos
+CAPX.BA,Capex S.A.,Argentina,Oil/Gas (Production and Exploration),0.8426659242099744,0.1856017150399105,15.73076923076923,False,retornos extremos
+COME.BA,Sociedad Comercial del Plata S.A.,Argentina,Oil/Gas (Production and Exploration),0.9555388364937332,0.2454948234593857,15.73076923076923,False,retornos extremos
+TGNO4.BA,Transportadora de Gas del Norte S.A.,Argentina,Oil/Gas Distribution,1.073609592679475,0.2363552079487909,15.73076923076923,False,retornos extremos
+TGSU2.BA,Transportadora de Gas del Sur S.A.,Argentina,Oil/Gas Distribution,0.9996668276072423,0.3044530138719693,15.73076923076923,True,
+RIGO.BA,Rigolleau S.A.,Argentina,Packaging & Container,0.3788127470584629,0.05549598192768967,15.73076923076923,True,
+CELU.BA,Celulosa Argentina S.A.,Argentina,Paper/Forest Products,0.7434172457128875,0.1374393417102818,15.73076923076923,False,retornos extremos
+FIPL.BA,Fiplasto S.A.,Argentina,Paper/Forest Products,0.4888265332443488,0.08762644469943892,15.73076923076923,False,retornos extremos
+CECO2.BA,Central Costanera S.A.,Argentina,Power,0.9273341203274799,0.1887674040252045,15.73076923076923,False,retornos extremos
+CEPU.BA,Central Puerto S.A.,Argentina,Power,1.001681289454962,0.2547527194408753,15.73076923076923,False,retornos extremos
+CGPA2.BA,Camuzzi Gas Pampeana S.A.,Argentina,Power,0.9408291926935697,0.1844816008162324,15.73076923076923,False,retornos extremos
+DGCU2.BA,Distribuidora de Gas Cuyana S.A.,Argentina,Power,0.8179658923955395,0.1701482485796435,15.73076923076923,False,iliquidez; retornos extremos
+EDN.BA,Empresa Distribuidora y Comercializadora Norte Sociedad Anónima,Argentina,Power,1.155963143799818,0.3133594405861603,15.73076923076923,False,retornos extremos
+EDSH.BA,EDESA Holding S.A.,Argentina,Power,0.1179191582696003,0.004247708102962711,9.75,False,iliquidez; retornos extremos
+GBAN.BA,"Naturgy BAN, S.A.",Argentina,Power,0.604892094270659,0.108980148531904,15.73076923076923,True,
+METR.BA,MetroGAS S.A.,Argentina,Power,1.111315051234933,0.2208956830372746,15.73076923076923,False,retornos extremos
+PAMP.BA,Pampa Energía S.A.,Argentina,Power,0.9627973100381002,0.3079375269385568,15.73076923076923,False,retornos extremos
+TRAN.BA,Compañía de Transporte de Energía Eléctrica en Alta Tensión Transener S.A.,Argentina,Power,1.083606499675789,0.2504145392376069,15.73076923076923,False,retornos extremos
+CTIO.BA,Consultatio S.A.,Argentina,Real Estate (Development),0.6106367644580298,0.1364835787467662,15.73076923076923,True,
+IRSA.BA,IRSA Inversiones y Representaciones Sociedad Anónima,Argentina,Real Estate (Operations & Services),0.719622632427289,0.2044543327894132,15.73076923076923,True,
+HAVA.BA,Havanna Holding S.A.,Argentina,Restaurant/Dining,0.5511856213558769,0.0950713162213287,10.44230769230769,True,
+REGE.BA,"García Reguera Sociedad Anónima Comercial, Industrial, Financiera e Inmobiliaria",Argentina,Retail (General),-0.05320016088980972,0.0006844817819255944,5.846153846153846,False,iliquidez; retornos extremos
+PATA.BA,Sociedad Anónima Importadora y Exportadora de la Patagonia,Argentina,Retail (Grocery and Food),0.5395930375251136,0.1340847039020557,15.73076923076923,False,retornos extremos
+CARC.BA,Carboclor S.A.,Argentina,Shipbuilding & Marine,0.5959053010096456,0.07068383239396525,11.15384615384615,False,retornos extremos
+GRIM.BA,Grimoldi S.A.,Argentina,Shoe,0.4378258250222047,0.05719421890184995,15.73076923076923,True,
+TXAR.BA,Ternium Argentina S.A.,Argentina,Steel,0.6104062949548477,0.1242193814861648,15.73076923076923,False,iliquidez
+TECO2.BA,Telecom Argentina S.A.,Argentina,Telecom. Services,0.8918258523758298,0.2701614956350052,15.73076923076923,True,
+AUSO.BA,Autopistas Del Sol SA,Argentina,Transportation,0.760543744212552,0.1676642637134094,15.73076923076923,False,retornos extremos
+OEST.BA,Grupo Concesionario del Oeste S.A.,Argentina,Transportation,0.7128195459654983,0.1723458366149907,15.73076923076923,False,retornos extremos
+OSW,OneSpaWorld Holdings Limited,Bahamas,Business & Consumer Services,0.8335129787038406,0.1928768458239125,9.0,True,
+NTB,The Bank of N.T. Butterfield & Son Limited,Bermudas,Bank (Money Center),0.6034700942527248,0.2195394857706406,10.17307692307692,True,
+ESNT,Essent Group Ltd.,Bermudas,Financial Svcs. (Non-bank & Insurance),0.4995114633545282,0.1754170869359409,13.05769230769231,True,
+G,Genpact Limited,Bermudas,Information Services,0.4379677560297387,0.1835346856182269,19.32692307692308,True,
+BNT,Brookfield Wealth Solutions Ltd.,Bermudas,Insurance (Life),0.4928074458296285,0.1339748721074161,5.365384615384615,True,
+ACGL,Arch Capital Group Ltd.,Bermudas,Insurance (Prop/Cas.),0.3206568507870998,0.1503083936164489,25.11538461538462,True,
+AGO,Assured Guaranty Ltd.,Bermudas,Insurance (Prop/Cas.),0.787974368661242,0.2307281382240289,22.61538461538462,True,
+AXS,AXIS Capital Holdings Limited,Bermudas,Insurance (Prop/Cas.),0.4075740349575708,0.1977563852724945,23.42307692307692,True,
+HG,"Hamilton Insurance Group, Ltd.",Bermudas,Insurance (Prop/Cas.),0.2369014703506882,0.03135435642330697,3.0,True,
+WTM,"White Mountains Insurance Group, Ltd.",Bermudas,Insurance (Prop/Cas.),0.3315622444009869,0.1471932045362444,25.11538461538462,True,
+BORR,Borr Drilling Limited,Bermudas,Oil/Gas (Production and Exploration),1.460902124643304,0.2332509918550796,7.288461538461538,False,retornos extremos
+NBR,Nabors Industries Ltd.,Bermudas,Oil/Gas (Production and Exploration),0.9760451903860128,0.1989496382142454,25.11538461538462,True,
+SDRL,Seadrill Limited,Bermudas,Oil/Gas (Production and Exploration),0.5168854991952887,0.08162757133286669,4.076923076923077,True,
+VAL,Valaris Limited,Bermudas,Oil/Gas (Production and Exploration),0.7160989237591029,0.1146427003685248,5.519230769230769,True,
+ASC,Ardmore Shipping Corporation,Bermudas,Oil/Gas Distribution,0.4528801609598961,0.06437012903738015,13.30769230769231,True,
+DHT,"DHT Holdings, Inc.",Bermudas,Oil/Gas Distribution,0.5174985308182879,0.1249107270979289,21.13461538461538,True,
+FLNG,FLEX LNG Ltd.,Bermudas,Oil/Gas Distribution,0.5816411801481729,0.14454538212854,7.403846153846154,True,
+GLNG,Golar LNG Limited,Bermudas,Oil/Gas Distribution,0.7668201763152552,0.1991534919196309,23.38461538461538,True,
+NAT,Nordic American Tankers Limited,Bermudas,Oil/Gas Distribution,0.4368911761911179,0.07416116276238871,25.11538461538462,True,
+SFL,SFL Corporation Ltd.,Bermudas,Oil/Gas Distribution,0.7373120446594233,0.2883118869880169,22.46153846153846,True,
+TK,Teekay Corporation Ltd.,Bermudas,Oil/Gas Distribution,0.6829747859301358,0.1742947938697094,25.11538461538462,True,
+TNK,Teekay Tankers Ltd.,Bermudas,Oil/Gas Distribution,0.7116593525992531,0.1563721281955589,18.96153846153846,True,
+EG,"Everest Group, Ltd.",Bermudas,Reinsurance,0.3019237945231304,0.1321046983082952,25.11538461538462,True,
+KG,Kestrel Group Ltd,Bermudas,Reinsurance,0.4919286364680781,0.05573802996854205,18.55769230769231,False,retornos extremos
+RNR,RenaissanceRe Holdings Ltd.,Bermudas,Reinsurance,0.2501693105999275,0.09799240502367657,25.11538461538462,True,
+SPNT,SiriusPoint Ltd.,Bermudas,Reinsurance,0.4091450157969175,0.1262812339559228,13.26923076923077,True,
+SIG,Signet Jewelers Limited,Bermudas,Retail (Special Lines),0.5985758268414259,0.1199251822918128,25.11538461538462,True,
+LILA,Liberty Latin America Ltd.,Bermudas,Telecom. Services,0.6986245483513587,0.1764315172186359,11.38461538461539,True,
+EMBJ3.SA,Embraer S.A.,Brasil,Aerospace/Defense,0.6621847925183095,0.2605771234930825,23.0,True,
+AZZA3.SA,Azzas 2154 S.A.,Brasil,Apparel,1.020043910856695,0.4350350698916075,15.80769230769231,True,
+CAMB3.SA,Cambuci S.A.,Brasil,Apparel,0.5904372356964498,0.191858250903829,16.30769230769231,False,iliquidez; retornos extremos
+TECN3.SA,Technos S.A.,Brasil,Apparel,1.008770140799351,0.3291908319788452,15.40384615384615,True,
+VIVA3.SA,Vivara Participações S.A.,Brasil,Apparel,1.258646112535098,0.616069668802324,7.096153846153846,True,
+VSTE3.SA,Veste S.A. Estilo,Brasil,Apparel,0.8597950285440685,0.2381246791934081,18.57692307692308,False,retornos extremos
+FRAS3.SA,Fras-le S.A.,Brasil,Auto Parts,0.6209073559202105,0.2530937657825566,19.48076923076923,False,iliquidez
+LEVE3.SA,MAHLE Metal Leve S.A.,Brasil,Auto Parts,0.5622672732182813,0.2983395167728611,23.0,False,iliquidez
+MYPK3.SA,Iochpe-Maxion S.A.,Brasil,Auto Parts,0.8036192946467843,0.3176689587899549,23.0,True,
+PLAS3.SA,Plascar Participações Industriais S.A.,Brasil,Auto Parts,0.6369928688228258,0.1226294232205812,23.0,True,
+BBAS3.SA,Banco do Brasil S.A.,Brasil,Bank (Money Center),1.181848637893568,0.6485408726986177,23.0,True,
+INTR,"Inter & Co, Inc.",Brasil,Bank (Money Center),1.370796898964428,0.417102559924088,4.384615384615385,True,
+NU,Nu Holdings Ltd.,Brasil,Bank (Money Center),0.7782533495027854,0.2039644640425937,4.923076923076923,True,
+RPAD3.SA,Alfa Holdings S.A.,Brasil,Bank (Money Center),0.4234740618369373,0.08385533002425138,23.0,False,iliquidez
+BAZA3.SA,Banco da Amazônia S.A.,Brasil,Banks (Regional),0.6929303087823744,0.3143978338040502,23.0,True,
+BEES3.SA,Banestes S.A - Banco do Estado do Espírito Santo,Brasil,Banks (Regional),0.6578396088545602,0.2346679958549236,23.0,True,
+ABEV3.SA,Ambev S.A.,Brasil,Beverage (Alcoholic),0.658315437263581,0.4286927540825832,23.0,True,
+PTBL3.SA,PBG S.A.,Brasil,Building Materials,0.864170238336275,0.2604598097684734,23.0,True,
+ARND3.SA,Arandu Investimentos S.A.,Brasil,Business & Consumer Services,0.689260383095441,0.07441437298303877,5.480769230769231,True,
+ESPA3.SA,MPM Corpóreos S.A.,Brasil,Business & Consumer Services,1.304604102774601,0.3484254057868458,5.769230769230769,True,
+PRNR3.SA,Priner Serviços Industriais S.A.,Brasil,Business & Consumer Services,1.106437781820297,0.454048105218791,6.730769230769231,True,
+DEXP3.SA,Dexxos Participações S.A.,Brasil,Chemical (Basic),0.6759419420472036,0.1145620648883446,23.0,False,iliquidez
+FHER3.SA,Fertilizantes Heringer S.A.,Brasil,Chemical (Specialty),0.9305160247336934,0.2305202552062227,19.63461538461538,True,
+NUTR3.SA,Nutriplant Indústria e Comércio S/A,Brasil,Chemical (Specialty),0.4747671432558561,0.04630500992367126,16.23076923076923,False,iliquidez; retornos extremos
+VITT3.SA,Vittia S.A.,Brasil,Chemical (Specialty),0.9046147150231106,0.3441909777384352,5.192307692307693,True,
+ALLD3.SA,Allied Tecnologia S.A.,Brasil,Computer Services,1.005782797989143,0.3341342344722126,5.576923076923077,True,
+CINT,CI&T Inc.,Brasil,Computer Services,0.6440554105270375,0.07592827493357546,5.0,True,
+MLAS3.SA,Grupo Multi S.A.,Brasil,Computers/Peripherals,1.283905342859995,0.3067720083395568,5.307692307692307,True,
+POSI3.SA,Positivo Tecnologia S.A.,Brasil,Computers/Peripherals,1.108556088770047,0.3605607436093522,19.96153846153846,False,retornos extremos
+ETER3.SA,Eternit S.A.,Brasil,Construction Supplies,0.8132432614691567,0.2914788552918973,23.0,True,
+TUPY3.SA,Tupy S.A.,Brasil,Construction Supplies,0.6797916380775588,0.2536863026080611,23.0,True,
+BIOM3.SA,Biomm S.A.,Brasil,Drugs (Biotechnology),0.4757237875702174,0.07305344403141689,23.0,False,iliquidez; retornos extremos
+BLAU3.SA,Blau Farmacêutica S.A.,Brasil,Drugs (Biotechnology),1.082753391190216,0.3393687036412231,5.557692307692307,True,
+HYPE3.SA,Hypera S.A.,Brasil,Drugs (Pharmaceutical),0.8703589847540419,0.4509256346584973,18.61538461538462,True,
+OFSA3.SA,Ouro Fino Saúde Animal Participações S.A.,Brasil,Drugs (Pharmaceutical),0.7950080100000261,0.3727174023558445,12.07692307692308,True,
+AFYA,Afya Limited,Brasil,Education,0.6470350431845008,0.2062615048354191,7.326923076923077,True,
+ANIM3.SA,Ânima Holding S.A.,Brasil,Education,1.37188042171773,0.4301129729524586,13.05769230769231,True,
+COGN3.SA,Cogna Educação S.A.,Brasil,Education,1.271516534877241,0.4384906642002754,14.69230769230769,True,
+CSED3.SA,Cruzeiro do Sul Educacional S.A.,Brasil,Education,1.372814121960926,0.4331813408200974,5.75,True,
+SEER3.SA,Ser Educacional S.A.,Brasil,Education,1.177394930188876,0.402383663335943,13.05769230769231,True,
+YDUQ3.SA,Yduqs Participações S.A.,Brasil,Education,1.073262101755289,0.4023261438670218,18.38461538461538,True,
+AERI3.SA,Aeris Indústria e Comércio de Equipamentos para Geração de Energia S.A.,Brasil,Electrical Equipment,0.9529298466616788,0.1576634410583774,6.0,True,
+WEGE3.SA,WEG S.A.,Brasil,Electrical Equipment,0.6802945916752775,0.3602422194469052,23.0,True,
+CALI3.SA,Construtora Adolpho Lindenberg S.A.,Brasil,Engineering/Construction,0.3360522164580943,0.1267857360721597,23.0,False,iliquidez
+BMOB3.SA,Bemobi Mobile Tech S.A.,Brasil,Entertainment,1.134075838882362,0.458936110710598,5.75,True,
+ALPK3.SA,"Allpark Empreendimentos, Participações e Serviços S.A.",Brasil,Environmental & Waste Services,1.177338262309941,0.2903131444068177,6.480769230769231,True,
+AMBP3.SA,Ambipar Participações e Empreendimentos S.A.,Brasil,Environmental & Waste Services,1.041195931767754,0.1109257922791569,6.326923076923077,False,retornos extremos
+GGPS3.SA,GPS Participações e Empreendimentos S.A.,Brasil,Environmental & Waste Services,1.260753504905285,0.5609514990189981,5.538461538461538,True,
+OPCT3.SA,OceanPact Serviços Marítimos S.A.,Brasil,Environmental & Waste Services,1.099576344426022,0.3114812790344345,5.75,True,
+ORVR3.SA,Orizon Valorização de Resíduos S.A.,Brasil,Environmental & Waste Services,1.13277254968564,0.5334039075555015,5.730769230769231,True,
+AGRO3.SA,BrasilAgro - Companhia Brasileira de Propriedades Agrícolas,Brasil,Farming/Agriculture,0.5633240871895943,0.2680377784415863,20.57692307692308,True,
+AGXY3.SA,AgroGalaxy Participações S.A.,Brasil,Farming/Agriculture,1.03665890882208,0.1462005867341205,5.288461538461538,True,
+SLCE3.SA,SLC Agrícola S.A.,Brasil,Farming/Agriculture,0.7438667507712554,0.3300328700285742,19.46153846153846,True,
+SOJA3.SA,Boa Safra Sementes S.A.,Brasil,Farming/Agriculture,0.9329815643786672,0.3832653515808888,5.538461538461538,True,
+TTEN3.SA,Três Tentos Agroindustrial S/A,Brasil,Farming/Agriculture,1.130246873684974,0.4183506259057335,5.326923076923077,True,
+B3SA3.SA,"B3 S.A. - Brasil, Bolsa, Balcão",Brasil,Financial Svcs. (Non-bank & Insurance),1.189272376962996,0.6190618211888697,19.09615384615385,True,
+BNBR3.SA,Banco do Nordeste do Brasil S.A.,Brasil,Financial Svcs. (Non-bank & Insurance),0.5013022314468266,0.1172032899692849,23.0,False,iliquidez
+CSUD3.SA,CSU Digital S.A.,Brasil,Financial Svcs. (Non-bank & Insurance),0.683216306578085,0.2286206150059495,23.0,True,
+PAGS,PagSeguro Digital Ltd.,Brasil,Financial Svcs. (Non-bank & Insurance),1.027472029906363,0.3156453550184813,8.807692307692308,True,
+BEEF3.SA,Minerva S.A.,Brasil,Food Processing,0.813362952534049,0.2991881430698867,19.36538461538462,True,
+CAML3.SA,Camil Alimentos S.A.,Brasil,Food Processing,0.9595029625721438,0.4543645937322884,9.134615384615385,True,
+JALL3.SA,Jalles Machado S/A,Brasil,Food Processing,1.046950231637753,0.4502677488380225,5.75,True,
+MBRF3.SA,Marfrig Global Foods S.A.,Brasil,Food Processing,0.788415777543574,0.2673188557848445,19.42307692307692,True,
+MDIA3.SA,M. Dias Branco S.A. Indústria e Comércio de Alimentos,Brasil,Food Processing,0.7434053466835543,0.3854897791535785,20.11538461538462,True,
+MNPR3.SA,Minupar Participações S.A.,Brasil,Food Processing,0.5605258678794759,0.08019698601894376,23.0,False,iliquidez; retornos extremos
+SMTO3.SA,São Martinho S.A.,Brasil,Food Processing,0.8282708565272059,0.3883967276889,19.78846153846154,True,
+UCAS3.SA,Unicasa Indústria de Móveis S.A.,Brasil,Furn/Home Furnishings,0.7894279712497384,0.2874579141954339,14.57692307692308,True,
+AURE3.SA,Auren Energia S.A.,Brasil,Green & Renewable Energy,0.9227813550185769,0.5634211738945281,4.615384615384615,True,
+EGIE3.SA,Engie Brasil Energia S.A.,Brasil,Green & Renewable Energy,0.6788047231389767,0.4314628464131346,23.0,True,
+RNEW3.SA,Renova Energia S.A.,Brasil,Green & Renewable Energy,0.6200418263476484,0.1021918277798733,13.23076923076923,False,iliquidez
+AALR3.SA,Alliança Saúde e Participações S.A.,Brasil,Healthcare Support Services,0.8515281023709492,0.1818854968524636,10.05769230769231,True,
+DASA3.SA,Diagnósticos da América S.A.,Brasil,Healthcare Support Services,0.7535491664447749,0.2141486977854709,20.69230769230769,True,
+FLRY3.SA,Fleury S.A.,Brasil,Healthcare Support Services,0.8024349120105713,0.4482129316978402,16.94230769230769,True,
+HAPV3.SA,Hapvida Participações e Investimentos S.A.,Brasil,Healthcare Support Services,1.129919878559722,0.3520252548098451,8.557692307692308,True,
+ONCO3.SA,Oncoclínicas do Brasil Serviços Médicos S.A.,Brasil,Healthcare Support Services,1.063192251785393,0.1182259025844205,5.134615384615385,True,
+PFRM3.SA,Profarma Distribuidora de Produtos Farmacêuticos S.A.,Brasil,Healthcare Support Services,0.9292246528251613,0.3702084390090667,20.09615384615385,True,
+QUAL3.SA,Qualicorp Consultoria e Corretora de Seguros S.A.,Brasil,Healthcare Support Services,1.053618432735419,0.3560340031256179,15.40384615384615,True,
+VVEO3.SA,CM Hospitalar S/A,Brasil,Healthcare Support Services,1.2818547672963,0.2883347916723912,5.25,True,
+AVLL3.SA,Alphaville S.A.,Brasil,Homebuilding,0.6859418086363094,0.08158678704314037,5.846153846153846,True,
+CURY3.SA,Cury Construtora e Incorporadora S.A.,Brasil,Homebuilding,1.057247329740828,0.4723102027566435,6.134615384615385,True,
+CYRE3.SA,Cyrela Brazil Realty S.A. Empreendimentos e Participações,Brasil,Homebuilding,1.183178170895566,0.4908501286455568,23.0,True,
+DIRR3.SA,Direcional Engenharia S.A.,Brasil,Homebuilding,1.089896475157793,0.4871759144174559,17.01923076923077,True,
+EVEN3.SA,Even Construtora e Incorporadora S.A.,Brasil,Homebuilding,1.096007164681122,0.4760950315887972,19.65384615384615,True,
+EZTC3.SA,EZTEC Empreendimentos e Participações S.A.,Brasil,Homebuilding,1.079741928804625,0.5051042117825886,19.44230769230769,True,
+GFSA3.SA,Gafisa S.A.,Brasil,Homebuilding,1.162096002593427,0.2521542909640202,23.0,False,retornos extremos
+MRVE3.SA,MRV Engenharia e Participações S.A.,Brasil,Homebuilding,1.198592111282557,0.4928874087022596,19.34615384615385,True,
+PDGR3.SA,PDG Realty S.A. Empreendimentos e Participações,Brasil,Homebuilding,1.191730633185396,0.2109246324601601,19.84615384615385,False,retornos extremos
+PLPL3.SA,Plano & Plano Desenvolvimento Imobiliário S.A.,Brasil,Homebuilding,1.240937244074191,0.4081665072637614,6.153846153846154,True,
+RSID3.SA,Rossi Residencial S.A.,Brasil,Homebuilding,1.122877306810189,0.2983783908740419,23.0,False,retornos extremos
+TCSA3.SA,Tecnisa S.A.,Brasil,Homebuilding,1.146282152827685,0.4490965643020272,19.82692307692308,True,
+TEND3.SA,Construtora Tenda S.A.,Brasil,Homebuilding,0.8912466626786624,0.2861945002943659,19.11538461538462,False,iliquidez
+TRIS3.SA,Trisul S.A.,Brasil,Homebuilding,0.8972910026928669,0.3490284152535158,19.11538461538462,True,
+VIVR3.SA,Viver Incorporadora e Construtora S.A.,Brasil,Homebuilding,1.015907221893994,0.1603459616072838,19.48076923076923,False,retornos extremos
+MATD3.SA,Hospital Mater Dei S.A.,Brasil,Hospitals/Healthcare Facilities,1.226655390874318,0.4381526842051561,5.5,True,
+RDOR3.SA,Rede DOr São Luiz S.A.,Brasil,Hospitals/Healthcare Facilities,1.189490051114667,0.5669555821568193,5.903846153846154,True,
+CVCB3.SA,CVC Brasil Operadora e Agência de Viagens S.A.,Brasil,Hotel/Gaming,1.39205733267594,0.4471824787190419,12.94230769230769,True,
+MNDL3.SA,Mundial S.A. - Produtos de Consumo,Brasil,Household Products,0.5281236945059864,0.08042225010569426,23.0,False,iliquidez; retornos extremos
+NATU3.SA,Natura Cosméticos S.A.,Brasil,Household Products,0.7170468706825218,0.2797041136003365,16.96153846153846,True,
+CTAX3.SA,Contax Participações S.A.,Brasil,Information Services,0.8341023572096593,0.1128034189535424,17.63461538461538,False,retornos extremos
+IFCM3.SA,Infracommerce CXaaS S.A.,Brasil,Information Services,1.078164151526083,0.0936719148707692,5.519230769230769,True,
+BBSE3.SA,BB Seguridade Participações S.A.,Brasil,Insurance (General),0.8235531621347422,0.5674193926109634,13.55769230769231,True,
+CXSE3.SA,Caixa Seguridade Participações S.A.,Brasil,Insurance (General),0.7321053215101545,0.4099326595653093,5.538461538461538,True,
+PSSA3.SA,Porto Seguro S.A.,Brasil,Insurance (General),0.7727390192409594,0.4996614166029721,20.69230769230769,True,
+WIZC3.SA,Wiz Co Participações e Corretagem de Seguros S.A.,Brasil,Insurance (General),0.9385331387453686,0.3730705246515102,11.46153846153846,True,
+BIED3.SA,Bahema Educação S.A.,Brasil,Investments & Asset Management,0.4246900920404739,0.07367947236808114,23.0,False,iliquidez; retornos extremos
+FAED11.SA,Fundo de Investimento Imobiliário - FII Anhanguera Educacional,Brasil,Investments & Asset Management,0.3680191095647243,0.2658408064092375,16.78846153846154,False,iliquidez
+PABY11.SA,Fundo de Investimento Imobiliário Panamby,Brasil,Investments & Asset Management,0.2692956622655024,0.0258604222952552,19.84615384615385,False,iliquidez; retornos extremos
+VINP,Vinci Compass Investments Ltd.,Brasil,Investments & Asset Management,0.6597043411617401,0.2778033709787811,5.788461538461538,True,
+FRIO3.SA,Metalfrio Solutions S.A.,Brasil,Machinery,0.5557985598876359,0.08677115161925897,19.63461538461538,False,iliquidez; retornos extremos
+KEPL3.SA,Kepler Weber S.A.,Brasil,Machinery,0.6870021786738721,0.168883701758558,23.0,True,
+ROMI3.SA,Romi S.A.,Brasil,Machinery,0.808703353770627,0.2689395012918707,23.0,True,
+CBAV3.SA,Companhia Brasileira de Alumínio,Brasil,Metals & Mining,1.033719632988593,0.2395731623274376,5.326923076923077,True,
+PMAM3.SA,Paranapanema S.A.,Brasil,Metals & Mining,1.001145005222978,0.2359690665147117,23.0,False,retornos extremos
+SGML,Sigma Lithium Corporation,Brasil,Metals & Mining,0.4574860153370423,0.04519360094675617,8.365384615384615,True,
+BRAV3.SA,Brava Energia S.A.,Brasil,Oil/Gas (Production and Exploration),1.218793778121484,0.368701559151005,6.0,True,
+PRIO3.SA,Prio S.A.,Brasil,Oil/Gas (Production and Exploration),1.050958213733356,0.2269443275127746,16.07692307692308,False,retornos extremos
+RECV3.SA,Petroreconcavo S.A.,Brasil,Oil/Gas (Production and Exploration),1.097919436369067,0.4215023178968018,5.519230769230769,True,
+LUPA3.SA,Lupatech S.A.,Brasil,Oilfield Svcs/Equip.,1.112231355898772,0.2530397388452057,20.53846153846154,False,retornos extremos
+OSXB3.SA,OSX Brasil S.A.,Brasil,Oilfield Svcs/Equip.,0.8313791639960498,0.113133082025745,17.07692307692308,False,retornos extremos
+RANI3.SA,Irani Papel e Embalagem S.A.,Brasil,Packaging & Container,0.583970264037222,0.1448850305555952,23.0,False,iliquidez
+DXCO3.SA,Dexco S.A.,Brasil,Paper/Forest Products,1.058802098039641,0.5200543886778739,19.19230769230769,True,
+SUZB3.SA,Suzano S.A.,Brasil,Paper/Forest Products,0.3198293619000981,0.1037390063050833,22.32692307692308,False,iliquidez
+AFLT3.SA,Afluente Transmissão de Energia Elétrica S.A.,Brasil,Power,0.5528087859216247,0.1165209255037435,20.32692307692308,False,iliquidez; retornos extremos
+CBEE3.SA,Ampla Energia e Serviços S.A.,Brasil,Power,0.4905777456875674,0.0835704911813796,23.0,False,iliquidez; retornos extremos
+CEEB3.SA,Companhia de Eletricidade do Estado da Bahia - COELBA,Brasil,Power,0.3959126581283588,0.2130019898789008,23.0,False,iliquidez
+CPFE3.SA,CPFL Energia S.A.,Brasil,Power,0.6995379562691143,0.4057906840260734,23.0,True,
+CPLE3.SA,Companhia Paranaense de Energia - COPEL,Brasil,Power,0.8128133983756458,0.4771643584153733,23.0,True,
+ENEV3.SA,Eneva S.A.,Brasil,Power,0.8523532426769224,0.2751470527637077,18.96153846153846,True,
+EQMA3B.SA,Equatorial Maranhão Distribuidora de Energia S.A.,Brasil,Power,0.444865669990181,0.183499872461519,16.23076923076923,False,iliquidez
+EQPA3.SA,Equatorial Pará Distribuidora de Energia S.A.,Brasil,Power,0.4761662010287794,0.1262813858249937,23.0,False,iliquidez; retornos extremos
+EQTL3.SA,Equatorial S.A.,Brasil,Power,0.7650569248907002,0.4715087768091759,18.63461538461538,True,
+GEPA3.SA,Rio Paranapanema Energia S.A.,Brasil,Power,0.4069533320636288,0.1519480465463672,23.0,False,iliquidez
+LIGT3.SA,Light S.A.,Brasil,Power,0.9666119666648145,0.3466406743442569,23.0,True,
+REDE3.SA,Rede Energia Participações S.A.,Brasil,Power,0.4559486765784989,0.05380464796588202,23.0,False,iliquidez; retornos extremos
+ATLX,Atlas Lithium Corporation,Brasil,Precious Metals,0.2298057532782125,0.003123117611137927,13.73076923076923,False,iliquidez; retornos extremos
+VLID3.SA,Valid Soluções S.A.,Brasil,Publishing & Newspapers,0.8497872171839105,0.4149668741761364,20.59615384615385,True,
+BCIA11.SA,Bradesco Carteira Imobiliaria Ativa Fundos de Investimento Imobiliario,Brasil,R.E.I.T.,0.5560707669185515,0.361901227670408,9.096153846153847,True,
+BRCR11.SA,Fundo de Investimento Imobiliário - FII BTG Pactual Corporate Office Fund,Brasil,R.E.I.T.,0.5494598132115363,0.4509732776599654,12.28846153846154,True,
+BTLG11.SA,BTG Pactual Logística Fundo de Investimento Imobiliário,Brasil,R.E.I.T.,0.502014058327219,0.4115107950824598,12.28846153846154,True,
+EDGA11.SA,Fundo de Investimento Imobiliario - FII Edificio Galeria,Brasil,R.E.I.T.,0.5420951988744649,0.3294632006903148,14.19230769230769,True,
+FAMB11.SA,Fundo de Investimento Imobiliario Edificio Almirante Barroso,Brasil,R.E.I.T.,0.5160852390101561,0.1403537802424836,12.28846153846154,True,
+FIIP11.SA,RB Capital Renda I Fundo de Investimento Imobiliário - FII,Brasil,R.E.I.T.,0.4544609413373993,0.3563885910569844,12.28846153846154,True,
+FPAB11.SA,Fundo de Investimento Imobiliário Projeto Água Branca,Brasil,R.E.I.T.,0.390079132859425,0.1380572126548322,12.26923076923077,True,
+MFII11.SA,Mérito Desenvolvimento Imobiliário I FII - Fundo de Investimento Imobiliário,Brasil,R.E.I.T.,0.507659798366323,0.2700032942788365,12.28846153846154,True,
+NEWU11.SA,Renda de Escritorios Fundo de Investimento Imobiliario - Cotas Fundo,Brasil,R.E.I.T.,0.3490846580253482,0.1129243381499405,6.384615384615385,True,
+PORD11.SA,Polo Fundo de Investimento Imobiliário - Recebíveis Imobiliários II - FII,Brasil,R.E.I.T.,0.3980694164702681,0.4017778800600501,12.28846153846154,True,
+PRSN11.SA,Personale I Fundo Invest Imobiliario,Brasil,R.E.I.T.,0.6736582477605022,0.09714122441541573,6.980769230769231,False,iliquidez
+TRBL11.SA,SDI Logística Rio - Fundo de Investimento Imobiliário - FII,Brasil,R.E.I.T.,0.679888403053368,0.3149801659021656,3.211538461538462,True,
+VVCO11.SA,XTED - TRX Edificios Corporativos Fundo Invest Imobiliario FII Fund,Brasil,R.E.I.T.,0.5094483951394609,0.1693245468258214,12.28846153846154,True,
+XPCM11.SA,XP Corporate Macaé Fundo de Investimento Imobiliário - FII,Brasil,R.E.I.T.,0.4547414996054777,0.1449208891415925,12.28846153846154,True,
+FIEI3.SA,Fica Empreendimentos Imobiliarios S.A,Brasil,Real Estate (Development),0.679974496250863,0.202140977542876,19.59615384615385,True,
+HBOR3.SA,Helbor Empreendimentos S.A.,Brasil,Real Estate (Development),1.102083889100616,0.3792009955438684,19.07692307692308,True,
+JFEN3.SA,João Fortes Engenharia S.A.,Brasil,Real Estate (Development),0.671955626718349,0.1008082595360749,23.0,False,retornos extremos
+LAVV3.SA,Lavvi Empreendimentos Imobiliários S.A.,Brasil,Real Estate (Development),1.222419359829341,0.5518857262978669,6.192307692307693,True,
+MDNE3.SA,Moura Dubeux Engenharia S.A.,Brasil,Real Estate (Development),1.523350796308789,0.6042383993972869,6.75,True,
+MELK3.SA,Melnick Desenvolvimento Imobiliário S.A.,Brasil,Real Estate (Development),1.130926782782315,0.532007757296314,6.115384615384615,True,
+MTRE3.SA,Mitre Realty Empreendimentos e Participações S.A.,Brasil,Real Estate (Development),1.284677118374528,0.5443290839488758,6.75,True,
+ALOS3.SA,Allos S.A.,Brasil,Real Estate (Operations & Services),0.9705352032050059,0.5222438058395646,15.80769230769231,True,
+GSHP3.SA,General Shopping e Outlets do Brasil S.A.,Brasil,Real Estate (Operations & Services),0.6418353569643349,0.1393995596196056,19.32692307692308,True,
+HBRE3.SA,HBR Realty Empreendimentos Imobiliários S.A.,Brasil,Real Estate (Operations & Services),1.208340905687635,0.3722930898138533,5.788461538461538,True,
+JHSF3.SA,JHSF Participações S.A.,Brasil,Real Estate (Operations & Services),1.138350311377043,0.4476263503557946,19.63461538461538,True,
+LAND3.SA,Terra Santa Propriedades Agrícolas S.A.,Brasil,Real Estate (Operations & Services),0.5905771949294116,0.1795122281650139,5.25,True,
+LOGG3.SA,LOG Commercial Properties e Participações S.A.,Brasil,Real Estate (Operations & Services),1.150676373420791,0.541184819164151,7.903846153846154,True,
+LPSB3.SA,LPS Brasil - Consultoria de Imóveis S.A.,Brasil,Real Estate (Operations & Services),1.089926981478461,0.3815187309998584,19.94230769230769,True,
+MULT3.SA,Multiplan Empreendimentos Imobiliários S.A.,Brasil,Real Estate (Operations & Services),0.9594110189355672,0.5742422905073377,19.34615384615385,True,
+NEXP3.SA,Nexpe Participações S.A.,Brasil,Real Estate (Operations & Services),0.9736268893910602,0.2775864506455715,19.07692307692308,True,
+SCAR3.SA,São Carlos Empreendimentos e Participações S.A.,Brasil,Real Estate (Operations & Services),0.7819413052031623,0.2500280059939172,23.0,True,
+SYNE3.SA,Syn Prop & Tech S.A.,Brasil,Real Estate (Operations & Services),0.7685598603978454,0.2492561574224273,23.0,True,
+AHEB3.SA,São Paulo Turismo S.A.,Brasil,Recreation,0.386255781446056,0.07709659243733968,23.0,False,iliquidez; retornos extremos
+BMKS3.SA,Bicicletas Monark S.A.,Brasil,Recreation,0.3694883986294555,0.08928626904866144,23.0,False,iliquidez
+SMFT3.SA,Smartfit Escola de Ginástica e Dança S.A.,Brasil,Recreation,1.378510098840073,0.564322087629313,5.326923076923077,True,
+IRBR3.SA,IRB-Brasil Resseguros S.A.,Brasil,Reinsurance,1.126876865589406,0.3298782302921409,9.288461538461538,True,
+MEAL3.SA,International Meal Company Alimentação S.A.,Brasil,Restaurant/Dining,1.003409825010877,0.3489689792893369,15.69230769230769,True,
+CSAN3.SA,Cosan S.A.,Brasil,Retail (Automotive),1.066085841070529,0.5427294627924792,20.69230769230769,True,
+EPAR3.SA,Embpar Participacoes S.A.,Brasil,Retail (Automotive),0.5198922652830774,0.08719035989913515,21.98076923076923,False,iliquidez; retornos extremos
+UGPA3.SA,Ultrapar Participações S.A.,Brasil,Retail (Automotive),0.6497640651866965,0.3156303362409487,23.0,False,iliquidez
+VBBR3.SA,Vibra Energia S.A.,Brasil,Retail (Automotive),1.144860086331956,0.6487931129211489,8.673076923076923,True,
+BHIA3.SA,Grupo Casas Bahia S.A.,Brasil,Retail (Building Supply),0.9051809845840821,0.1906111505666164,23.0,False,iliquidez; retornos extremos
+LJQQ3.SA,Lojas Quero-Quero S.A.,Brasil,Retail (Building Supply),1.561926441758351,0.4710435735616757,6.25,True,
+TOKY3.SA,Grupo Toky S.A.,Brasil,Retail (Building Supply),1.279845712278783,0.2029808893580065,5.75,True,
+WEST3.SA,Westwing Comércio Varejista S.A.,Brasil,Retail (Building Supply),1.047865502446909,0.2200376106310781,5.75,True,
+ARML3.SA,"Armac Locação, Logística e Serviços S.A.",Brasil,Retail (Distributors),1.6175509667317,0.4563585583025201,5.288461538461538,True,
+MILS3.SA,"Mills Locação, Serviços e Logística S.A.",Brasil,Retail (Distributors),1.095533446081192,0.3689392615438544,16.61538461538462,True,
+AMER3.SA,Americanas S.A.,Brasil,Retail (General),1.066365699438218,0.2468761453234321,20.69230769230769,False,retornos extremos
+ASAI3.SA,Sendas Distribuidora S.A.,Brasil,Retail (General),1.178125988258398,0.4842205513106016,5.692307692307693,True,
+GMAT3.SA,Grupo Mateus S.A.,Brasil,Retail (General),1.137323518317591,0.4652829401993821,6.076923076923077,True,
+MGLU3.SA,Magazine Luiza S.A.,Brasil,Retail (General),1.243176050139223,0.3377588425189277,15.55769230769231,True,
+PCAR3.SA,Companhia Brasileira De Distribuicao,Brasil,Retail (Grocery and Food),0.4910379139020906,0.1292027110103584,23.0,False,iliquidez; retornos extremos
+CTXT11.SA,Fundo Invest Imobiliario Centro Textil Internacional - Cotas Fund,Brasil,Retail (REITs),0.5178716774206448,0.2328208878239894,12.26923076923077,True,
+FIGS11.SA,Fundo de Investimento Imobiliário General Shopping Ativo e Renda - FII,Brasil,Retail (REITs),0.5603414691396146,0.4277895763159065,12.28846153846154,True,
+FLRP11.SA,Fundo de Investimento Imobiliário - FII Floripa Shopping,Brasil,Retail (REITs),0.4306193728562986,0.2872815423675029,17.01923076923077,True,
+HGBS11.SA,HEDGE Brasil Shopping Fundo de Investimento Imobiliário,Brasil,Retail (REITs),0.555695245338353,0.4820800899430466,14.69230769230769,True,
+RNGO11.SA,Fundo de Investimento Imobiliário Rio Negro,Brasil,Retail (REITs),0.5089976573697185,0.4635460185789232,12.28846153846154,True,
+AMAR3.SA,Marisa Lojas S.A.,Brasil,Retail (Special Lines),1.082812599094046,0.3647067440509359,19.09615384615385,True,
+CEAB3.SA,C&A Modas S.A.,Brasil,Retail (Special Lines),1.605368052626463,0.5136777719747287,7.019230769230769,True,
+DMVF3.SA,d1000 Varejo Farma Participações S.A.,Brasil,Retail (Special Lines),1.00645965601695,0.3514853427381245,6.25,True,
+LREN3.SA,Lojas Renner S.A.,Brasil,Retail (Special Lines),0.9474883414918815,0.4418609159082947,23.0,True,
+PGMN3.SA,Empreendimentos Pague Menos S.A.,Brasil,Retail (Special Lines),1.346520140295789,0.4674794694581808,6.192307692307693,True,
+PNVL3.SA,Dimed S.A. Distribuidora de Medicamentos,Brasil,Retail (Special Lines),0.6642427480440848,0.2496656220062614,23.0,True,
+RADL3.SA,Raia Drogasil S.A.,Brasil,Retail (Special Lines),0.672851226287306,0.2693493176861621,23.0,True,
+SBFG3.SA,Grupo SBF S.A.,Brasil,Retail (Special Lines),1.462351728165058,0.514297099517653,7.576923076923077,True,
+HBSA3.SA,Hidrovias do Brasil S.A.,Brasil,Shipbuilding & Marine,1.226486609993101,0.4432745365598612,6.134615384615385,True,
+LOGN3.SA,Log-In Logística Intermodal S.A.,Brasil,Shipbuilding & Marine,0.8705960995243253,0.2653554476406544,19.44230769230769,True,
+GRND3.SA,Grendene S.A.,Brasil,Shoe,0.7547824140092627,0.4527514772269492,20.69230769230769,True,
+VULC3.SA,Vulcabras S.A.,Brasil,Shoe,0.6245443664735255,0.1175935379785159,23.0,False,iliquidez; retornos extremos
+CASH3.SA,Méliuz S.A.,Brasil,Software (Entertainment),1.203070376420244,0.1963379862653523,6.0,True,
+DOTZ3.SA,Dotz S.A.,Brasil,Software (Entertainment),1.155301866766096,0.1766369678676236,5.442307692307693,True,
+ENJU3.SA,Enjoei S.A.,Brasil,Software (Entertainment),1.321132841347487,0.3136773869956963,6.0,True,
+LWSA3.SA,Locaweb Serviços de Internet S.A.,Brasil,Software (Internet),1.322659982631292,0.383632982587521,6.769230769230769,True,
+TOTS3.SA,TOTVS S.A.,Brasil,Software (System & Application),0.8105843962688825,0.4191186023383764,20.69230769230769,True,
+BRAP3.SA,Bradespar S.A.,Brasil,Steel,0.9603998449644806,0.5013948417286533,23.0,True,
+CMIN3.SA,CSN Mineração S.A.,Brasil,Steel,0.9913759323829272,0.3919671739081343,5.711538461538462,True,
+CSNA3.SA,Companhia Siderúrgica Nacional,Brasil,Steel,1.233030351605224,0.4816834431335414,23.0,True,
+VALE3.SA,Vale S.A.,Brasil,Steel,0.9148157105883867,0.5034639625125319,23.0,True,
+TIMS3.SA,TIM S.A.,Brasil,Telecom (Wireless),0.7462463045901562,0.3562360604886754,20.69230769230769,True,
+INTB3.SA,Intelbras S.A. - Indústria de Telecomunicação Eletrônica Brasileira,Brasil,Telecom. Equipment,1.081866136727774,0.4422795833374477,5.75,True,
+PDTC3.SA,Padtec Holding S.A.,Brasil,Telecom. Equipment,0.8040005248751887,0.1829779370388513,23.0,True,
+WDCN3.SA,Livetech da Bahia Indústria e Comércio S.A.,Brasil,Telecom. Equipment,1.093846325132416,0.320857557757545,5.288461538461538,True,
+DESK3.SA,Desktop S.A.,Brasil,Telecom. Services,0.8787778916289629,0.2141809338643118,5.307692307692307,True,
+FIQE3.SA,Unifique Telecomunicações S.A.,Brasil,Telecom. Services,0.9556916754979693,0.4259620473262621,5.288461538461538,True,
+VIVT3.SA,Telefônica Brasil S.A.,Brasil,Telecom. Services,0.5664570361555812,0.3705418649158214,23.0,True,
+ECOR3.SA,EcoRodovias Infraestrutura e Logística S.A.,Brasil,Transportation,1.16384914671075,0.5373339915499407,16.65384615384615,True,
+MOTV3.SA,Motiva Infraestrutura de Mobilidade S.A.,Brasil,Transportation,0.8849546036357393,0.4938106518947619,23.0,True,
+MOVI3.SA,Movida Participações S.A.,Brasil,Transportation,1.49453858075946,0.531098301975274,9.48076923076923,True,
+RENT3.SA,Localiza Rent a Car S.A.,Brasil,Transportation,1.092742283634566,0.5711613134899713,20.69230769230769,True,
+SEQL3.SA,Sequoia Logística e Transportes S.A.,Brasil,Transportation,1.205682863584547,0.1325130864421643,6.096153846153846,True,
+TPIS3.SA,Triunfo Participações e Investimentos S.A.,Brasil,Transportation,0.8267681572314618,0.2137558760645201,19.34615384615385,True,
+MRSA3B.SA,MRS Logística S.A.,Brasil,Transportation (Railroads),0.2685776828365227,0.03459123046523227,13.84615384615385,False,iliquidez
+RAIL3.SA,Rumo S.A.,Brasil,Transportation (Railroads),1.022687727155976,0.4141470345526693,11.63461538461539,True,
+JSLG3.SA,JSL S.A.,Brasil,Trucking,1.467526513744744,0.5277108148964482,6.173076923076923,True,
+SIMH3.SA,SIMPAR S.A.,Brasil,Trucking,1.700322904944694,0.5541791334064505,6.153846153846154,True,
+TGMA3.SA,Tegma Gestão Logística S.A.,Brasil,Trucking,0.9960940168982075,0.419369809940691,19.40384615384615,True,
+VAMO3.SA,"Vamos Locação de Caminhões, Máquinas e Equipamentos S.A.",Brasil,Trucking,1.536247899060549,0.4932473053168429,5.769230769230769,True,
+CSMG3.SA,Companhia de Saneamento de Minas Gerais,Brasil,Utility (Water),0.9095745237504611,0.4706169673569094,20.69230769230769,True,
+SBSP3.SA,Companhia de Saneamento Básico do Estado de São Paulo - SABESP,Brasil,Utility (Water),0.9307834031271419,0.5208277716854097,23.0,True,
+CRML,Critical Metals Corp.,Islas Vírgenes Británicas,Metals & Mining,0.1751435848651421,0.00171683048189808,4.75,False,retornos extremos
+XP,XP Inc.,Islas Caimán,Brokerage & Investment Banking,1.252998486634636,0.4035556032693208,6.923076923076923,True,
+FN,Fabrinet,Islas Caimán,Electronics (General),0.4067941735098902,0.04743152745910517,16.42307692307692,True,
+STNE,StoneCo Ltd.,Islas Caimán,Financial Svcs. (Non-bank & Insurance),1.408862329579024,0.3586789556362358,8.057692307692308,True,
+MLEC,Moolec Science SA,Islas Caimán,Food Processing,0.05539980371704912,0.0002340227050869892,5.692307692307693,True,
+PAX,Patria Investments Limited,Islas Caimán,Investments & Asset Management,0.7557262869020397,0.2846021646864419,5.807692307692307,True,
+GLRE,"Greenlight Capital Re, Ltd.",Islas Caimán,Reinsurance,0.4124874280134425,0.1916644541000757,19.51923076923077,True,
+OXBR,Oxbridge Re Holdings Limited,Islas Caimán,Reinsurance,0.4787708932529158,0.0286289615026778,12.65384615384615,True,
+CRDO,Credo Technology Group Holding Ltd,Islas Caimán,Semiconductor,0.5683548576712891,0.02791053713187042,4.788461538461538,True,
+VTEX,VTEX,Islas Caimán,Software (Internet),0.6491466925484587,0.0843865248486817,5.307692307692307,True,
+CWCO,Consolidated Water Co. Ltd.,Islas Caimán,Utility (Water),0.4260934040810887,0.09386019473518914,25.11538461538462,True,
+LTM.SN,LATAM Airlines Group S.A.,Chile,Air Transport,0.9211730811547175,0.1914079845159133,19.01923076923077,False,retornos extremos
+BCI.SN,Banco de Crédito e Inversiones,Chile,Bank (Money Center),0.6965806131617962,0.387547825169559,18.90384615384615,True,
+BINT.SN,Banco Internacional,Chile,Bank (Money Center),0.3252219586241752,0.1616996512428778,11.0,False,iliquidez
+BSANTANDER.SN,Banco Santander-Chile,Chile,Bank (Money Center),0.8510597112073801,0.5742011446172149,19.01923076923077,True,
+CHILE.SN,Banco de Chile,Chile,Bank (Money Center),0.6538245017544437,0.4236358983870619,18.90384615384615,True,
+ITAUCL.SN,Banco Itaú Chile,Chile,Bank (Money Center),0.7863121506507134,0.4463215427624182,19.01923076923077,True,
+CCU.SN,Compañía Cervecerías Unidas S.A.,Chile,Beverage (Alcoholic),0.641948956216882,0.3889154906132981,19.01923076923077,True,
+CONCHATORO.SN,Viña Concha y Toro S.A.,Chile,Beverage (Alcoholic),0.5735349280388385,0.3590241879185345,19.01923076923077,True,
+EMILIANA.SN,Viñedos Emiliana S.A.,Chile,Beverage (Alcoholic),0.3202459229392565,0.1087364485705313,19.01923076923077,False,iliquidez
+VSPT.SN,Viña San Pedro Tarapacá S.A.,Chile,Beverage (Alcoholic),0.4127348025071989,0.2046466531941289,19.01923076923077,False,iliquidez
+NIBSA.SN,Nibsa S.A.,Chile,Building Materials,0.3058064744311416,0.0607902161075331,16.84615384615385,False,iliquidez
+SCHWAGER.SN,Schwager S.A.,Chile,Business & Consumer Services,0.5552805794538997,0.09991652858120592,19.01923076923077,False,iliquidez; retornos extremos
+ENAEX.SN,Enaex S.A.,Chile,Chemical (Basic),0.4219447759178699,0.3233891646487667,19.01923076923077,False,iliquidez
+OXIQUIM.SN,Oxiquim S.A.,Chile,Chemical (Basic),0.2934719786659941,0.09990662509925607,11.69230769230769,False,iliquidez
+SOQUICOM.SN,Soquimich Comercial S.A.,Chile,Chemical (Specialty),0.5271399097437633,0.2014684188940775,19.01923076923077,True,
+SONDA.SN,Sonda S.A.,Chile,Computer Services,0.7631357564614468,0.4174299184484292,19.01923076923077,True,
+POLPAICO.SN,Cemento Polpaico S.A.,Chile,Construction Supplies,0.2923710834682016,0.09742736322715051,19.01923076923077,False,iliquidez
+VOLCAN.SN,Compañía Industrial El Volcán S.A.,Chile,Construction Supplies,0.3049978738584053,0.1206967476544462,19.01923076923077,False,iliquidez
+ANTARCHILE.SN,AntarChile S.A.,Chile,Diversified,0.7667309596972283,0.5323861433093853,19.01923076923077,True,
+ELECMETAL.SN,Compañía Electro Metalúrgica S.A.,Chile,Diversified,0.3004383638910718,0.1143900111262417,19.01923076923077,False,iliquidez
+ILC.SN,Inversiones La Construcción S.A.,Chile,Diversified,0.8649687650591719,0.3956636756534599,14.34615384615385,True,
+INVERCAP.SN,Invercap S.A.,Chile,Diversified,0.6038061774520227,0.1787697347052922,19.01923076923077,True,
+MARINSA.SN,Marítima de Inversiones S.A.,Chile,Diversified,0.3812152025061115,0.07125328178295998,19.01923076923077,False,iliquidez
+NAVARINO.SN,Navarino S.A.,Chile,Diversified,0.2489161436718244,0.07267235142674022,19.01923076923077,False,iliquidez
+PASUR.SN,Forestal Constructora y Comercial del Pacifico Sur SA,Chile,Diversified,0.3172097701230407,0.1851023809051402,19.01923076923077,False,iliquidez
+QUINENCO.SN,Quiñenco SA,Chile,Diversified,0.6288839858301144,0.3518902791275147,19.01923076923077,True,
+SK.SN,Sigdo Koppers S.A.,Chile,Diversified,0.556577147074974,0.302650865688019,19.01923076923077,True,
+BESALCO.SN,Besalco S.A.,Chile,Engineering/Construction,0.719612230591223,0.2488021416276289,18.90384615384615,True,
+EISA.SN,Echeverría Izquierdo S.A.,Chile,Engineering/Construction,0.632504609274252,0.2562198246158697,14.30769230769231,False,iliquidez
+INGEVEC.SN,Ingevec S.A.,Chile,Engineering/Construction,0.5915024271880421,0.2094635016944868,14.67307692307692,False,iliquidez
+MOLLER.SN,Empresa Constructora Moller y Pérez Cotapos S.A.,Chile,Engineering/Construction,0.5792544515488688,0.2186783547174787,13.65384615384615,False,iliquidez
+SALFACORP.SN,SalfaCorp S.A.,Chile,Engineering/Construction,0.9747358510140537,0.4268141481244798,19.01923076923077,True,
+AZUL-AZUL.SN,Azul Azul S.A.,Chile,Entertainment,0.01353767819892471,7.711547254840578e-05,18.25,False,iliquidez; retornos extremos
+COLO-COLO.SN,Blanco y Negro S.A.,Chile,Entertainment,0.3486769698704617,0.07801087939670104,19.01923076923077,False,iliquidez
+CRUZADOS.SN,Cruzados SADP,Chile,Entertainment,0.3687245351192828,0.08963633987164099,16.98076923076923,False,iliquidez
+SIEMEL.SN,Inversiones Siemel S.A.,Chile,Farming/Agriculture,0.2681796771734261,0.04942598484716942,19.01923076923077,False,iliquidez
+BICE.SN,Bicecorp S.A.,Chile,Financial Svcs. (Non-bank & Insurance),0.3250058645213808,0.1381877709332699,19.01923076923077,False,iliquidez
+BLUMAR.SN,Blumar S.A.,Chile,Food Processing,0.420486194620142,0.1425207797949929,19.01923076923077,False,iliquidez
+CAMANCHACA.SN,Camanchaca S.A.,Chile,Food Processing,0.627612686139442,0.1702032523216502,15.98076923076923,True,
+CAMPOS.SN,Sociedad de Inversiones Campos Chilenos S.A.,Chile,Food Processing,0.3942930440020655,0.07394151500067092,19.01923076923077,False,iliquidez
+CAROZZI.SN,Carozzi S.A.,Chile,Food Processing,0.2725578087651759,0.08238926735152907,15.03846153846154,False,iliquidez
+DUNCANFOX.SN,Duncan Fox S.A.,Chile,Food Processing,0.2917535890709695,0.09064104117502991,19.01923076923077,False,iliquidez
+IANSA.SN,Empresas Iansa S.A.,Chile,Food Processing,0.5160479208563147,0.095141258829604,19.01923076923077,False,iliquidez
+MULTI-X.SN,Multiexport Foods S.A.,Chile,Food Processing,0.7742676035406358,0.2385975625979664,19.01923076923077,True,
+NUTRAVALOR.SN,Inversiones Nutravalor S.A.,Chile,Food Processing,0.3033813894415087,0.07842118218218175,19.01923076923077,False,iliquidez
+SALMOCAM.SN,Salmones Camanchaca S.A.,Chile,Food Processing,0.6161478112578684,0.3169294875235888,8.788461538461538,False,iliquidez
+WATTS.SN,Watts S.A.,Chile,Food Processing,0.5130956773376252,0.2674496923459124,12.44230769230769,True,
+INFODEMA.SN,Infodema S.A.,Chile,Furn/Home Furnishings,0.2608012588059023,0.06945000729687645,19.01923076923077,False,iliquidez
+MANQUEHUE.SN,Inmobiliaria Manquehue S.A.,Chile,Homebuilding,0.6872659720378812,0.3332477028904028,7.807692307692307,True,
+PAZ.SN,Paz Corp S.A.,Chile,Homebuilding,0.7655468094023948,0.2722026039918886,19.01923076923077,True,
+SOCOVESA.SN,Socovesa S.A.,Chile,Homebuilding,0.875374963923583,0.3186349030373758,19.01923076923077,True,
+INDISA.SN,Instituto de Diagnóstico S.A.,Chile,Hospitals/Healthcare Facilities,0.4322211166701978,0.190671631441337,19.01923076923077,False,iliquidez
+LAS-CONDES.SN,Clínica Las Condes S.A.,Chile,Hospitals/Healthcare Facilities,0.3960450954842966,0.1016453867321246,19.01923076923077,False,iliquidez
+ENJOY.SN,Enjoy S.A.,Chile,Hotel/Gaming,0.8649847481503865,0.1401371741335403,17.42307692307692,False,retornos extremos
+FOSFOROS.SN,Compañía Chilena de Fósforos S.A.,Chile,Household Products,0.297856606006305,0.1116670834027681,19.01923076923077,False,iliquidez
+BANVIDA.SN,Banvida S.A.,Chile,Insurance (General),0.4500212415815342,0.1989761428916949,19.01923076923077,True,
+AAISA.SN,Administradora Americana de Inversiones S.A.,Chile,Investments & Asset Management,0.4987874553747978,0.1391520302304357,4.384615384615385,True,
+CUPRUM.SN,Administradora de Fondos de Pensiones Cuprum S.A.,Chile,Investments & Asset Management,0.2752761070734593,0.04132425252992311,11.86538461538461,False,iliquidez
+HABITAT.SN,Administradora de Fondos de Pensiones Habitat S.A.,Chile,Investments & Asset Management,0.5174770581192414,0.2166975621976114,19.01923076923077,True,
+INVERNOVA.SN,Invernova S.A.,Chile,Investments & Asset Management,0.2454825934750334,0.04835729957525126,19.01923076923077,False,iliquidez
+PLANVITAL.SN,Administradora de Fondos de Pensiones PlanVital S.A.,Chile,Investments & Asset Management,0.2654292277325003,0.02538503484026655,14.61538461538461,False,iliquidez; retornos extremos
+POTASIOS-A.SN,Potasios de Chile S.A.,Chile,Investments & Asset Management,0.4644867908532,0.08445206714088971,14.88461538461539,False,iliquidez
+PROVIDA.SN,Administradora de Fondos de Pensiones Provida S.A.,Chile,Investments & Asset Management,0.2586056596144176,0.05973532320555286,19.01923076923077,False,iliquidez
+TRICAHUE.SN,Inversiones Tricahue S.A.,Chile,Investments & Asset Management,0.3199977788662523,0.1017321013780822,18.90384615384615,False,iliquidez
+FUTS,Future Science Holdings Inc.,Chile,Metals & Mining,0.3948257524015208,0.00929404677843837,19.01923076923077,False,iliquidez; retornos extremos
+MOLYMET.SN,Molibdenos y Metales S.A.,Chile,Metals & Mining,0.3531405579055252,0.1280317496814177,19.01923076923077,False,iliquidez
+PUCOBRE.SN,Sociedad Punta del Cobre S.A.,Chile,Metals & Mining,0.4776105450444535,0.2000426682663881,19.01923076923077,False,iliquidez
+LIPIGAS.SN,Empresas Lipigas S.A.,Chile,Oil/Gas Distribution,0.5150231048120494,0.2645453403386502,9.98076923076923,True,
+CRISTALES.SN,Cristalerías de Chile S.A.,Chile,Packaging & Container,0.4507263493149335,0.2641721242988472,19.01923076923077,True,
+CMPC.SN,Empresas CMPC S.A.,Chile,Paper/Forest Products,0.8513837228831402,0.4981558663103313,19.01923076923077,True,
+MASISA.SN,Masisa S.A.,Chile,Paper/Forest Products,0.816822993177419,0.2751531787847524,19.01923076923077,True,
+CGE.SN,Compañía General de Electricidad S.A.,Chile,Power,0.4587330323870695,0.1053445287317326,19.01923076923077,False,iliquidez
+CGET.SN,CGE Transmisión S.A.,Chile,Power,0.1897106425381066,0.008579702545372436,4.153846153846154,False,iliquidez
+COLBUN.SN,Colbún S.A.,Chile,Power,0.7425037675661241,0.3861009242953614,19.01923076923077,True,
+ECL.SN,Engie Energia Chile S.A.,Chile,Power,0.7514302438835173,0.4047251160705494,19.01923076923077,True,
+ENELAM.SN,Enel Américas S.A.,Chile,Power,0.7772327398345474,0.4994223671463589,19.01923076923077,True,
+ENELCHILE.SN,Enel Chile S.A.,Chile,Power,0.8652367529559645,0.4253712379713979,10.57692307692308,True,
+ENELDXCH.SN,Enel Distribucion Chile S.A.,Chile,Power,0.2691127980633195,0.06483126918099014,19.01923076923077,False,iliquidez
+ENELGXCH.SN,Enel Generación Chile S.A.,Chile,Power,0.7162235325453351,0.3690950087297002,19.01923076923077,True,
+GASCO.SN,Empresas Gasco S.A.,Chile,Power,0.412469772291027,0.1782246508658366,18.88461538461538,True,
+MINERA.SN,Minera Valparaiso S.A.,Chile,Power,0.37357191326663,0.1760600917984547,19.01923076923077,False,iliquidez
+NTGCLGAS.SN,Naturgy Chile Gas Natural S.A.,Chile,Power,0.5496711028970845,0.1340466072747521,10.11538461538461,True,
+PEHUENCHE.SN,Empresa Eléctrica Pehuenche S.A.,Chile,Power,0.332018032496109,0.1271539750620206,19.01923076923077,False,iliquidez
+STMCHA.SN,Sociedad Transmisora Metropolitana II S.A.,Chile,Power,0.5936085770113189,0.08953267058720848,3.788461538461538,False,iliquidez
+GASCOINV.SN,Gasco Inversiones S.A.,Chile,Real Estate (General/Diversified),0.377329150453862,0.04891421557390374,5.288461538461538,False,iliquidez
+CENCOMALLS.SN,Cencosud Shopping S.A.,Chile,Real Estate (Operations & Services),0.9812500654031224,0.4881176003670562,7.384615384615385,True,
+MALLPLAZA.SN,Plaza S.A.,Chile,Real Estate (Operations & Services),0.9623840385909785,0.4497035290713114,8.307692307692308,True,
+PARAUCO.SN,Parque Arauco S.A.,Chile,Real Estate (Operations & Services),0.8994142537390509,0.4761421195936069,19.01923076923077,True,
+ZOFRI.SN,Zona Franca de Iquique S.A.,Chile,Real Estate (Operations & Services),0.4470559967262761,0.1718374654802227,19.01923076923077,True,
+POLO.SN,Club de Polo y Equitación San Cristóbal S.A.,Chile,Recreation,0.2482134284674516,0.0854232360772289,19.01923076923077,False,iliquidez
+COPEC.SN,Empresas Copec S.A.,Chile,Retail (Automotive),0.8905544592495079,0.5856739230647172,19.01923076923077,True,
+COPEVAL.SN,Compañía Agropecuaria Copeval S.A.,Chile,Retail (Distributors),0.2551333594356513,0.165048927888471,19.01923076923077,False,iliquidez
+ABC.SN,abc S.A.,Chile,Retail (General),1.017190910974532,0.2179263372656103,19.01923076923077,False,retornos extremos
+CENCOSUD.SN,Cencosud S.A.,Chile,Retail (General),0.9370372720743038,0.5267590655317509,19.01923076923077,True,
+FALABELLA.SN,Falabella S.A.,Chile,Retail (General),0.8880634971681084,0.5096898291285252,19.01923076923077,True,
+HITES.SN,Empresas Hites S.A.,Chile,Retail (General),0.9828005444654179,0.2967845544183029,16.98076923076923,True,
+RIPLEY.SN,Ripley Corp S.A.,Chile,Retail (General),0.9544095179131346,0.4504440468978206,19.01923076923077,True,
+HIPERMARC.SN,Hipermarc S.A.,Chile,Retail (Grocery and Food),0.4423898878998431,0.04915647924491007,19.01923076923077,False,iliquidez; retornos extremos
+SMU.SN,SMU S.A.,Chile,Retail (Grocery and Food),0.7269587560091453,0.3756068438681542,9.807692307692308,True,
+TRICOT.SN,Empresas Tricot S.A.,Chile,Retail (Special Lines),0.7738024617968668,0.3627407636949419,9.26923076923077,False,iliquidez
+FROWARD.SN,Portuaria Cabo Froward S.A.,Chile,Shipbuilding & Marine,0.2647291688298704,0.1318402447878659,19.01923076923077,False,iliquidez
+NAVIERA.SN,Grupo Empresas Navieras S.A.,Chile,Shipbuilding & Marine,0.37438183596943,0.1314772517116942,19.01923076923077,False,iliquidez
+SMSAAM.SN,Sociedad Matriz SAAM S.A.,Chile,Shipbuilding & Marine,0.6224175251317428,0.3148015470839072,14.73076923076923,True,
+VAPORES.SN,Compañía Sud Americana de Vapores S.A.,Chile,Shipbuilding & Marine,0.8680986718768794,0.2835087591196522,19.01923076923077,True,
+FORUS.SN,Forus S.A.,Chile,Shoe,0.7595609061717042,0.3723035624539944,19.01923076923077,True,
+CAP.SN,CAP S.A.,Chile,Steel,1.12628866796959,0.3945467882658946,19.01923076923077,True,
+CINTAC.SN,Cintac S.A.,Chile,Steel,0.6209094929501717,0.2466279422474823,19.01923076923077,False,iliquidez
+ALMENDRAL.SN,Almendral S.A.,Chile,Telecom (Wireless),0.6046579561599617,0.3518501668779357,19.01923076923077,True,
+ENTEL.SN,Empresa Nacional de Telecomunicaciones S.A.,Chile,Telecom (Wireless),0.6905741825467226,0.3545660988305932,19.01923076923077,True,
+CTC.SN,Telefónica Chile S.A.,Chile,Telecom. Services,0.3103734835163778,0.09167387766496293,8.673076923076923,False,iliquidez
+AGUAS-A.SN,Aguas Andinas S.A.,Chile,Utility (Water),0.6233553599435521,0.3924215703882513,19.01923076923077,True,
+ESSBIO-C.SN,Essbio S.A.,Chile,Utility (Water),0.3084234218098685,0.04495585690371129,18.88461538461538,False,iliquidez; retornos extremos
+ESVAL-C.SN,Esval S.A.,Chile,Utility (Water),0.2796272460781945,0.01989656615255508,18.80769230769231,False,iliquidez; retornos extremos
+IAM.SN,Inversiones Aguas Metropolitanas S.A.,Chile,Utility (Water),0.6396145972945418,0.4096544893212666,19.01923076923077,True,
+FABRICATO.CL,Fabricato S.A.,Colombia,Apparel,0.1140861094626774,0.2854628237577619,13.55769230769231,False,iliquidez; retornos extremos
+BBVACOL.CL,Banco Bilbao Vizcaya Argentaria Colombia S.A.,Colombia,Bank (Money Center),0.1127426562785822,0.581164318734902,13.55769230769231,False,iliquidez; retornos extremos
+BHI.CL,BAC Holding International Corp.,Colombia,Bank (Money Center),0.6699344785668983,0.1969508648066205,4.557692307692307,True,
+BOGOTA.CL,Banco de Bogotá S.A.,Colombia,Bank (Money Center),0.1147914711120338,0.5910165899014646,13.55769230769231,False,retornos extremos
+CIBEST.CL,Grupo Cibest S.A.,Colombia,Bank (Money Center),0.1188723535080791,0.4871257744995259,13.55769230769231,False,retornos extremos
+GRUBOLIVAR.CL,Grupo Bolívar S.A.,Colombia,Bank (Money Center),0.1142306237111591,0.5891882619812583,13.55769230769231,False,iliquidez; retornos extremos
+GRUPOAVAL.CL,Grupo Aval Acciones y Valores S.A.,Colombia,Bank (Money Center),0.1152318030311918,0.5827891696319394,13.55769230769231,False,retornos extremos
+OCCIDENTE.CL,Banco de Occidente S.A.,Colombia,Bank (Money Center),0.1127727019201959,0.6004890786288146,13.55769230769231,False,iliquidez; retornos extremos
+TGLS,Tecnoglass Inc.,Colombia,Building Materials,0.001163681769551827,4.739694806410455e-05,13.55769230769231,True,
+ENKA.CL,Enka de Colombia S.A.,Colombia,Chemical (Basic),0.1135352881551398,0.4563043579178996,13.55769230769231,False,iliquidez; retornos extremos
+CEMARGOS.CL,Cementos Argos S.A.,Colombia,Construction Supplies,0.117815233964356,0.4622036538945511,13.55769230769231,False,retornos extremos
+GRUPOARGOS.CL,Grupo Argos S.A.,Colombia,Construction Supplies,0.1186219675194162,0.4292995819621401,13.55769230769231,False,retornos extremos
+CORFICOLCF.CL,Corporación Financiera Colombiana S.A.,Colombia,Diversified,0.1157935880777744,0.5759608128617837,13.55769230769231,False,retornos extremos
+GRUPOSURA.CL,Grupo de Inversiones Suramericana S.A.,Colombia,Diversified,0.1170624604074945,0.4402210726679653,13.55769230769231,False,retornos extremos
+CONCONCRET.CL,Constructora Conconcreto S.A.,Colombia,Engineering/Construction,0.114575993105038,0.3795886500916396,13.55769230769231,False,retornos extremos
+ELCONDOR.CL,Construcciones El Condor S.A.,Colombia,Engineering/Construction,0.1121985144309764,0.4021618790465652,13.55769230769231,False,iliquidez; retornos extremos
+BMC.CL,BMC Bolsa Mercantil de Colombia S.A.,Colombia,Financial Svcs. (Non-bank & Insurance),0.114151737546632,0.4472555007490393,13.55769230769231,False,iliquidez; retornos extremos
+BVC.CL,Bolsa de Valores de Colombia S.A.,Colombia,Financial Svcs. (Non-bank & Insurance),0.1131928031150242,0.6088164366493176,13.55769230769231,False,retornos extremos
+NUTRESA.CL,Grupo Nutresa S. A.,Colombia,Food Processing,0.1143532464674488,0.4579199323086988,13.55769230769231,False,retornos extremos
+ECOPETROL.CL,Ecopetrol S.A.,Colombia,Oil/Gas (Integrated),0.1181346468288877,0.458450434412243,13.55769230769231,False,retornos extremos
+GPRK,GeoPark Limited,Colombia,Oil/Gas (Production and Exploration),0.00387141736857131,0.0005040709907006002,13.55769230769231,True,
+CELSIA.CL,CELSIA S.A. E.S.P.,Colombia,Power,0.1149810722928434,0.5847361327309925,13.55769230769231,False,retornos extremos
+GEB.CL,Grupo Energía Bogotá S.A. E.S.P.,Colombia,Power,0.1142911871416225,0.6277724539684351,13.55769230769231,False,retornos extremos
+ISA.CL,Interconexión Eléctrica S.A. E.S.P.,Colombia,Power,0.1166502290659987,0.5375736211259723,13.55769230769231,False,retornos extremos
+PROMIGAS.CL,Promigas S.A. E.S.P.,Colombia,Power,0.1136323473637966,0.5543934966796809,13.55769230769231,False,iliquidez; retornos extremos
+MINEROS.CL,Mineros S.A.,Colombia,Precious Metals,0.1153060367784111,0.4418192653871442,13.55769230769231,False,retornos extremos
+TERPEL.CL,Organización Terpel S.A.,Colombia,Retail (Automotive),0.1140138045188562,0.6063223975312669,12.25,False,retornos extremos
+EXITO.CL,Almacenes Éxito S.A.,Colombia,Retail (General),0.1157853096517145,0.465621311198952,13.55769230769231,False,retornos extremos
+BMPA,"BMP AI Technologies, Inc.",Colombia,Software (System & Application),0.03768798963393897,0.003604674021751575,13.55769230769231,False,iliquidez; retornos extremos
+ETB.CL,Empresa de Telecomunicaciones de Bogotá S.A. E.S.P.,Colombia,Telecom. Services,0.1143432457512816,0.4487193185041384,13.55769230769231,False,retornos extremos
+ESTA,Establishment Labs Holdings Inc.,Costa Rica,Healthcare Products,0.5515631274870417,0.06568478945726064,8.326923076923077,True,
+ASURB.MX,"Grupo Aeroportuario del Sureste, S. A. B. de C. V.",México,Air Transport,0.7811561001836527,0.3530799565902308,23.0,True,
+GAPB.MX,"Grupo Aeroportuario del Pacífico, S.A.B. de C.V.",México,Air Transport,0.9890450424010719,0.4866597279527721,20.75,True,
+OMAB.MX,"Grupo Aeroportuario del Centro Norte, S.A.B. de C.V.",México,Air Transport,1.01291412616243,0.4745680388144063,20.0,True,
+VOLARA.MX,"Controladora Vuela Compañía de Aviación, S.A.B. de C.V.",México,Air Transport,1.289413079089962,0.3416947283953732,13.13461538461539,True,
+GISSAA.MX,"Grupo Industrial Saltillo, S.A.B. de C.V.",México,Auto Parts,0.4870513471953784,0.1268108111525921,23.0,True,
+NEMAKA.MX,"Nemak, S. A. B. de C. V.",México,Auto Parts,0.9569361853820091,0.2945530373569264,11.38461538461539,True,
+BBAJIOO.MX,"Banco del Bajío, S.A., Institución de Banca Múltiple",México,Bank (Money Center),1.133141167878669,0.5434181676637828,9.442307692307692,True,
+GFINBURO.MX,"Grupo Financiero Inbursa, S.A.B. de C.V.",México,Bank (Money Center),0.9001971563001956,0.4581322202363307,23.0,True,
+GFNORTEO.MX,"Grupo Financiero Banorte, S.A.B. de C.V.",México,Bank (Money Center),1.204165580756702,0.6139352431820835,23.0,True,
+RA.MX,Regional S.A.B. de C.V.,México,Banks (Regional),1.069669244830072,0.4831782248766795,15.36538461538461,True,
+CUERVO.MX,"Becle, S.A.B. de C.V.",México,Beverage (Alcoholic),0.7055753576700681,0.2305669238902515,9.76923076923077,True,
+AC.MX,"Arca Continental, S.A.B. de C.V.",México,Beverage (Soft),0.5774212208110429,0.3549919446390858,23.0,True,
+CULTIBAB.MX,"Organización Cultiba, S.A.B. de C.V.",México,Beverage (Soft),0.3904709998676646,0.09402632803502131,23.0,False,iliquidez
+ACTINVRB.MX,"Corporación Actinver, S. A. B. de C. V.",México,Brokerage & Investment Banking,0.5017555779730267,0.3951916555023287,16.55769230769231,True,
+ALTERNAB.MX,"Alterna Asesoría Internacional, S.A.B. de C.V.",México,Brokerage & Investment Banking,0.3963347530492692,0.1014006572825266,5.442307692307693,False,iliquidez
+AGUA.MX,Grupo Rotoplas S.A.B. de C.V.,México,Building Materials,0.7119071450415813,0.2246952547168766,11.94230769230769,True,
+LAMOSA.MX,"Grupo Lamosa, S.A.B. de C.V.",México,Building Materials,0.4264151484213628,0.12577617102344,23.0,False,iliquidez
+ALPEKA.MX,"ALPEK, S.A.B. de C.V.",México,Chemical (Basic),0.7913414916604864,0.2379941175023585,14.57692307692308,True,
+CYDSASAA.MX,"Cydsa, S.A.B. de C.V.",México,Chemical (Basic),0.525411190558573,0.1428849624412947,23.0,True,
+ORBIA.MX,"Orbia Advance Corporation, S.A.B. de C.V.",México,Chemical (Basic),1.023283537288886,0.449014590231491,23.0,True,
+CEMEXCPO.MX,"CEMEX, S.A.B. de C.V.",México,Construction Supplies,1.394480067377273,0.5781771470237969,23.0,True,
+CMOCTEZ.MX,"Corporación Moctezuma, S.A.B. de C.V.",México,Construction Supplies,0.4507584884763137,0.2141348511134977,23.0,False,iliquidez
+GCC.MX,"GCC, S.A.B. de C.V.",México,Construction Supplies,0.6771574621010389,0.3375302663605425,23.0,True,
+GCARSOA1.MX,"Grupo Carso, S.A.B. de C.V.",México,Diversified,0.9188305541818034,0.4104766244001461,23.0,True,
+KUOB.MX,"Kuo, S.A.B. de C.V.",México,Diversified,0.5841670921770914,0.2698143540070338,23.0,True,
+LABB.MX,"Genomma Lab Internacional, S.A.B. de C.V.",México,Drugs (Pharmaceutical),0.8267183802206758,0.2859132965421873,18.44230769230769,True,
+CIEB.MX,"Corporación Interamericana de Entretenimiento, S.A.B. de C.V.",México,Entertainment,0.5081291009196554,0.1536109089837858,23.0,False,iliquidez
+PASAB.MX,"Promotora Ambiental, S.A.B. de C.V.",México,Environmental & Waste Services,0.577848061490643,0.2536832409362051,21.05769230769231,False,iliquidez
+BOLSAA.MX,"Bolsa Mexicana de Valores, S.A.B. de C.V.",México,Financial Svcs. (Non-bank & Insurance),0.8906957808702477,0.4716287289432032,18.46153846153846,True,
+FINDEP.MX,Financiera Independencia S.A.B. de C.V. SOFOM E.N.R.,México,Financial Svcs. (Non-bank & Insurance),0.6184773479839081,0.1976586201598907,19.07692307692308,False,iliquidez
+GENTERA.MX,"Gentera, S.A.B. de C.V.",México,Financial Svcs. (Non-bank & Insurance),1.105874043107951,0.4101867318111286,15.90384615384615,True,
+INVEXA.MX,"INVEX Controladora, S.A.B. de C.V.",México,Financial Svcs. (Non-bank & Insurance),0.3449638920576387,0.2149430741162917,23.0,False,iliquidez
+ACCELSAB.MX,"Accel, S.A.B. de C.V.",México,Food Processing,0.3726825644779768,0.2686854438409854,23.0,False,iliquidez
+BIMBOA.MX,"Grupo Bimbo, S.A.B. de C.V.",México,Food Processing,0.8415135699012108,0.5110051193393804,23.0,True,
+GRUMAB.MX,"Gruma, S.A.B. de C.V.",México,Food Processing,0.6271433506567883,0.209544299941214,23.0,True,
+HERDEZ.MX,"Grupo Herdez, S.A.B. de C.V.",México,Food Processing,0.5462546870864984,0.1798211939800651,23.0,True,
+SIGMAFA.MX,"Sigma Foods, S.A.B. de C.V.",México,Food Processing,1.067559429157577,0.5144335302541099,23.0,True,
+ARA.MX,"Consorcio ARA, S. A. B. de C. V.",México,Homebuilding,0.9400079048907297,0.4172713565164129,23.0,True,
+CADUA.MX,"Corpovael, S.A.B. de C.V.",México,Homebuilding,0.4691568229051639,0.1267182916076344,10.96153846153846,True,
+VINTE.MX,"Vinte Viviendas Integrales, S.A.B. de C.V.",México,Homebuilding,0.4715528515936401,0.4088294617481446,10.13461538461539,False,iliquidez
+MEDICAB.MX,"Médica Sur, S.A.B. de C.V.",México,Hospitals/Healthcare Facilities,0.3993063686888814,0.09266672635819662,23.0,True,
+CIDMEGA.MX,"Grupe, S.A.B. de C.V.",México,Hotel/Gaming,0.3494994938640326,0.1145264156995107,23.0,False,iliquidez
+HCITY.MX,"Promotora de Hoteles Norte 19, S.A.B. de C.V.",México,Hotel/Gaming,0.7599638937605244,0.2228897413151795,13.44230769230769,True,
+HOTEL.MX,"Grupo Hotelero Santa Fe, S.A.B. de C.V.",México,Hotel/Gaming,0.5500595542239736,0.2016098864590025,12.19230769230769,True,
+RLHA.MX,"RLH Properties, S.A.B. de C.V.",México,Hotel/Gaming,0.4424068770034574,0.2330301558735679,11.03846153846154,False,iliquidez
+KIMBERA.MX,"Kimberly-Clark de México, S. A. B. de C. V.",México,Household Products,0.8122629207926926,0.4892845761789604,23.0,True,
+VASCONI.MX,"Grupo Vasconia, S.A.B.",México,Household Products,0.3542920866230747,0.04533559913350915,18.92307692307692,False,iliquidez
+Q.MX,"Quálitas Controladora, S.A.B. de C.V.",México,Insurance (Prop/Cas.),0.7908538743461002,0.3210700260411311,11.34615384615385,True,
+GBMO.MX,"Corporativo GBM, S.A.B. de C.V.",México,Investments & Asset Management,0.5309817530432996,0.2207598825456289,17.76923076923077,False,iliquidez
+GPROFUT.MX,"Grupo Profuturo, S.A.B. de C.V.",México,Investments & Asset Management,0.2926557127571347,0.0761180027634224,23.0,False,iliquidez
+GMEXICOB.MX,"Grupo México, S.A.B. de C.V.",México,Metals & Mining,1.157699724594767,0.5186555421552375,23.0,True,
+MFRISCOA-1.MX,"Minera Frisco, S.A.B. de C.V.",México,Metals & Mining,0.8673826687758998,0.1662387317707473,15.88461538461539,True,
+VISTAA.MX,"Vista Energy, S.A.B. de C.V.",México,Oil/Gas (Production and Exploration),0.4178398658403962,0.03525710831509155,9.26923076923077,True,
+VITROA.MX,"Vitro, S.A.B. de C.V.",México,Packaging & Container,0.7383074966495157,0.186464491482922,23.0,False,iliquidez
+FCFE18.MX,Fideicomiso Irrevocable Numero Cib/2919 (Cfe Fibra E),México,Power,0.6127889919149665,0.4278022876778144,8.76923076923077,True,
+PE&OLES.MX,"Industrias Peñoles, S.A.B. de C.V.",México,Precious Metals,1.16660560658507,0.379014267340002,23.0,True,
+DANHOS13.MX,Fibra Danhos,México,R.E.I.T.,0.7995686253864968,0.4454888525219189,13.11538461538461,True,
+EDUCA18.MX,"Fideicomiso Irrevocable No. F/3277 en Banco Invex, S. A. Institución de Banca Múltiple, INVEX Grupo",México,R.E.I.T.,0.3972592123746114,0.1756594707425452,4.980769230769231,False,iliquidez
+FHIPO14.MX,Fideicomiso Irrevocable F/2061 FHipo,México,R.E.I.T.,0.5986625470791909,0.291104401330806,11.94230769230769,True,
+FIBRAHD15.MX,Fideicomiso Irrevocable No. F/1523,México,R.E.I.T.,0.5631955934613669,0.2364178648458742,11.44230769230769,True,
+FIBRAMQ12.MX,FIBRA Macquarie México,México,R.E.I.T.,0.9099291680077712,0.4978734604804221,13.07692307692308,True,
+FIBRAPL14.MX,FIBRA Prologis,México,R.E.I.T.,0.81238070800322,0.4416883870701696,12.46153846153846,True,
+FIHO12.MX,FibraHotel,México,R.E.I.T.,0.6721643780591077,0.2357636648437686,13.05769230769231,True,
+FINN13.MX,Fideicomiso Irrevocable db/1616,México,R.E.I.T.,0.5508117925391798,0.2223962567230999,13.69230769230769,True,
+FMTY14.MX,"Fibra Mty, S.A.P.I. de C.V.",México,R.E.I.T.,0.5621336109145278,0.3782131550964249,11.92307692307692,True,
+FNOVA17.MX,Fibra Nova,México,R.E.I.T.,0.4218912858457726,0.3245646635750005,8.23076923076923,False,iliquidez
+FPLUS16.MX,Fibra Plus,México,R.E.I.T.,0.4184068339779077,0.08218358890359778,10.03846153846154,True,
+FUNO11.MX,Fibra UNO,México,R.E.I.T.,0.9355536308651871,0.4669454221906042,15.69230769230769,True,
+STORAGE18.MX,FIBRA Storage,México,R.E.I.T.,0.4894245939349629,0.3493085326178842,6.057692307692307,False,iliquidez
+DINEB.MX,"DINE, S.A.B. de C.V.",México,Real Estate (Development),0.5701185256933926,0.2112396241756466,23.0,False,iliquidez
+GICSAB.MX,Grupo Gicsa S.A.B. de C.V.,México,Real Estate (General/Diversified),0.685395048895057,0.154718402758048,11.46153846153846,True,
+VESTA.MX,"Corporación Inmobiliaria Vesta, S.A.B. de C.V.",México,Real Estate (Operations & Services),0.8269181836006523,0.4554803499713738,14.34615384615385,True,
+SPORTS.MX,"Grupo Sports World, S.A.B. de C.V.",México,Recreation,0.5928701000461677,0.1523287963004173,16.13461538461538,True,
+ALSEA.MX,"Alsea, S.A.B. de C.V.",México,Restaurant/Dining,1.055083011008578,0.4690552801009907,23.0,True,
+CMRB.MX,"CMR, S.A.B. de C.V.",México,Restaurant/Dining,0.4401555597151179,0.0954965251778388,23.0,False,iliquidez
+BWMX,"Betterware de México, S.A.P.I. de C.V.",México,Retail (Building Supply),0.2157523333467044,0.01036658420889902,7.865384615384615,True,
+POCHTECB.MX,"Grupo Pochteca, S.A.B. de C.V.",México,Retail (Distributors),0.764147257141833,0.2280893601271679,18.88461538461538,True,
+VVWT,VIVA World Trade Inc.,México,Retail (Distributors),0.226610792693678,0.0007319502282364665,8.961538461538462,False,iliquidez; retornos extremos
+LIVEPOLC-1.MX,"El Puerto de Liverpool, S.A.B. de C.V.",México,Retail (General),0.7472867775211928,0.3443784150857657,23.0,True,
+SORIANAB.MX,"Organización Soriana, S. A. B. de C. V.",México,Retail (General),0.8147943453173561,0.3895022278842216,23.0,True,
+WALMEX.MX,"Wal-Mart de México, S.A.B. de C.V.",México,Retail (General),0.5562511183341466,0.2628532560458203,23.0,True,
+CHDRAUIB.MX,"Grupo Comercial Chedraui, S.A.B. de C.V.",México,Retail (Grocery and Food),0.7669854693313628,0.3975856895855912,16.55769230769231,True,
+LACOMERUBC.MX,"La Comer, S.A.B. de C.V.",México,Retail (Grocery and Food),0.7875644747890151,0.4079105743143969,10.86538461538461,True,
+FSHOP13.MX,Fibra Shop,México,Retail (REITs),0.5801476580261814,0.3186939282143144,13.32692307692308,True,
+FRAGUAB.MX,"Corporativo Fragua, S.A.B. de C.V.",México,Retail (Special Lines),0.3915158597398092,0.1385950489493954,23.0,False,iliquidez
+GIGANTE.MX,"Grupo Gigante, S. A. B. de C. V.",México,Retail (Special Lines),0.4387130767243275,0.09985791154741597,23.0,False,iliquidez
+AUTLANB.MX,"Compañía Minera Autlán, S.A.B. de C.V.",México,Steel,0.7771857965233301,0.2063451382275507,23.0,True,
+ICHB.MX,"Industrias CH, S. A. B. de C. V.",México,Steel,0.7206340343393483,0.3133316012698809,23.0,True,
+AMXB.MX,"América Móvil, S.A.B. de C.V.",México,Telecom (Wireless),0.8231663763365921,0.4790181512178302,23.0,True,
+CTAXTELA.MX,Controladora Axtel S.A.B. de C.V.,México,Telecom. Services,0.4680295780651187,0.03700700655820977,3.442307692307693,True,
+LASITE.MX,"Sitios Latinoamérica, S.A.B. de C.V.",México,Telecom. Services,0.723919746524276,0.1518807958136368,4.096153846153846,True,
+SITES1A-1.MX,"Operadora de Sites Mexicanos, S.A.B. de C.V.",México,Telecom. Services,0.8002650318252398,0.1485768013081207,4.653846153846154,True,
+FRGT,"Freight Technologies, Inc.",México,Transportation,0.5729411365675092,0.01353502614048474,9.26923076923077,False,retornos extremos
+PINFRA.MX,"Promotora y Operadora de Infraestructura, S. A. B. de C. V.",México,Transportation,0.8149698550259526,0.4096240156201701,23.0,True,
+TRAXIONA.MX,"Grupo Traxión, S.A.B. de C.V.",México,Trucking,0.7571265565715419,0.2183326292813886,9.134615384615385,True,
+CPA,"Copa Holdings, S.A.",Panamá,Air Transport,0.7490063391895804,0.2512475812428139,20.96153846153846,True,
+BLX,"Banco Latinoamericano de Comercio Exterior, S. A.",Panamá,Financial Svcs. (Non-bank & Insurance),0.5198525067576191,0.1395170301045037,25.11538461538462,True,
+BAP,Credicorp Ltd.,Perú,Bank (Money Center),0.8937665224291934,0.5464562461070013,17.42307692307692,True,
+RFII,"Rain Forest International, Inc.",Perú,Retail (Distributors),-0.08203450770638823,0.0001458280649205834,16.63461538461538,False,iliquidez; retornos extremos
+DLO,DLocal Limited,Uruguay,Financial Svcs. (Non-bank & Insurance),0.9261336588687337,0.1014362911841286,5.442307692307693,True,
+ARCO,Arcos Dorados Holdings Inc.,Uruguay,Restaurant/Dining,0.8221886859742514,0.2618309104537168,15.61538461538461,True,
+MELI,"MercadoLibre, Inc.",Uruguay,Retail (General),0.7911977612273017,0.1943532496987026,19.30769230769231,True,
