@@ -165,7 +165,7 @@ def indices_globales() -> pd.DataFrame:
     for indice, (url, col_t, col_n, col_s, a_yahoo) in INDICES_GLOBALES.items():
         try:
             t = _wiki(url, (col_t,), min_filas=18)
-        except (requests.RequestException, ValueError):
+        except Exception:  # noqa: BLE001 - un índice que falle no debe impedir actualizar los demás
             continue
         for tk, nom, sec in zip(_columna(t, col_t), _columna(t, col_n), _columna(t, col_s)):
             if pd.isna(tk):
