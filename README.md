@@ -12,6 +12,7 @@ de Colombia** y **estimar el costo de capital** (Ke y WACC) con supuestos trazab
 | **Costo de capital** | CAPM global + CRP, Fisher y WACC; cascada del Ke, ficha citable, sensibilidad, WACC por industria e historial de supuestos |
 | **Beta propio vs Damodaran** | Beta por industria estimado con acciones latinoamericanas de Yahoo Finance frente al de Damodaran, Ke con cada fuente, empresas detrás de cada industria y elección de la fuente que usarán Valoración y Proyectos |
 | **Comparador de acciones** | Cualquier ticker de Yahoo Finance: retorno por periodo, riesgo (volatilidad, caída máxima, VaR, beta, alfa), valoración (P/E, P/B, EV/EBITDA, dividendo), solidez (ROE, márgenes, D/E), ficha por acción y conexión con el beta de su industria |
+| **Universo de acciones** | El buscador incluye Colombia y Latinoamérica (585), S&P 500, Nasdaq-100 y todas las acciones y ETF de Nasdaq y NYSE (`python actualizar_universo.py`); también acepta cualquier símbolo de Yahoo Finance |
 | **Portafolio** | Pesos editables (igual ponderado, mínima varianza, máximo Sharpe), desempeño frente a un índice, aporte al riesgo, correlaciones, VaR y frontera eficiente sin ventas en corto |
 | **Evaluación de proyectos** | Flujo de caja del proyecto y del inversionista, deuda, capital de trabajo, pérdidas fiscales; VPN, TIR, TIRM, APV; tornado, escenarios macro y Monte Carlo |
 | **Valoración de empresas** | Estados financieros editables o desde Excel, diagnóstico (ROIC, EVA), DCF del FCFF con valor terminal consistente, puente de valor, sensibilidad WACC × g y contraste con múltiplos |
@@ -63,6 +64,14 @@ público en *Settings → Secrets* de Streamlit Community Cloud:
 publico = true
 admin_clave = "una-clave-larga"   # opcional: habilita un campo «Administración» en la barra lateral
 ```
+
+### Claves opcionales (Secrets)
+
+- `FRED_API_KEY`: clave gratuita de https://fredaccount.stlouisfed.org. FRED rechaza o demora las conexiones desde servidores
+  compartidos (GitHub Actions, Streamlit Cloud); con la clave la descarga del Tesoro, el breakeven y el CPI de EE. UU. es estable.
+  Agrégala en *Settings → Secrets and variables → Actions* de GitHub (para la actualización diaria).
+- `SOCRATA_APP_TOKEN`: token gratuito de datos.gov.co. Sin él, las consultas a la Supersociedades pueden ser limitadas por uso
+  compartido. Agrégalo en los Secrets de Streamlit Cloud.
 
 En modo público se ocultan «Actualizar datos ahora» y la importación del cuaderno; las demás páginas
 funcionan igual. En uso local (sin estas variables) todo sigue disponible. Los datos se siguen actualizando

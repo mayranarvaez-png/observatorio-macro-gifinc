@@ -4,6 +4,7 @@ import streamlit as st
 
 from nucleo import costo_capital as cc
 from nucleo import mercado, tema, ui
+from nucleo.catalogo import POR_ID
 
 tema.encabezado("Coyuntura macro-financiera de Colombia",
                 "Los indicadores que mueven el costo de capital y las decisiones de inversión, con su variación frente a hace "
@@ -22,10 +23,28 @@ TARJETAS = [
     ("trm", "TRM (COP/USD)", 0, "off"),
     ("colcap", "COLCAP", 0, "normal"),
 ]
+@st.dialog("Gráfico del indicador", width="large")
+def abrir_grafico(id_serie: str, etiqueta: str) -> None:
+    """Ventana con el gráfico completo de una tarjeta, su ficha técnica y la descarga de los datos."""
+    s = POR_ID[id_serie]
+    st.markdown(f"### {etiqueta}")
+    rango = st.segmented_control("Periodo", list(ui.RANGOS), default="5 años", key=f"rango_dlg_{id_serie}")
+    df = ui.recortar(ui.serie(id_serie), ui.RANGOS[rango or "5 años"])
+    if df.empty:
+        st.info("Sin datos para este indicador. Usa **Actualizar datos ahora**.")
+        return
+    ui.mostrar(ui.lineas({etiqueta: df}, s.unidad, altura=380))
+    ui.boton_descarga(df.rename(columns={"valor": etiqueta}), f"{id_serie}.csv", "Descargar datos (CSV)", clave=f"dl_dlg_{id_serie}")
+    with st.expander("Ficha técnica", icon=":material/info:"):
+        ui.ficha(s)
+
+
 with st.container(horizontal=True, gap="small"):
     for id_serie, etiqueta, dec, color in TARJETAS:
         with st.container(width=230):
             ui.tarjeta(id_serie, etiqueta, decimales=dec, color_delta=color)
+            if st.button("Ver gráfico", key=f"ver_{id_serie}", icon=":material/open_in_full:", type="tertiary", width="stretch"):
+                abrir_grafico(id_serie, etiqueta)
 
 # --- Lectura de coyuntura -----------------------------------------------------------
 st.subheader("Lectura rápida")

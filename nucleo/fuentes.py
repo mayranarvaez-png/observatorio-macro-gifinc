@@ -81,27 +81,70 @@ def datos_gov(recurso: str) -> pd.DataFrame:
 
 
 # --- FRED (St. Louis Fed) ----------------------------------------------------
-def fred(serie: str) -> pd.DataFrame:
-    """Usa la API oficial si hay FRED_API_KEY (gratuita en fredaccount.stlouisfed.org);
-    si no, la descarga pública en CSV (que no acepta User-Agents personalizados)."""
+def _yahoo_diario(simbolo: str) -> pd.DataFrame:
+    """Serie diaria de cierre desde Yahoo Finance (respaldo cuando FRED no responde)."""
+    import time
+    fin = int(time.time())
+    ini = int(pd.Timestamp(INICIO).timestamp())
+    r = requests.get(f"https://query1.finance.yahoo.com/v8/finance/chart/{simbolo}",
+                     params={"period1": ini, "period2": fin, "interval": "1d"},
+                     headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}, timeout=(10, 40))
+    r.raise_for_status()
+    res = r.json()["chart"]["result"][0]
+    df = pd.DataFrame({"fecha": pd.to_datetime(res["timestamp"], unit="s").normalize(),
+                       "valor": res["indicators"]["quote"][0]["close"]})
+    return _normalizar(df)
+
+
+# Respaldo por serie de FRED: (símbolo de Yahoo, factor). ^TNX está en % (4,96 = 4,96 %).
+_RESPALDO_FRED = {"DGS10": ("^TNX", 1.0)}
+
+
+def _fred_directo(serie: str) -> pd.DataFrame:
     clave = os.environ.get("FRED_API_KEY")
     if clave:
         r = _SESION.get("https://api.stlouisfed.org/fred/series/observations",
                         params={"series_id": serie, "api_key": clave, "file_type": "json",
-                                "observation_start": INICIO}, timeout=TIEMPO_ESPERA)
+                                "observation_start": INICIO}, timeout=(10, 40))
         r.raise_for_status()
         df = pd.DataFrame(r.json()["observations"])[["date", "value"]]
     else:
         r = requests.get("https://fred.stlouisfed.org/graph/fredgraph.csv",
                          params={"id": serie, "cosd": INICIO},
                          headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)", "Accept": "*/*"},
-                         timeout=TIEMPO_ESPERA)
+                         timeout=(10, 40))
         r.raise_for_status()
         df = pd.read_csv(io.StringIO(r.text))
     df.columns = ["fecha", "valor"]
     df["fecha"] = pd.to_datetime(df["fecha"])
     df["valor"] = pd.to_numeric(df["valor"], errors="coerce")
     return _normalizar(df)
+
+
+def fred(serie: str) -> pd.DataFrame:
+    """Usa la API oficial si hay FRED_API_KEY (gratuita en fredaccount.stlouisfed.org); si no, la descarga pública en CSV.
+
+    FRED suele tardar o rechazar las conexiones desde servidores compartidos (GitHub Actions, Streamlit Cloud): por eso se
+    reintenta con tiempos cortos y, para el Tesoro a 10 años, se usa Yahoo Finance como respaldo. Para el breakeven y el
+    CPI de EE. UU. la solución estable es definir FRED_API_KEY.
+    """
+    import time
+    ultimo_error: Exception | None = None
+    for intento in range(3):
+        try:
+            return _fred_directo(serie)
+        except requests.RequestException as e:
+            ultimo_error = e
+            time.sleep(2 * (intento + 1))
+    if serie in _RESPALDO_FRED:
+        simbolo, factor = _RESPALDO_FRED[serie]
+        try:
+            df = _yahoo_diario(simbolo)
+            df["valor"] = df["valor"] * factor
+            return df
+        except (requests.RequestException, KeyError, IndexError, ValueError):
+            pass
+    raise ultimo_error
 
 
 # --- OCDE (SDMX) -------------------------------------------------------------

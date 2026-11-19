@@ -9,7 +9,7 @@ from dataclasses import dataclass
 import pandas as pd
 import streamlit as st
 
-from . import almacen, mercado, portafolio as pf, ui, yahoo
+from . import almacen, mercado, portafolio as pf, ui, universo, yahoo
 
 REFERENCIAS = {
     "COLCAP (ETF ICOLCAP)": "ICOLCAP.CL",
@@ -25,6 +25,8 @@ REFERENCIAS = {
 MONEDAS = {"COP": "Pesos colombianos (COP)", "USD": "Dólares (USD)",
            "LOCAL": "Moneda local de cada acción (no comparable entre países)"}
 DEFECTO = ["ECOPETROL.CL", "ISA.CL", "GRUPOSURA.CL", "NUTRESA.CL", "CEMARGOS.CL"]
+LISTAS = ["Colombia y Latinoamérica", "S&P 500", "Nasdaq-100", "Todas las acciones de Nasdaq y NYSE", "ETF"]
+MAX_ACCIONES = 30
 
 
 @dataclass
@@ -45,12 +47,33 @@ def _limpiar(t: str) -> str:
     return str(t).strip().upper()
 
 
-def etiquetas() -> dict[str, str]:
-    """ticker → «ticker · empresa (país)» para las acciones del cuaderno de betas."""
+@st.cache_data(show_spinner=False)
+def _catalogo() -> dict[str, dict[str, str]]:
+    """Etiquetas por lista: {lista: {ticker: «ticker · empresa (detalle)»}}."""
+    out: dict[str, dict[str, str]] = {l: {} for l in LISTAS}
     emp = almacen.leer_empresas_propias()
-    if emp is None:
-        return {}
-    return {r.ticker: f"{r.ticker} · {r.empresa} ({r.pais_es})" for r in emp.itertuples()}
+    if emp is not None:
+        out["Colombia y Latinoamérica"] = {r.ticker: f"{r.ticker} · {r.empresa} ({r.pais_es})" for r in emp.itertuples()}
+    us = universo.leer()
+    if us is not None:
+        us = us.fillna({"sector": "", "bolsa": ""})
+        for r in us.itertuples():
+            et = f"{r.ticker} · {r.nombre} ({r.sector or r.bolsa})"
+            if r.sp500:
+                out["S&P 500"][r.ticker] = et
+            if r.nasdaq100:
+                out["Nasdaq-100"][r.ticker] = et
+            if r.tipo == "ETF":
+                out["ETF"][r.ticker] = et
+            else:
+                out["Todas las acciones de Nasdaq y NYSE"][r.ticker] = et
+    return out
+
+
+def etiquetas(listas: list[str] | None = None) -> dict[str, str]:
+    """ticker → texto para el buscador, uniendo las listas elegidas."""
+    cat = _catalogo()
+    return {t: e for l in (listas or LISTAS) for t, e in cat.get(l, {}).items()}
 
 
 def rf_por_defecto(base: str) -> float:
@@ -61,14 +84,21 @@ def rf_por_defecto(base: str) -> float:
 
 
 def selector(clave: str, min_tickers: int = 1) -> Seleccion | None:
-    etq = etiquetas()
+    cat = _catalogo()
+    listas = st.pills("Buscar en", LISTAS, selection_mode="multi", default=_mem("listas", ["Colombia y Latinoamérica", "S&P 500", "Nasdaq-100"]),
+                      key=f"{clave}_listas",
+                      help="Elige de dónde salen las sugerencias del buscador. Las acciones ya elegidas se conservan al cambiar de lista.") or []
+    st.session_state["_mem_acc_listas"] = listas
+    etq = etiquetas(listas)
+    etq_todas = etiquetas()
     c1, c2 = st.columns([3, 1])
     elegidos = c1.multiselect(
         "Acciones (símbolos de Yahoo Finance)", options=list(dict.fromkeys(list(etq) + _mem("tickers", DEFECTO))),
         default=_mem("tickers", DEFECTO), accept_new_options=True, key=f"{clave}_tickers",
-        format_func=lambda t: etq.get(t, t), max_selections=15,
-        help="Busca por nombre o ticker entre las 585 acciones del cuaderno, o escribe cualquier símbolo de Yahoo "
-             "(p. ej. AAPL, MSFT, PETR4.SA, WALMEX.MX, SQM-B.SN). Las colombianas terminan en .CL.")
+        format_func=lambda t: etq_todas.get(t, t), max_selections=MAX_ACCIONES,
+        help=f"Busca por nombre o ticker (hasta {MAX_ACCIONES} acciones), o escribe cualquier símbolo de Yahoo Finance "
+             "(p. ej. META, AMZN, PETR4.SA, WALMEX.MX, SQM-B.SN, ASML). Las colombianas terminan en .CL. "
+             f"Hay {sum(len(v) for k, v in cat.items() if k != 'ETF'):,} sugerencias disponibles.".replace(",", "."))
     tickers = list(dict.fromkeys(_limpiar(t) for t in elegidos))
     anios = c2.selectbox("Historial", [3, 5, 10], index=[3, 5, 10].index(_mem("anios", 5)),
                          format_func=lambda a: f"{a} años", key=f"{clave}_anios")

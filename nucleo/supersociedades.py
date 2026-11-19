@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import os
 import re
+import time
 
 import pandas as pd
 import requests
@@ -33,9 +34,20 @@ def _get(dataset: str, params: dict) -> list[dict]:
     token = os.environ.get("SOCRATA_APP_TOKEN")
     if token:
         headers["X-App-Token"] = token
-    r = requests.get(BASE + DATASETS[dataset] + ".json", params=params, headers=headers, timeout=_TIMEOUT)
-    r.raise_for_status()
-    return r.json()
+    ultimo: Exception | None = None
+    for intento in range(4):
+        try:
+            r = requests.get(BASE + DATASETS[dataset] + ".json", params=params, headers=headers, timeout=(10, _TIMEOUT))
+            if r.status_code in (429, 502, 503, 504):      # límite de uso o servidor ocupado: se espera y se reintenta
+                time.sleep(3 * (intento + 1))
+                ultimo = requests.HTTPError(f"{r.status_code} de datos.gov.co")
+                continue
+            r.raise_for_status()
+            return r.json()
+        except (requests.ConnectionError, requests.Timeout) as e:
+            ultimo = e
+            time.sleep(3 * (intento + 1))
+    raise ultimo
 
 
 def norm(texto: str) -> str:
