@@ -1,127 +1,133 @@
 {
   "pib_var_anual": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:30",
+    "actualizado": "2026-11-19 12:51",
     "ultimo_dato": "2026-04-01",
     "observaciones": 82
   },
   "desempleo": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:30",
-    "ultimo_dato": "2026-08-01",
-    "observaciones": 236
+    "actualizado": "2026-11-19 12:51",
+    "ultimo_dato": "2026-09-01",
+    "observaciones": 237
   },
   "ipc_anual": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:30",
+    "actualizado": "2026-11-19 12:51",
     "ultimo_dato": "2026-09-01",
     "observaciones": 261
   },
   "ipc_nucleo": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:30",
+    "actualizado": "2026-11-19 12:51",
     "ultimo_dato": "2026-09-01",
     "observaciones": 261
   },
   "tpm": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:31",
-    "ultimo_dato": "2026-10-26",
-    "observaciones": 7968
+    "actualizado": "2026-11-19 12:51",
+    "ultimo_dato": "2026-11-19",
+    "observaciones": 7992
   },
   "ibr_on": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:31",
-    "ultimo_dato": "2026-10-23",
-    "observaciones": 4587
+    "actualizado": "2026-11-19 12:52",
+    "ultimo_dato": "2026-11-18",
+    "observaciones": 4603
   },
   "ibr_3m": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:31",
-    "ultimo_dato": "2026-10-23",
-    "observaciones": 3468
+    "actualizado": "2026-11-19 12:52",
+    "ultimo_dato": "2026-11-18",
+    "observaciones": 3484
   },
   "tes_1": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:31",
-    "ultimo_dato": "2026-09-01",
-    "observaciones": 260
+    "actualizado": "2026-11-19 12:52",
+    "ultimo_dato": "2026-10-01",
+    "observaciones": 261
   },
   "tes_5": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:31",
-    "ultimo_dato": "2026-09-01",
-    "observaciones": 260
+    "actualizado": "2026-11-19 12:52",
+    "ultimo_dato": "2026-10-01",
+    "observaciones": 261
   },
   "tes_10": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:31",
-    "ultimo_dato": "2026-09-01",
-    "observaciones": 260
+    "actualizado": "2026-11-19 12:52",
+    "ultimo_dato": "2026-10-01",
+    "observaciones": 261
   },
   "colcap": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:31",
-    "ultimo_dato": "2026-09-01",
-    "observaciones": 225
+    "actualizado": "2026-11-19 12:52",
+    "ultimo_dato": "2026-10-01",
+    "observaciones": 226
   },
   "trm": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:32",
-    "ultimo_dato": "2026-10-24",
-    "observaciones": 5170
+    "actualizado": "2026-11-19 12:52",
+    "ultimo_dato": "2026-11-19",
+    "observaciones": 5185
   },
   "cuenta_corriente": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:32",
+    "actualizado": "2026-11-19 12:53",
     "ultimo_dato": "2025-01-01",
     "observaciones": 21
   },
   "ied": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:32",
+    "actualizado": "2026-11-19 12:53",
     "ultimo_dato": "2025-01-01",
     "observaciones": 21
   },
   "deuda_gobierno": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:32",
+    "actualizado": "2026-11-19 12:54",
     "ultimo_dato": "2024-01-01",
     "observaciones": 17
   },
   "balance_fiscal": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:32",
+    "actualizado": "2026-11-19 12:55",
     "ultimo_dato": "2024-01-01",
     "observaciones": 17
   },
   "ust_10": {
-    "estado": "ok",
+    "estado": "error",
     "actualizado": "2026-10-26 08:32",
     "ultimo_dato": "2026-10-22",
-    "observaciones": 5456
+    "observaciones": 5456,
+    "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=90)",
+    "intento": "2026-11-19 12:56"
   },
   "breakeven_10": {
-    "estado": "ok",
+    "estado": "error",
     "actualizado": "2026-10-26 08:32",
     "ultimo_dato": "2026-10-23",
-    "observaciones": 5457
+    "observaciones": 5457,
+    "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=90)",
+    "intento": "2026-11-19 12:58"
   },
   "ipc_usa": {
-    "estado": "ok",
+    "estado": "error",
     "actualizado": "2026-10-26 08:32",
     "ultimo_dato": "2026-09-01",
-    "observaciones": 248
+    "observaciones": 248,
+    "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=90)",
+    "intento": "2026-11-19 12:59"
   },
   "spread_tes_ust": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:32",
-    "ultimo_dato": "2026-09-01",
-    "observaciones": 260
+    "actualizado": "2026-11-19 12:59",
+    "ultimo_dato": "2026-10-01",
+    "observaciones": 261
   },
   "damodaran": {
     "estado": "ok",
-    "actualizado": "2026-10-26 08:32",
+    "actualizado": "2026-11-19 12:59",
     "ultimo_dato": "2026-01-01"
   }
 }
