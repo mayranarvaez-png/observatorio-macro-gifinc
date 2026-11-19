@@ -30,6 +30,9 @@ FIN_KEYS = ("Bank", "Insurance", "Reinsurance", "Brokerage", "Financial Svcs", "
 COLS_SECTOR = ["industria", "firmas", "paises", "beta_prom", "ic_lo", "ic_hi", "confianza"]
 COLS_ACCIONES = ["ticker", "empresa", "pais_es", "industria", "beta_vs_indice_pais", "r2",
                  "anios", "incluir", "motivo_exclusion"]
+# Columnas adicionales de la hoja «Acciones» que se guardan si existen (para los gráficos de la metodología).
+COLS_ACCIONES_EXTRA = ["pais", "moneda", "n_sem", "se", "beta_dimson", "beta_blume", "beta_ilf", "sem_sin_cambio",
+                       "n_recortes", "max_abs_ret"]
 COLS_DAMODARAN = ["industria", "n_empresas", "beta_apalancada", "de", "caja_valor_firma",
                   "beta_desapalancada", "beta_desapalancada_caja"]
 COLS_BETA = ["beta_apalancada", "beta_desapalancada", "beta_desapalancada_caja"]
@@ -108,7 +111,7 @@ def importar(contenido: bytes, dam_em: pd.DataFrame, fecha_corrida: str) -> dict
     _exigir(acciones, COLS_ACCIONES, "Acciones")
     propio = construir_propio(sectores, dam_em, acciones)
     perdidos = sorted(set(sectores["industria"]) - set(propio["industria"]))
-    empresas = acciones[COLS_ACCIONES].copy()
+    empresas = acciones[COLS_ACCIONES + [c for c in COLS_ACCIONES_EXTRA if c in acciones.columns]].copy()
     empresas["incluir"] = empresas["incluir"].astype(bool)
     dam_bu = dam_em.set_index("industria")["beta_desapalancada_caja"]
     tau = estimar_tau(propio, dam_bu)
@@ -123,7 +126,12 @@ def importar(contenido: bytes, dam_em: pd.DataFrame, fecha_corrida: str) -> dict
         "tau": float(tau),
         "sectores_sin_equivalente_en_damodaran": perdidos,
     }
-    return {"propio": propio, "empresas": empresas, "meta": meta}
+    extras = {}
+    if "Estabilidad" in libro:
+        extras["estabilidad"] = libro["Estabilidad"]
+    if "Beta por pais" in libro:
+        extras["beta_por_pais"] = libro["Beta por pais"]
+    return {"propio": propio, "empresas": empresas, "meta": meta, "extras": extras}
 
 
 # =============================== Combinación ========================================

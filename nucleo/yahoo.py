@@ -115,13 +115,33 @@ def precios_varios(tickers: list[str], anios: int = 10) -> dict[str, tuple[pd.Da
 
 
 # =============================== Tipo de cambio =====================================
+def limpiar_fx(fx: pd.Series, umbral: float = 0.3, reversion: float = 0.1) -> pd.Series:
+    """Quita saltos falsos de una semana en un tipo de cambio.
+
+    Yahoo tiene semanas con el tipo de cambio errado por un factor de 100 (p. ej., COP=X en dic-2014, feb-2015 y dic-2015).
+    Se marca como error una semana cuyo cambio supera `umbral` (log) y se revierte casi por completo la semana siguiente;
+    ese dato se reemplaza por el anterior. Las devaluaciones reales (que no se revierten) se conservan.
+    """
+    fx = fx.dropna().astype(float)
+    fx = fx[fx > 0]
+    d = np.log(fx).diff()
+    malos = (d.abs() > umbral) & ((d + d.shift(-1)).abs() < reversion)
+    return fx.mask(malos).ffill()
+
+
 @st.cache_data(ttl=6 * 3600, show_spinner=False)
 def fx_por_usd(moneda: str, anios: int = 10) -> pd.Series | None:
-    """Unidades de `moneda` por 1 USD, semanal. USD → serie de unos (se arma con el índice de otra serie)."""
+    """Unidades de `moneda` por 1 USD, semanal. Para COP se usa la TRM oficial (Superfinanciera) si está descargada."""
     if moneda == "USD":
         return None
+    if moneda == "COP":
+        from . import almacen
+        trm = almacen.leer_serie("trm")
+        if trm is not None and not trm.empty:
+            s = trm.set_index("fecha")["valor"].resample("W-FRI").last().dropna()
+            return limpiar_fx(s)
     r = precios(f"{moneda}=X", anios)
-    return None if r is None else r[0]["cierre"].dropna()
+    return None if r is None else limpiar_fx(r[0]["cierre"])
 
 
 def convertir(px: pd.Series, moneda: str, destino: str, anios: int = 10) -> pd.Series | None:

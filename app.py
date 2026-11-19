@@ -20,25 +20,27 @@ tema.aplicar()
 st.logo(str(ASSETS / "logo_gifinc.png"), icon_image=str(ASSETS / "icono_gifinc.png"), size="large")
 
 paginas = st.navigation({
-    "Monitoreo": [
+    "Indicadores": [
         st.Page("paginas/inicio.py", title="Coyuntura", icon=":material/dashboard:", default=True),
         st.Page("paginas/indicadores.py", title="Indicadores", icon=":material/show_chart:"),
+        st.Page("paginas/metodologia.py", title="Fuentes y metodología", icon=":material/menu_book:"),
     ],
-    "Análisis financiero": [
+    "Costo de capital": [
         st.Page("paginas/guia_costo_capital.py", title="¿Qué es el costo de capital?", icon=":material/school:"),
-        st.Page("paginas/costo_capital.py", title="Costo de capital", icon=":material/calculate:"),
+        st.Page("paginas/metodologia_damodaran.py", title="Metodología de Damodaran", icon=":material/account_balance:"),
+        st.Page("paginas/metodologia_propia.py", title="Metodología propia: beta latinoamericano", icon=":material/science:"),
         st.Page("paginas/beta_latam.py", title="Beta propio vs Damodaran", icon=":material/compare_arrows:"),
-        st.Page("paginas/evaluacion_proyectos.py", title="Evaluación de proyectos", icon=":material/account_tree:"),
-        st.Page("paginas/valoracion_empresas.py", title="Valoración de empresas", icon=":material/domain:"),
+        st.Page("paginas/costo_capital.py", title="Calculadora de Ke y WACC", icon=":material/calculate:"),
     ],
-    "Inversión": [
+    "Valoración": [
+        st.Page("paginas/valoracion_empresas.py", title="Valoración de empresas", icon=":material/domain:"),
+        st.Page("paginas/evaluacion_proyectos.py", title="Evaluación de proyectos", icon=":material/account_tree:"),
+    ],
+    "Portafolios de inversión": [
         st.Page("paginas/acciones.py", title="Comparador de acciones", icon=":material/query_stats:"),
         st.Page("paginas/portafolio.py", title="Portafolio", icon=":material/pie_chart:"),
     ],
-    "Referencia": [
-        st.Page("paginas/metodologia.py", title="Metodología y fuentes", icon=":material/menu_book:"),
-    ],
-})
+}, position="top")
 
 with st.sidebar:
     st.markdown("### Observatorio Macro-Financiero")

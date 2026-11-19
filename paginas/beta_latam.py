@@ -56,7 +56,7 @@ if acceso.es_admin():
             except (ValueError, KeyError, zipfile.BadZipFile) as e:
                 st.error(f"No se pudo importar el archivo: {e}")
             else:
-                almacen.guardar_betas_propios(res["propio"], res["empresas"], res["meta"])
+                almacen.guardar_betas_propios(res["propio"], res["empresas"], res["meta"], res.get("extras"))
                 st.session_state.pop("_mem_tau", None)
                 st.rerun()
 

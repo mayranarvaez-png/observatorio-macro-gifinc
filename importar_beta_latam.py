@@ -21,7 +21,7 @@ def importar_archivo(ruta: Path, fecha: str | None = None) -> dict:
     if dam is None:
         raise SystemExit("Faltan los betas de Damodaran. Ejecuta primero: python actualizar_datos.py")
     resultado = beta_propio.importar(Path(ruta).read_bytes(), dam, fecha or date.today().isoformat())
-    almacen.guardar_betas_propios(resultado["propio"], resultado["empresas"], resultado["meta"])
+    almacen.guardar_betas_propios(resultado["propio"], resultado["empresas"], resultado["meta"], resultado.get("extras"))
     return resultado["meta"]
 
 

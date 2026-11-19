@@ -150,3 +150,12 @@ def test_catalogo_une_fuentes_sin_duplicados():
     assert fila.loc["ASML.AS", "pais"] == "Países Bajos"
     if u.RUTA_COLOMBIA.exists():                       # EC llega primero desde la lista colombiana
         assert fila.loc["EC", "pais"] == "Colombia"
+
+
+def test_limpiar_fx_quita_saltos_falsos_y_conserva_devaluaciones():
+    idx = pd.date_range("2015-01-02", periods=8, freq="W-FRI")
+    fx = pd.Series([2400, 2410, 24.1, 2420, 2430, 3100, 3120, 3130], index=idx, dtype=float)   # error ×100 y devaluación real
+    limpio = yahoo.limpiar_fx(fx)
+    assert limpio.iloc[2] == 2410                       # la semana errada toma el dato anterior
+    assert limpio.iloc[5] == 3100                       # el salto real (que no se revierte) se conserva
+    assert limpio.iloc[3] == 2420                       # la semana siguiente queda intacta

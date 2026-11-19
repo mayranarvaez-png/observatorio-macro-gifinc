@@ -111,8 +111,11 @@ def leer_betas(universo: str, tau: float | None = None) -> pd.DataFrame | None:
 
 
 # --- Beta propio de Latinoamérica (cuaderno de Yahoo Finance) -------------------------
-def guardar_betas_propios(propio: pd.DataFrame, empresas: pd.DataFrame, meta: dict) -> None:
+def guardar_betas_propios(propio: pd.DataFrame, empresas: pd.DataFrame, meta: dict,
+                           extras: dict[str, pd.DataFrame] | None = None) -> None:
     DIR_LATAM.mkdir(parents=True, exist_ok=True)
+    for nombre, df in (extras or {}).items():
+        df.to_csv(DIR_LATAM / f"{nombre}_latam.csv", index=False)
     propio.to_csv(DIR_LATAM / "betas_latam_propio.csv", index=False)
     empresas.to_csv(DIR_LATAM / "empresas_latam.csv", index=False)
     (DIR_LATAM / "metadatos.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2),
@@ -126,6 +129,12 @@ def leer_betas_propios() -> pd.DataFrame | None:
 
 def leer_empresas_propias() -> pd.DataFrame | None:
     ruta = DIR_LATAM / "empresas_latam.csv"
+    return pd.read_csv(ruta) if ruta.exists() else None
+
+
+def leer_extra_propio(nombre: str) -> pd.DataFrame | None:
+    """Tablas adicionales del cuaderno: 'estabilidad' o 'beta_por_pais'."""
+    ruta = DIR_LATAM / f"{nombre}_latam.csv"
     return pd.read_csv(ruta) if ruta.exists() else None
 
 
