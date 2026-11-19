@@ -40,7 +40,7 @@ paginas = st.navigation({
         st.Page("paginas/acciones.py", title="Comparador de acciones", icon=":material/query_stats:"),
         st.Page("paginas/portafolio.py", title="Portafolio", icon=":material/pie_chart:"),
     ],
-}, position="top")
+})
 
 with st.sidebar:
     st.markdown("### Observatorio Macro-Financiero")
