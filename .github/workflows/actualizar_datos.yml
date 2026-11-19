@@ -31,4 +31,6 @@ jobs:
           git config user.email "observatorio-bot@users.noreply.github.com"
           git add datos/
           git diff --cached --quiet || git commit -m "Actualización automática de datos $(date +%F)"
-          git push
+          # Si alguien subió cambios mientras corría la descarga, se integran antes de subir los datos.
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
