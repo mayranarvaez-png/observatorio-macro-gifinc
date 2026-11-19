@@ -25,6 +25,7 @@ paginas = st.navigation({
         st.Page("paginas/indicadores.py", title="Indicadores", icon=":material/show_chart:"),
     ],
     "Análisis financiero": [
+        st.Page("paginas/guia_costo_capital.py", title="¿Qué es el costo de capital?", icon=":material/school:"),
         st.Page("paginas/costo_capital.py", title="Costo de capital", icon=":material/calculate:"),
         st.Page("paginas/beta_latam.py", title="Beta propio vs Damodaran", icon=":material/compare_arrows:"),
         st.Page("paginas/evaluacion_proyectos.py", title="Evaluación de proyectos", icon=":material/account_tree:"),
