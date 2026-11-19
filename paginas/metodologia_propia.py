@@ -205,7 +205,19 @@ with t4:
         "Las acciones ilíquidas tienen betas artificialmente bajos (su precio no reacciona a tiempo), así que excluirlas es correcto. "
         "Las excluidas por retornos extremos tienen un beta parecido al de las incluidas: en el conjunto de la región, el filtro no sesga el resultado.",
     ], titulo="¿Los filtros sesgan el beta?", tono="neutro")
-    tema.lectura([
+    fx_ok = co_inc >= 10          # con el tipo de cambio corregido entran la mayoría de las colombianas
+    if fx_ok:
+        motivos_co = co.loc[~co["incluir"], "motivo_exclusion"].fillna("otro").str.split(";").explode().str.strip().value_counts()
+        tema.lectura([
+            f"De las **{len(co)} acciones colombianas de la BVC**, **{co_inc}** pasan los filtros. Las demás se excluyen por "
+            + ", ".join(f"{m} ({n})" for m, n in motivos_co.items()) + ".",
+            "Esta corrida ya usa el **tipo de cambio corregido**: TRM oficial para el peso colombiano y limpieza de los saltos falsos de Yahoo "
+            "(la serie `COP=X` tiene tres semanas erradas por un factor de 100 en 2014-2015).",
+            f"Beta mediano de las colombianas incluidas: **{ui.num(co.loc[co['incluir'], 'beta_vs_indice_pais'].median())}**, "
+            "contra el ETF ICOLCAP en dólares.",
+        ], titulo="Colombia en la muestra", tono="ok")
+    else:
+        tema.lectura([
         f"De las **{len(co)} acciones colombianas de la BVC**, solo **{co_inc}** {'pasa' if co_inc == 1 else 'pasan'} los filtros, "
         "casi todas por «retornos extremos».",
         "**La causa es un error de datos de Yahoo Finance**, no las crisis: la serie del dólar en pesos (`COP=X`) tiene tres semanas "
@@ -215,7 +227,7 @@ with t4:
         "las acciones colombianas con historia en esos años y distorsiona su beta y el del ETF ICOLCAP usado como mercado.",
         "**Consecuencia: en esta corrida, Colombia casi no aporta acciones al beta latinoamericano.** Hay que volver a correr el cuaderno "
         "con el tipo de cambio corregido (TRM oficial o limpieza de esos saltos). El tablero ya usa la TRM oficial en sus propias conversiones.",
-    ], titulo="Advertencia: error en el tipo de cambio de Yahoo", tono="riesgo")
+        ], titulo="Advertencia: error en el tipo de cambio de Yahoo", tono="riesgo")
     with st.expander("Ver las acciones colombianas y su motivo de exclusión", icon=":material/flag:"):
         t = co[["ticker", "empresa", "industria", "beta_vs_indice_pais", "incluir", "motivo_exclusion"]].copy()
         t["incluir"] = np.where(t["incluir"], "Sí", "No")
@@ -277,7 +289,9 @@ with t6:
         f"En **{len(fuera)} de {len(fuerte)}** sectores Damodaran queda fuera del intervalo de confianza del beta propio: ahí la región "
         f"sí parece tener un riesgo distinto. La mayor diferencia está en **{mayor['industria']}** "
         f"(propio {ui.num(mayor['beta_desapalancada_caja'])} vs Damodaran {ui.num(mayor['bu_dam'])}).",
-        "Antes de sacar conclusiones, hay que repetir la corrida con el tipo de cambio corregido: hoy Colombia casi no aporta acciones (pestaña ④).",
+        ("La corrida usa el tipo de cambio corregido (TRM oficial), de modo que Colombia sí aporta sus acciones líquidas (pestaña ④)."
+         if co_inc >= 10 else
+         "Antes de sacar conclusiones, hay que repetir la corrida con el tipo de cambio corregido: hoy Colombia casi no aporta acciones (pestaña ④)."),
     ], titulo="Lectura de los resultados", tono="neutro")
 
     c1, c2 = st.columns(2, gap="large")
@@ -347,8 +361,7 @@ with t6:
 # =============================== ⑦ LÍMITES ==========================================
 with t7:
     st.markdown(f"""
-1. **Error en el tipo de cambio de Yahoo (pendiente de corregir en el cuaderno).** La serie `COP=X` tiene tres semanas erradas por un
-   factor de 100 (2014-2015). Por eso, de las acciones colombianas de la BVC solo {co_inc} de {len(co)} entran a esta corrida (pestaña ④).
+1. **Calidad del tipo de cambio.** Yahoo tiene semanas erradas por un factor de 100 (`COP=X` en 2014-2015). {"Esta corrida usa la TRM oficial y limpia esos saltos" if co_inc >= 10 else "Esta corrida todavía no lo corrige"}; de las acciones colombianas de la BVC entran {co_inc} de {len(co)} (pestaña ④).
 2. **Muestras pequeñas.** {int((prop['n_empresas'] < 5).sum())} de {len(prop)} sectores tienen menos de 5 firmas; ahí el beta propio es
    poco confiable y el combinado se acerca a Damodaran.
 3. **D/E y caja de Damodaran.** Se desapalanca con el promedio de la industria, no con el de cada empresa.
