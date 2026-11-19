@@ -124,3 +124,29 @@ def test_a_semanal_descarta_la_semana_en_curso():
     df = pd.DataFrame({"cierre": range(len(idx)), "ajustado": range(len(idx))}, index=idx)
     sem = yahoo.a_semanal(df)
     assert (sem.index <= hoy).all()
+
+
+def test_universo_simbolos_y_paises():
+    from nucleo import universo as u
+    assert u.simbolo_yahoo("brk.b") == "BRK-B"
+    assert u._hong_kong("SEHK:\xa05") == "0005.HK"
+    assert u.sufijo("ASML.AS") == ".AS" and u.sufijo("AAPL") == ""
+    assert u.PAIS_POR_SUFIJO[u.sufijo("SAN.MC")] == "España"
+
+
+def test_catalogo_une_fuentes_sin_duplicados():
+    from nucleo import universo as u
+    us = pd.DataFrame({"ticker": ["AAPL", "SPY", "EC"], "nombre": ["Apple", "SPDR S&P 500", "Ecopetrol ADR"],
+                       "bolsa": ["Nasdaq", "NYSE Arca", "NYSE"], "tipo": ["Acción", "ETF", "Acción"],
+                       "sp500": [True, False, False], "nasdaq100": [True, False, False], "sector": ["IT", None, None],
+                       "industria": [None, None, None]})
+    glob = pd.DataFrame({"ticker": ["ASML.AS"], "nombre": ["ASML"], "sector": ["Tech"], "listas": ["AEX"],
+                         "pais": ["Países Bajos"], "mercado": ["Euronext Ámsterdam"], "tipo": ["Acción"]})
+    cat = u.construir_catalogo(us, glob)
+    assert cat["ticker"].is_unique
+    fila = cat.set_index("ticker")
+    assert fila.loc["AAPL", "listas"] == "S&P 500|Nasdaq-100" and fila.loc["AAPL", "pais"] == "EE. UU."
+    assert fila.loc["SPY", "listas"] == "ETF de EE. UU."
+    assert fila.loc["ASML.AS", "pais"] == "Países Bajos"
+    if u.RUTA_COLOMBIA.exists():                       # EC llega primero desde la lista colombiana
+        assert fila.loc["EC", "pais"] == "Colombia"

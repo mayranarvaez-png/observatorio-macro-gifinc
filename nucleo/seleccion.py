@@ -1,6 +1,7 @@
 """Selección de acciones compartida por las páginas «Comparador de acciones» y «Portafolio».
 
-La elección (tickers, periodo, moneda y referencia) se recuerda al pasar de una página a otra.
+Incluye un explorador del catálogo (Colombia, Latinoamérica, EE. UU., Europa, Canadá y Hong Kong) con filtros por
+país, índice, sector y tipo. La elección (acciones, periodo, moneda y referencia) se recuerda entre páginas.
 """
 from __future__ import annotations
 
@@ -9,12 +10,15 @@ from dataclasses import dataclass
 import pandas as pd
 import streamlit as st
 
-from . import almacen, mercado, portafolio as pf, ui, universo, yahoo
+from . import portafolio as pf, ui, universo, yahoo
 
 REFERENCIAS = {
     "COLCAP (ETF ICOLCAP)": "ICOLCAP.CL",
     "S&P 500 (SPY)": "SPY",
+    "Nasdaq-100 (QQQ)": "QQQ",
+    "Mundo (ACWI)": "ACWI",
     "Mercados emergentes (EEM)": "EEM",
+    "Europa (Euro Stoxx 50, FEZ)": "FEZ",
     "Latinoamérica (ILF)": "ILF",
     "Brasil (EWZ)": "EWZ",
     "México (EWW)": "EWW",
@@ -25,8 +29,8 @@ REFERENCIAS = {
 MONEDAS = {"COP": "Pesos colombianos (COP)", "USD": "Dólares (USD)",
            "LOCAL": "Moneda local de cada acción (no comparable entre países)"}
 DEFECTO = ["ECOPETROL.CL", "ISA.CL", "GRUPOSURA.CL", "NUTRESA.CL", "CEMARGOS.CL"]
-LISTAS = ["Colombia y Latinoamérica", "S&P 500", "Nasdaq-100", "Todas las acciones de Nasdaq y NYSE", "ETF"]
 MAX_ACCIONES = 30
+MAX_FILAS = 2000
 
 
 @dataclass
@@ -48,32 +52,20 @@ def _limpiar(t: str) -> str:
 
 
 @st.cache_data(show_spinner=False)
-def _catalogo() -> dict[str, dict[str, str]]:
-    """Etiquetas por lista: {lista: {ticker: «ticker · empresa (detalle)»}}."""
-    out: dict[str, dict[str, str]] = {l: {} for l in LISTAS}
-    emp = almacen.leer_empresas_propias()
-    if emp is not None:
-        out["Colombia y Latinoamérica"] = {r.ticker: f"{r.ticker} · {r.empresa} ({r.pais_es})" for r in emp.itertuples()}
-    us = universo.leer()
-    if us is not None:
-        us = us.fillna({"sector": "", "bolsa": ""})
-        for r in us.itertuples():
-            et = f"{r.ticker} · {r.nombre} ({r.sector or r.bolsa})"
-            if r.sp500:
-                out["S&P 500"][r.ticker] = et
-            if r.nasdaq100:
-                out["Nasdaq-100"][r.ticker] = et
-            if r.tipo == "ETF":
-                out["ETF"][r.ticker] = et
-            else:
-                out["Todas las acciones de Nasdaq y NYSE"][r.ticker] = et
-    return out
+def catalogo() -> pd.DataFrame:
+    """Catálogo unificado. Si no se ha generado con `actualizar_universo.py`, se arma con lo que haya en disco."""
+    cat = universo.leer_catalogo()
+    if cat is None:
+        cat = universo.construir_catalogo(universo.leer(), None)
+    cat = cat.fillna({"sector": "—", "mercado": "—", "listas": "", "tipo": "Acción", "pais": "Otro"})
+    # Orden: primero las que pertenecen a un índice o a la BVC, luego el resto por nombre.
+    prioridad = cat["listas"].str.contains("S&P 500|Nasdaq-100|BVC|ADR|FTSE|DAX|CAC|Stoxx|IBEX|MIB|AEX|SMI|TSX|Hang", regex=True)
+    return cat.assign(_p=~prioridad).sort_values(["_p", "nombre"]).drop(columns="_p").reset_index(drop=True)
 
 
-def etiquetas(listas: list[str] | None = None) -> dict[str, str]:
-    """ticker → texto para el buscador, uniendo las listas elegidas."""
-    cat = _catalogo()
-    return {t: e for l in (listas or LISTAS) for t, e in cat.get(l, {}).items()}
+def etiquetas() -> dict[str, str]:
+    cat = catalogo()
+    return dict(zip(cat["ticker"], cat["ticker"] + " · " + cat["nombre"] + " (" + cat["pais"] + ")"))
 
 
 def rf_por_defecto(base: str) -> float:
@@ -83,22 +75,72 @@ def rf_por_defecto(base: str) -> float:
     return (v or 4.0) / 100
 
 
+def _agregar(clave: str, nuevos: list[str]) -> None:
+    llave = f"{clave}_tickers"
+    actuales = st.session_state.get(llave, _mem("tickers", DEFECTO))
+    juntos = list(dict.fromkeys(list(actuales) + nuevos))[:MAX_ACCIONES]
+    st.session_state[llave] = juntos
+    st.session_state["_mem_acc_tickers"] = juntos
+
+
+def explorador(clave: str) -> list[str]:
+    """Filtros y tabla del catálogo. Devuelve los tickers que cumplen los filtros (para el buscador)."""
+    cat = catalogo()
+    with st.expander("Explorar acciones por país, índice o sector", expanded=_mem("explorar_abierto", True),
+                     icon=":material/travel_explore:"):
+        conteo = cat["pais"].value_counts()
+        conteo = conteo.reindex(["Colombia"] + [p for p in conteo.index if p != "Colombia"]).dropna().astype(int)
+        f1, f2, f3, f4 = st.columns([2, 2, 2, 1])
+        paises = f1.multiselect("País", list(conteo.index), default=[p for p in _mem("paises", ["Colombia", "EE. UU."]) if p in conteo.index],
+                                format_func=lambda p: f"{p} ({conteo[p]:,})".replace(",", "."), key=f"{clave}_paises",
+                                help="Déjalo vacío para buscar en todos los países.")
+        st.session_state["_mem_acc_paises"] = paises
+        base = cat[cat["pais"].isin(paises)] if paises else cat
+        listas_disp = sorted({l for v in base["listas"] for l in str(v).split("|") if l})
+        listas = f2.multiselect("Índice o lista", listas_disp, key=f"{clave}_listas_f",
+                                help="Por ejemplo S&P 500, Nasdaq-100, Bolsa de Colombia (BVC), FTSE 100, DAX…")
+        if listas:
+            base = base[base["listas"].apply(lambda v: any(l in str(v).split("|") for l in listas))]
+        sectores = f3.multiselect("Sector", sorted(base["sector"].dropna().unique()), key=f"{clave}_sectores")
+        if sectores:
+            base = base[base["sector"].isin(sectores)]
+        tipo = f4.selectbox("Tipo", ["Acciones", "ETF", "Todos"], key=f"{clave}_tipo")
+        if tipo != "Todos":
+            base = base[base["tipo"] == ("ETF" if tipo == "ETF" else "Acción")]
+        texto = st.text_input("Buscar por nombre o ticker", key=f"{clave}_texto",
+                              placeholder="p. ej. Meta, Amazon, Cibest, Ecopetrol, ASML, Nestlé")
+        if texto.strip():
+            q = texto.strip().lower()
+            base = base[base["ticker"].str.lower().str.contains(q, regex=False) | base["nombre"].str.lower().str.contains(q, regex=False)]
+        vista = base.head(MAX_FILAS)
+        st.caption(f"{len(base):,} resultados".replace(",", ".")
+                   + (f" (se muestran los primeros {MAX_FILAS:,}; afina los filtros)".replace(",", ".") if len(base) > MAX_FILAS else "")
+                   + ". Marca las casillas de la izquierda y pulsa **Agregar**.")
+        evento = st.dataframe(
+            vista[["ticker", "nombre", "pais", "mercado", "sector", "listas", "tipo"]].rename(columns={
+                "ticker": "Ticker", "nombre": "Empresa", "pais": "País", "mercado": "Mercado", "sector": "Sector",
+                "listas": "Índice o lista", "tipo": "Tipo"}),
+            hide_index=True, width="stretch", height=300, on_select="rerun", selection_mode="multi-row", key=f"{clave}_tabla")
+        filas = list(getattr(getattr(evento, "selection", None), "rows", []) or [])
+        nuevos = vista.iloc[filas]["ticker"].tolist() if filas else []
+        st.button(f"Agregar {len(nuevos)} acción(es) seleccionada(s)" if nuevos else "Agregar las acciones seleccionadas",
+                  disabled=not nuevos, type="primary", icon=":material/add:", on_click=_agregar, args=(clave, nuevos),
+                  key=f"{clave}_agregar")
+    return base["ticker"].head(MAX_FILAS).tolist()
+
+
 def selector(clave: str, min_tickers: int = 1) -> Seleccion | None:
-    cat = _catalogo()
-    listas = st.pills("Buscar en", LISTAS, selection_mode="multi", default=_mem("listas", ["Colombia y Latinoamérica", "S&P 500", "Nasdaq-100"]),
-                      key=f"{clave}_listas",
-                      help="Elige de dónde salen las sugerencias del buscador. Las acciones ya elegidas se conservan al cambiar de lista.") or []
-    st.session_state["_mem_acc_listas"] = listas
-    etq = etiquetas(listas)
-    etq_todas = etiquetas()
+    filtrados = explorador(clave)
+    etq = etiquetas()
+    llave = f"{clave}_tickers"
+    if llave not in st.session_state:
+        st.session_state[llave] = list(_mem("tickers", DEFECTO))
     c1, c2 = st.columns([3, 1])
     elegidos = c1.multiselect(
-        "Acciones (símbolos de Yahoo Finance)", options=list(dict.fromkeys(list(etq) + _mem("tickers", DEFECTO))),
-        default=_mem("tickers", DEFECTO), accept_new_options=True, key=f"{clave}_tickers",
-        format_func=lambda t: etq_todas.get(t, t), max_selections=MAX_ACCIONES,
-        help=f"Busca por nombre o ticker (hasta {MAX_ACCIONES} acciones), o escribe cualquier símbolo de Yahoo Finance "
-             "(p. ej. META, AMZN, PETR4.SA, WALMEX.MX, SQM-B.SN, ASML). Las colombianas terminan en .CL. "
-             f"Hay {sum(len(v) for k, v in cat.items() if k != 'ETF'):,} sugerencias disponibles.".replace(",", "."))
+        f"Acciones elegidas (hasta {MAX_ACCIONES})", options=list(dict.fromkeys(list(st.session_state[llave]) + filtrados)),
+        accept_new_options=True, key=llave, format_func=lambda t: etq.get(t, t), max_selections=MAX_ACCIONES,
+        help="Quita una acción con la X. También puedes escribir directamente cualquier símbolo de Yahoo Finance "
+             "(p. ej. META, AMZN, PETR4.SA, ASML.AS, 7203.T) y pulsar Enter.")
     tickers = list(dict.fromkeys(_limpiar(t) for t in elegidos))
     anios = c2.selectbox("Historial", [3, 5, 10], index=[3, 5, 10].index(_mem("anios", 5)),
                          format_func=lambda a: f"{a} años", key=f"{clave}_anios")
@@ -107,8 +149,10 @@ def selector(clave: str, min_tickers: int = 1) -> Seleccion | None:
                         index=list(MONEDAS).index(_mem("base", "COP")), key=f"{clave}_base",
                         help="Todas las series se convierten con el tipo de cambio semanal de Yahoo. "
                              "El retorno en pesos incluye el efecto cambiario de las acciones extranjeras.")
+    ref_mem = _mem("ref", "COLCAP (ETF ICOLCAP)")
     nombre_ref = d2.selectbox("Índice de referencia", list(REFERENCIAS),
-                              index=list(REFERENCIAS).index(_mem("ref", "COLCAP (ETF ICOLCAP)")), key=f"{clave}_ref",
+                              index=list(REFERENCIAS).index(ref_mem if ref_mem in REFERENCIAS else "COLCAP (ETF ICOLCAP)"),
+                              key=f"{clave}_ref",
                               help="Se usa para el beta, la correlación y el alfa. ICOLCAP es el ETF que replica el COLCAP.")
     rf = d3.number_input("Tasa libre (%)", value=round(rf_por_defecto(base) * 100, 2), step=0.1,
                          key=f"{clave}_rf_{base}", help="TES 10A para COP; Tesoro 10A para USD o moneda local.") / 100

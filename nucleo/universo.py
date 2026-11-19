@@ -41,11 +41,11 @@ def _txt(url: str) -> pd.DataFrame:
     return pd.read_csv(io.StringIO("\n".join(lineas)), sep="|", dtype=str)
 
 
-def _wiki(url: str, columna_simbolo: tuple[str, ...]) -> pd.DataFrame:
+def _wiki(url: str, columna_simbolo: tuple[str, ...], min_filas: int = 50) -> pd.DataFrame:
     r = requests.get(url, headers=UA, timeout=(10, 60))
     r.raise_for_status()
     for t in pd.read_html(io.StringIO(r.text)):
-        if any(c in t.columns for c in columna_simbolo) and len(t) > 50:
+        if any(c in t.columns for c in columna_simbolo) and len(t) >= min_filas:
             return t
     raise ValueError(f"No se encontró la tabla de composición en {url}")
 
@@ -107,3 +107,145 @@ def guardar(df: pd.DataFrame) -> None:
 
 def leer() -> pd.DataFrame | None:
     return pd.read_csv(RUTA) if RUTA.exists() else None
+
+
+# =============================== Índices de otros países ============================
+def _sufijo_fijo(suf: str):
+    return lambda t: simbolo_yahoo(t) + suf
+
+
+def _hong_kong(t: str) -> str:
+    return f"{int(re.sub(r'[^0-9]', '', str(t))):04d}.HK"
+
+
+# índice → (url, columna del ticker, columna del nombre, columna del sector, conversión a símbolo de Yahoo)
+INDICES_GLOBALES = {
+    "FTSE 100": ("https://en.wikipedia.org/wiki/FTSE_100_Index", "Ticker", "Company", "FTSE industry", _sufijo_fijo(".L")),
+    "DAX": ("https://en.wikipedia.org/wiki/DAX", "Ticker", "Company", "Prime Standard Sector", str),
+    "CAC 40": ("https://en.wikipedia.org/wiki/CAC_40", "Ticker", "Company", "Sector", str),
+    "Euro Stoxx 50": ("https://en.wikipedia.org/wiki/EURO_STOXX_50", "Ticker", "Name", "Sector", str),
+    "IBEX 35": ("https://en.wikipedia.org/wiki/IBEX_35", "Ticker", "Company", "Sector", str),
+    "FTSE MIB": ("https://en.wikipedia.org/wiki/FTSE_MIB", "Ticker", "Company", "ICB Sector", str),
+    "AEX": ("https://en.wikipedia.org/wiki/AEX_index", "Ticker", "Company", "ICB Sector", str),
+    "SMI": ("https://en.wikipedia.org/wiki/Swiss_Market_Index", "Ticker", "Name", "Sector", _sufijo_fijo(".SW")),
+    "S&P/TSX 60": ("https://en.wikipedia.org/wiki/S%26P/TSX_60", "Symbol", "Company", "Sector", _sufijo_fijo(".TO")),
+    "Hang Seng": ("https://en.wikipedia.org/wiki/Hang_Seng_Index", "Ticker", "Name", "Sub-index", _hong_kong),
+}
+PAIS_POR_SUFIJO = {
+    ".CL": "Colombia", ".SA": "Brasil", ".MX": "México", ".SN": "Chile", ".BA": "Argentina", ".LM": "Perú",
+    ".L": "Reino Unido", ".DE": "Alemania", ".F": "Alemania", ".PA": "Francia", ".AS": "Países Bajos", ".MI": "Italia",
+    ".MC": "España", ".SW": "Suiza", ".BR": "Bélgica", ".HE": "Finlandia", ".IR": "Irlanda", ".I": "Irlanda",
+    ".LS": "Portugal", ".CO": "Dinamarca", ".ST": "Suecia", ".OL": "Noruega", ".VI": "Austria", ".TO": "Canadá",
+    ".HK": "Hong Kong", ".T": "Japón",
+}
+MERCADO_POR_SUFIJO = {
+    ".CL": "BVC", ".SA": "B3", ".MX": "BMV", ".SN": "Bolsa de Santiago", ".BA": "BYMA", ".LM": "BVL", ".L": "Londres",
+    ".DE": "Xetra", ".F": "Fráncfort", ".PA": "Euronext París", ".AS": "Euronext Ámsterdam", ".MI": "Borsa Italiana",
+    ".MC": "BME Madrid", ".SW": "SIX Suiza", ".BR": "Euronext Bruselas", ".HE": "Nasdaq Helsinki", ".IR": "Euronext Dublín",
+    ".I": "Euronext Dublín", ".LS": "Euronext Lisboa", ".CO": "Nasdaq Copenhague", ".ST": "Nasdaq Estocolmo",
+    ".OL": "Oslo Børs", ".VI": "Viena", ".TO": "Toronto", ".HK": "Hong Kong", ".T": "Tokio",
+}
+
+
+def sufijo(ticker: str) -> str:
+    m = re.search(r"\.[A-Z]{1,2}$", str(ticker))
+    return m.group(0) if m else ""
+
+
+def _columna(t: pd.DataFrame, nombre: str) -> pd.Series:
+    """Columna por prefijo (Wikipedia agrega notas como «[35]» a los encabezados)."""
+    for c in t.columns:
+        if str(c).startswith(nombre):
+            return t[c]
+    return pd.Series([None] * len(t), index=t.index)
+
+
+def indices_globales() -> pd.DataFrame:
+    filas = []
+    for indice, (url, col_t, col_n, col_s, a_yahoo) in INDICES_GLOBALES.items():
+        try:
+            t = _wiki(url, (col_t,), min_filas=18)
+        except (requests.RequestException, ValueError):
+            continue
+        for tk, nom, sec in zip(_columna(t, col_t), _columna(t, col_n), _columna(t, col_s)):
+            if pd.isna(tk):
+                continue
+            try:
+                y = a_yahoo(str(tk).replace("\xa0", " ").strip())
+            except ValueError:
+                continue
+            filas.append({"ticker": y, "nombre": nom, "sector": sec, "listas": indice})
+    df = pd.DataFrame(filas)
+    if df.empty:
+        return df
+    df = df.groupby("ticker", as_index=False).agg(nombre=("nombre", "first"), sector=("sector", "first"),
+                                                  listas=("listas", lambda s: "|".join(dict.fromkeys(s))))
+    df["pais"] = df["ticker"].map(lambda t: PAIS_POR_SUFIJO.get(sufijo(t), "Otro"))
+    df["mercado"] = df["ticker"].map(lambda t: MERCADO_POR_SUFIJO.get(sufijo(t), "—"))
+    df["tipo"] = "Acción"
+    return df
+
+
+def validar_en_yahoo(tickers: list[str]) -> set[str]:
+    """Devuelve los símbolos que Yahoo reconoce (consulta liviana del último mes)."""
+    import threading
+    from concurrent.futures import ThreadPoolExecutor
+
+    local = threading.local()           # una sesión por hilo: reutiliza la conexión (abrir una nueva es lento)
+
+    def ok(t):
+        if not hasattr(local, "s"):
+            local.s = requests.Session()
+            local.s.headers.update(UA)
+        try:
+            r = local.s.get(f"https://query1.finance.yahoo.com/v8/finance/chart/{t}",
+                            params={"range": "1mo", "interval": "1wk"}, timeout=(10, 20))
+            return t if r.status_code == 200 and r.json()["chart"]["result"] else None
+        except (requests.RequestException, ValueError, KeyError, TypeError):
+            return None
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        return {t for t in ex.map(ok, tickers) if t}
+
+
+# =============================== Catálogo unificado =================================
+RUTA_CATALOGO = almacen.RAIZ / "universo" / "catalogo.csv"
+RUTA_COLOMBIA = almacen.RAIZ / "universo" / "colombia.csv"
+COLUMNAS = ["ticker", "nombre", "pais", "mercado", "tipo", "sector", "listas"]
+
+
+def construir_catalogo(us: pd.DataFrame | None, globales: pd.DataFrame | None) -> pd.DataFrame:
+    """Une Colombia (BVC y ADR), Latinoamérica (cuaderno de betas), EE. UU. y los índices de otros países."""
+    partes = []
+    if RUTA_COLOMBIA.exists():
+        co = pd.read_csv(RUTA_COLOMBIA)
+        co["listas"] = co["ticker"].map(lambda t: "Bolsa de Colombia (BVC)" if t.endswith(".CL") else "ADR de empresas colombianas")
+        partes.append(co)
+    emp = almacen.leer_empresas_propias()
+    if emp is not None:
+        la = pd.DataFrame({"ticker": emp["ticker"], "nombre": emp["empresa"], "pais": emp["pais_es"],
+                           "sector": emp["industria"], "tipo": "Acción", "listas": "Latinoamérica (cuaderno de betas)"})
+        la["mercado"] = la["ticker"].map(lambda t: MERCADO_POR_SUFIJO.get(sufijo(t), "EE. UU. (ADR)"))
+        partes.append(la)
+    if us is not None and not us.empty:
+        u = us.copy()
+        u["pais"] = "EE. UU."
+        u["mercado"] = u["bolsa"]
+        u["listas"] = [("|".join(x for x, f in (("S&P 500", a), ("Nasdaq-100", b)) if f))
+                       or ("ETF de EE. UU." if t == "ETF" else "Nasdaq y NYSE")
+                       for a, b, t in zip(u["sp500"], u["nasdaq100"], u["tipo"])]
+        partes.append(u)
+    if globales is not None and not globales.empty:
+        partes.append(globales)
+    df = pd.concat([p.reindex(columns=COLUMNAS) for p in partes], ignore_index=True)
+    df = df.drop_duplicates("ticker", keep="first")
+    df["nombre"] = df["nombre"].fillna(df["ticker"]).astype(str).str.strip()
+    return df[COLUMNAS]
+
+
+def guardar_catalogo(df: pd.DataFrame) -> None:
+    RUTA_CATALOGO.parent.mkdir(parents=True, exist_ok=True)
+    df.to_csv(RUTA_CATALOGO, index=False)
+
+
+def leer_catalogo() -> pd.DataFrame | None:
+    return pd.read_csv(RUTA_CATALOGO) if RUTA_CATALOGO.exists() else None

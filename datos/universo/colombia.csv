@@ -1,0 +1,37 @@
+ticker,nombre,pais,mercado,tipo
+ECOPETROL.CL,Ecopetrol S.A.,Colombia,BVC,Acción
+GRUPOSURA.CL,Grupo de Inversiones Suramericana S.A.,Colombia,BVC,Acción
+PFGRUPSURA.CL,Grupo de Inversiones Suramericana S.A. (preferencial),Colombia,BVC,Acción
+ISA.CL,Interconexión Eléctrica S.A. E.S.P.,Colombia,BVC,Acción
+CEMARGOS.CL,Cementos Argos S.A.,Colombia,BVC,Acción
+PFCEMARGOS.CL,Cementos Argos S.A. (preferencial),Colombia,BVC,Acción
+GEB.CL,Grupo Energía Bogotá S.A. E.S.P.,Colombia,BVC,Acción
+NUTRESA.CL,Grupo Nutresa S. A.,Colombia,BVC,Acción
+CELSIA.CL,CELSIA S.A. E.S.P.,Colombia,BVC,Acción
+CNEC.CL,Canacol Energy Ltd,Colombia,BVC,Acción
+EXITO.CL,Almacenes Éxito S.A.,Colombia,BVC,Acción
+PFAVAL.CL,Grupo Aval Acciones y Valores S.A. (preferencial),Colombia,BVC,Acción
+GRUPOAVAL.CL,Grupo Aval Acciones y Valores S.A.,Colombia,BVC,Acción
+GRUPOARGOS.CL,Grupo Argos S.A.,Colombia,BVC,Acción
+PFGRUPOARG.CL,Grupo Argos S.A. (preferencial),Colombia,BVC,Acción
+CORFICOLCF.CL,Corporación Financiera Colombiana S.A.,Colombia,BVC,Acción
+PFCORFICOL.CL,Corporación Financiera Colombiana S.A. (preferencial),Colombia,BVC,Acción
+PFDAVVNDA.CL,Banco Davivienda S.A. (preferencial),Colombia,BVC,Acción
+BOGOTA.CL,Banco de Bogotá S.A.,Colombia,BVC,Acción
+MINEROS.CL,Mineros S.A.,Colombia,BVC,Acción
+PROMIGAS.CL,Promigas S.A. E.S.P.,Colombia,BVC,Acción
+ENKA.CL,Enka de Colombia S.A.,Colombia,BVC,Acción
+ETB.CL,Empresa de Telecomunicaciones de Bogotá S.A. E.S.P.,Colombia,BVC,Acción
+BHI.CL,BAC Holding International Corp.,Colombia,BVC,Acción
+CONCONCRET.CL,Constructora Conconcreto S.A.,Colombia,BVC,Acción
+BVC.CL,Bolsa de Valores de Colombia S.A.,Colombia,BVC,Acción
+ELCONDOR.CL,Construcciones El Condor S.A.,Colombia,BVC,Acción
+TERPEL.CL,Organización Terpel S.A.,Colombia,BVC,Acción
+FABRICATO.CL,Fabricato S.A.,Colombia,BVC,Acción
+GRUBOLIVAR.CL,Grupo Bolívar S.A.,Colombia,BVC,Acción
+ICOLCAP.CL,Fondo Bursátil iShares MSCI COLCAP,Colombia,BVC,ETF
+HCOLSEL.CL,Fondo Bursátil Horizons Colombia Select de S&P,Colombia,BVC,ETF
+EC,Ecopetrol S.A.,Colombia,NYSE (ADR),Acción
+CIB,Grupo Cibest S.A.,Colombia,NYSE (ADR),Acción
+PFCIBEST.CL,Grupo Cibest S.A. (preferencial),Colombia,BVC,Acción
+CIBEST.CL,Grupo Cibest S.A.,Colombia,BVC,Acción
