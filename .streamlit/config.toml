@@ -7,7 +7,7 @@ textColor = "#2B2B2E"
 
 # Letra más grande para lectura cómoda en clase y en proyector (por defecto: 16).
 baseFontSize = 18
-metricValueFontSize = "2.4rem"
+metricValueFontSize = "1.9rem"
 
 [theme.sidebar]
 backgroundColor = "#F3F3F5"

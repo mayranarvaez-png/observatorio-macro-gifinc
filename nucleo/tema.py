@@ -50,7 +50,14 @@ h2, h3 {{ border-left: 5px solid {ROJO}; padding-left: 12px !important; margin-t
   border-radius: 10px; padding: 12px 14px; box-shadow: 0 1px 4px rgba(0,0,0,.07);
 }}
 [data-testid="stMetricLabel"] p {{ color: {GRIS}; font-weight: 600; letter-spacing: .01em; }}
-[data-testid="stMetricValue"] {{ color: {TINTA}; font-weight: 750; }}
+[data-testid="stMetricValue"] {{ color: {TINTA}; font-weight: 750; font-size: clamp(1.3rem, 1.9vw, 1.95rem) !important;
+  line-height: 1.15; }}
+/* Nada se corta con «…»: etiquetas, valores y variaciones pasan a la línea siguiente si no caben. */
+[data-testid="stMetricValue"], [data-testid="stMetricValue"] *,
+[data-testid="stMetricLabel"], [data-testid="stMetricLabel"] *,
+[data-testid="stMetricDelta"], [data-testid="stMetricDelta"] * {{
+  white-space: normal !important; overflow: visible !important; text-overflow: clip !important; overflow-wrap: anywhere;
+}}
 
 /* Pestañas */
 button[data-baseweb="tab"] {{ font-weight: 600; }}
@@ -90,8 +97,10 @@ def _registrar_plantilla() -> None:
         font=dict(family=_FUENTE, color=TINTA),
         colorway=ui.PALETA,
         paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
-        xaxis=dict(gridcolor="#ECECEF", linecolor="#C9C9CF", zeroline=False, ticks="outside", tickcolor="#C9C9CF"),
-        yaxis=dict(gridcolor="#ECECEF", linecolor="#C9C9CF", zeroline=False),
+        xaxis=dict(gridcolor="#ECECEF", linecolor="#C9C9CF", zeroline=False, ticks="outside", tickcolor="#C9C9CF",
+                   automargin=True, title=dict(standoff=12), exponentformat="none", separatethousands=True),
+        yaxis=dict(gridcolor="#ECECEF", linecolor="#C9C9CF", zeroline=False, automargin=True, title=dict(standoff=12),
+                   exponentformat="none", separatethousands=True),
         hoverlabel=dict(bgcolor="white", bordercolor="#C9C9CF", font=dict(family=_FUENTE, size=13, color=TINTA)),
         legend=dict(bgcolor="rgba(0,0,0,0)", font=dict(size=13)),
         title=dict(font=dict(size=16, color=TINTA), x=0),

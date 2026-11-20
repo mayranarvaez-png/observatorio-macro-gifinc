@@ -135,11 +135,18 @@ def lineas(series: dict[str, pd.DataFrame], unidad: str, colores: list[str] | No
     return _estilo(fig, altura, unidad)
 
 
-TAMANO_LETRA_GRAFICOS = 15
+TAMANO_LETRA_GRAFICOS = 14
 
 
 def mostrar(fig: go.Figure) -> None:
-    fig.update_layout(font=dict(size=TAMANO_LETRA_GRAFICOS))
+    """Muestra un gráfico con márgenes que se ajustan a las etiquetas de los ejes (nunca se cortan)."""
+    m = fig.layout.margin
+    fig.update_layout(
+        font=dict(size=TAMANO_LETRA_GRAFICOS),
+        margin=dict(l=max(m.l or 0, 12), r=max(m.r or 0, 20), t=max(m.t or 0, 36), b=max(m.b or 0, 12)),
+    )
+    fig.update_xaxes(automargin=True, title_standoff=12, exponentformat="none", separatethousands=True)
+    fig.update_yaxes(automargin=True, title_standoff=12, exponentformat="none", separatethousands=True)
     st.plotly_chart(fig, width="stretch", theme=None,
                     config={"displaylogo": False, "locale": "es"})
 
