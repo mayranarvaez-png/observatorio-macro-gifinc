@@ -1,6 +1,7 @@
 """Componentes visuales compartidos por las páginas del tablero."""
 from __future__ import annotations
 
+import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
@@ -138,8 +139,33 @@ def lineas(series: dict[str, pd.DataFrame], unidad: str, colores: list[str] | No
 TAMANO_LETRA_GRAFICOS = 14
 
 
+def _ejes_enteros(fig: go.Figure) -> None:
+    """Ejes horizontales con años o periodos enteros: un tick por año (nunca 2024,5) y sin separador de miles (2024, no 2.024)."""
+    por_eje: dict[str, list] = {}
+    for tr in fig.data:
+        x = getattr(tr, "x", None)
+        if x is None or getattr(tr, "orientation", None) == "h" or tr.type in ("histogram", "heatmap", "pie", "funnel"):
+            continue
+        por_eje.setdefault(getattr(tr, "xaxis", None) or "x", []).extend(list(x))
+    for eje, valores in por_eje.items():
+        try:
+            arr = np.asarray(valores, dtype=float)
+        except (TypeError, ValueError):
+            continue                                   # fechas o categorías: Plotly ya las maneja bien
+        arr = arr[~np.isnan(arr)]
+        if len(arr) == 0 or not np.allclose(arr, np.round(arr)):
+            continue
+        es_anio = arr.min() >= 1900 and arr.max() <= 2200
+        if not es_anio and arr.max() - arr.min() > 60:
+            continue                                   # enteros grandes que no son periodos (p. ej., montos)
+        nombre = "xaxis" if eje == "x" else "xaxis" + eje[1:]
+        paso = 1 if arr.max() - arr.min() <= 25 else 5
+        fig.update_layout({nombre: dict(tickmode="linear", tick0=float(arr.min()), dtick=paso, tickformat="d")})
+
+
 def mostrar(fig: go.Figure) -> None:
     """Muestra un gráfico con márgenes que se ajustan a las etiquetas de los ejes (nunca se cortan)."""
+    _ejes_enteros(fig)
     m = fig.layout.margin
     fig.update_layout(
         font=dict(size=TAMANO_LETRA_GRAFICOS),
