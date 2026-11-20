@@ -159,3 +159,17 @@ def test_limpiar_fx_quita_saltos_falsos_y_conserva_devaluaciones():
     assert limpio.iloc[2] == 2410                       # la semana errada toma el dato anterior
     assert limpio.iloc[5] == 3100                       # el salto real (que no se revierte) se conserva
     assert limpio.iloc[3] == 2420                       # la semana siguiente queda intacta
+
+
+def test_rubros_yahoo_conservan_el_ebitda_y_no_dejan_gastos_negativos():
+    crudo = pd.DataFrame({2024: {"TotalRevenue": 1000e6, "CostOfRevenue": 700e6, "OperatingIncome": 200e6,
+                                 "ReconciledDepreciation": 150e6, "CapitalExpenditure": -80e6, "AccountsReceivable": 90e6,
+                                 "Inventory": 60e6, "AccountsPayable": 50e6, "NetPPE": 500e6, "TotalDebt": 300e6,
+                                 "CashAndCashEquivalents": 40e6}})
+    tabla, avisos = yahoo.a_rubros(crudo)
+    v = tabla[2024]
+    assert v["Gastos operacionales (sin D&A)"] >= 0                      # la D&A venía dentro del costo
+    ebitda = v["Ventas"] - v["Costo de ventas"] - v["Gastos operacionales (sin D&A)"]
+    assert math.isclose(ebitda, 200 + 150)                                # utilidad operativa + D&A, en millones
+    assert v["CAPEX"] == 80 and v["Capital de trabajo neto operativo (KTNO)"] == 100
+    assert any("depreciación venía incluida" in a for a in avisos)

@@ -15,7 +15,7 @@ de Colombia** y **estimar el costo de capital** (Ke y WACC) con supuestos trazab
 | **Catálogo de acciones** | Explorador con filtros por país, índice, sector y tipo: Colombia (BVC y ADR), Latinoamérica (585 del cuaderno), EE. UU. (todo Nasdaq y NYSE, S&P 500, Nasdaq-100, ETF) y los índices FTSE 100, DAX, CAC 40, Euro Stoxx 50, IBEX 35, FTSE MIB, AEX, SMI, S&P/TSX 60 y Hang Seng (`python actualizar_universo.py`). También acepta cualquier símbolo de Yahoo Finance |
 | **Portafolio** | Pesos editables (igual ponderado, mínima varianza, máximo Sharpe), desempeño frente a un índice, aporte al riesgo, correlaciones, VaR y frontera eficiente sin ventas en corto |
 | **Evaluación de proyectos** | Flujo de caja del proyecto y del inversionista, deuda, capital de trabajo, pérdidas fiscales; VPN, TIR, TIRM, APV; tornado, escenarios macro y Monte Carlo |
-| **Valoración de empresas** | Estados financieros editables o desde Excel, diagnóstico (ROIC, EVA), DCF del FCFF con valor terminal consistente, puente de valor, sensibilidad WACC × g y contraste con múltiplos |
+| **Valoración de empresas** | Estados financieros de empresas en bolsa (Yahoo Finance), de la Supersociedades, desde Excel o editables, diagnóstico (ROIC, EVA), DCF del FCFF con valor terminal consistente, puente de valor, sensibilidad WACC × g y contraste con múltiplos |
 | **Metodología y fuentes** | Estado de cada serie, fórmulas y referencias académicas |
 
 ## Fuentes

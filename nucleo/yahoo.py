@@ -202,6 +202,8 @@ def parsear_perfil(js: dict, ticker: str) -> dict:
         "de": None if de is None else de / 100,          # Yahoo lo entrega en porcentaje
         "crec_ingresos": g("financialData", "revenueGrowth"),
         "beta_yahoo": g("defaultKeyStatistics", "beta") or g("summaryDetail", "beta"),
+        "acciones_circulacion": g("defaultKeyStatistics", "sharesOutstanding"),
+        "precio": g("price", "regularMarketPrice"),
     }
     out["banderas"] = banderas(out)
     return out
@@ -269,3 +271,85 @@ def panel(tickers: list[str], moneda_base: str, anios: int) -> tuple[pd.DataFram
         metas[t] = {**datos[t][1], "moneda_origen": datos[t][1].get("currency"), "moneda_analisis": s[1]}
     df = pd.DataFrame(cuerpo).sort_index()
     return df, metas, fallos
+
+
+# =============================== Estados financieros anuales ========================
+# Partidas de la API de series fundamentales de Yahoo (no requiere crumb).
+PARTIDAS = ["TotalRevenue", "CostOfRevenue", "OperatingIncome", "ReconciledDepreciation", "DepreciationAndAmortization",
+            "CapitalExpenditure", "AccountsReceivable", "Inventory", "AccountsPayable", "NetPPE", "TotalDebt",
+            "CashCashEquivalentsAndShortTermInvestments", "CashAndCashEquivalents", "EBITDA"]
+
+
+def parsear_fundamentales(js: dict) -> tuple[pd.DataFrame, str | None]:
+    """Respuesta de `fundamentals-timeseries` → (tabla partida × año en unidades de la moneda, moneda)."""
+    tabla, moneda = {}, None
+    for item in (js.get("timeseries", {}).get("result") or []):
+        clave = (item.get("meta", {}).get("type") or [""])[0]
+        for v in item.get(clave) or []:
+            if not v:
+                continue
+            tabla.setdefault(clave.replace("annual", ""), {})[int(v["asOfDate"][:4])] = v["reportedValue"]["raw"]
+            moneda = moneda or v.get("currencyCode")
+    return pd.DataFrame(tabla).T.sort_index(axis=1), moneda
+
+
+def a_rubros(crudo: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
+    """Partidas de Yahoo (unidades) → rubros del modelo de valoración (millones). Misma convención que Supersociedades:
+    gastos operacionales sin D&A = ventas − costo de ventas − utilidad operativa − D&A; KTNO = cartera + inventarios − proveedores."""
+    from .valoracion import RUBROS
+    avisos = []
+
+    def fila(*nombres):
+        for n in nombres:
+            if n in crudo.index and crudo.loc[n].notna().any():
+                return crudo.loc[n].astype(float)
+        return pd.Series(np.nan, index=crudo.columns)
+
+    ventas, costo, uop = fila("TotalRevenue"), fila("CostOfRevenue"), fila("OperatingIncome")
+    dya = fila("ReconciledDepreciation", "DepreciationAndAmortization")
+    if costo.isna().all():
+        avisos.append("Yahoo no reporta costo de ventas (típico en bancos y aseguradoras): la valoración por flujo de caja libre "
+                      "no es adecuada para entidades financieras.")
+    for nombre, s in (("depreciación y amortización", dya), ("utilidad operativa", uop)):
+        if s.isna().any():
+            avisos.append(f"Falta {nombre} en algunos años; se usa 0.")
+    dya, costo, uop = dya.fillna(0), costo.fillna(0), uop.fillna(0)
+    # Si la depreciación ya viene dentro del costo de ventas (frecuente en Yahoo), los gastos saldrían negativos:
+    # en esos años se saca la D&A del costo. El EBITDA (= utilidad operativa + D&A) no cambia.
+    dentro = (ventas - costo - uop - dya) < 0
+    if dentro.any():
+        costo = costo.where(~dentro, costo - dya)
+        avisos.append("En " + ", ".join(str(a) for a in dentro[dentro].index) + " la depreciación venía incluida en el costo "
+                      "de ventas; se separó para no contarla dos veces.")
+    out = pd.DataFrame({
+        "Ventas": ventas,
+        "Costo de ventas": costo,
+        "Gastos operacionales (sin D&A)": ventas - costo - uop - dya,
+        "Depreciación y amortización": dya,
+        "CAPEX": fila("CapitalExpenditure").abs(),
+        "Capital de trabajo neto operativo (KTNO)": fila("AccountsReceivable").fillna(0) + fila("Inventory").fillna(0)
+                                                    - fila("AccountsPayable").fillna(0),
+        "Activo fijo neto": fila("NetPPE"),
+        "Deuda financiera": fila("TotalDebt"),
+        "Caja e inversiones temporales": fila("CashCashEquivalentsAndShortTermInvestments", "CashAndCashEquivalents"),
+    }).T
+    vacios = [r for r in RUBROS if out.loc[r].isna().all()]
+    if vacios:
+        avisos.append("Sin dato en Yahoo: " + ", ".join(vacios) + " (se usa 0; puedes corregirlo en la tabla).")
+    out = out.dropna(axis=1, subset=["Ventas"]).fillna(0) / 1e6
+    return out.loc[RUBROS], avisos
+
+
+@st.cache_data(ttl=24 * 3600, show_spinner=False)
+def estados_anuales(ticker: str) -> tuple[pd.DataFrame, str | None] | None:
+    """Estados financieros anuales (hasta 4 años) en unidades de la moneda de reporte. None si Yahoo no tiene datos."""
+    fin = int(time.time())
+    r = _get(f"{BASE}/ws/fundamentals-timeseries/v1/finance/timeseries/{ticker}",
+             {"type": ",".join("annual" + p for p in PARTIDAS), "period1": 1262304000, "period2": fin})
+    if r is None or r.status_code != 200:
+        return None
+    try:
+        crudo, moneda = parsear_fundamentales(r.json())
+    except (ValueError, KeyError, TypeError):
+        return None
+    return (crudo, moneda) if not crudo.empty and "TotalRevenue" in crudo.index else None

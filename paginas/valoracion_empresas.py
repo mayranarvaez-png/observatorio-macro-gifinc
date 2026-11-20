@@ -6,7 +6,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-from nucleo import almacen, tema, ui
+from nucleo import almacen, seleccion, tema, ui, yahoo
 from nucleo import carga_archivos as carga
 from nucleo import supersociedades as ss
 from nucleo import componentes as comp
@@ -50,7 +50,72 @@ def _usar(tabla: pd.DataFrame, nombre: str, origen: str, traza: pd.DataFrame | N
     st.session_state["_mem_val_nombre"] = nombre
     st.session_state["_val_origen"] = {"origen": origen, "traza": traza, "avisos": avisos or []}
     st.session_state.pop("val_editor", None)
+    # Los supuestos por defecto salen del histórico: se reinician para la nueva empresa.
+    for k in ("val_margen", "val_capex", "val_dya", "val_ktno"):
+        st.session_state.pop(k, None)
     st.rerun()
+
+
+def _acotar(valor: float, minimo: float, maximo: float, defecto: float) -> float:
+    """Valor inicial de un deslizador dentro de su rango (un histórico atípico no debe romper la página)."""
+    if valor is None or pd.isna(valor):
+        return defecto
+    return float(min(max(valor, minimo), maximo))
+
+
+@st.cache_data(show_spinner=False)
+def _trm_anual() -> pd.Series:
+    trm = almacen.leer_serie("trm")
+    return pd.Series(dtype=float) if trm is None else trm.set_index("fecha")["valor"].groupby(lambda f: f.year).mean()
+
+
+def _panel_yahoo() -> None:
+    st.caption("Estados financieros anuales que reporta Yahoo Finance para empresas que cotizan en bolsa (hasta 4 años): "
+               "Colombia, Latinoamérica, EE. UU., Europa y más. Ideal para Ecopetrol, ISA, Nutresa, Cementos Argos, etc.")
+    cat = seleccion.catalogo()
+    acciones = cat[cat["tipo"] == "Acción"]
+    acciones = pd.concat([acciones[acciones["pais"] == "Colombia"], acciones[acciones["pais"] != "Colombia"]])
+    etiquetas = dict(zip(acciones["ticker"], acciones["ticker"] + " · " + acciones["nombre"] + " (" + acciones["pais"] + ")"))
+    t = st.selectbox("Empresa (escribe el nombre o el ticker)", list(etiquetas), index=None, key="yf_ticker",
+                     format_func=lambda x: etiquetas.get(x, x), accept_new_options=True,
+                     placeholder="p. ej. Ecopetrol, ISA, Nutresa, Apple…",
+                     help="También puedes escribir cualquier símbolo de Yahoo Finance y pulsar Enter.")
+    if not t:
+        return
+    t = str(t).strip().upper()
+    with st.spinner("Consultando Yahoo Finance…"):
+        datos = yahoo.estados_anuales(t)
+        perfil = yahoo.perfil(t) or {}
+    if datos is None:
+        st.warning(f"Yahoo Finance no tiene estados financieros para **{t}**. Revisa el símbolo o usa otra fuente.")
+        return
+    crudo, moneda = datos
+    tabla, avisos = yahoo.a_rubros(crudo)
+    nota_moneda = ""
+    if moneda and moneda != "COP":
+        trm = _trm_anual()
+        if moneda == "USD" and not trm.empty:
+            factor = pd.Series({a: trm.get(a, trm.iloc[-1]) for a in tabla.columns})
+            tabla = tabla * factor
+            nota_moneda = (f" Yahoo reporta en **USD**; se convirtió a pesos con la TRM promedio de cada año "
+                           f"(último año: {ui.num(factor.iloc[-1], 0)} COP/USD).")
+        else:
+            nota_moneda = (f" Yahoo reporta en **{moneda}** y no se convirtió: las cifras quedan en millones de {moneda}. "
+                           "El modelo usa supuestos macro de Colombia, así que interpreta el resultado con cuidado.")
+    nombre = perfil.get("nombre") or t
+    st.caption(f"**{nombre}** · {perfil.get('sector') or 'sector sin dato'} · reporta en {moneda or 'moneda sin dato'}. "
+               f"Cifras en millones de COP.{nota_moneda} Elige el sector equivalente de Damodaran en el paso ③.")
+    st.dataframe(tabla.style.format(lambda x: ui.num(x, 1)), width="stretch")
+    for a in avisos:
+        st.caption(f":orange[⚠ {a}]")
+    acc = perfil.get("acciones_circulacion")
+    if acc:
+        st.caption(f"Acciones en circulación según Yahoo: **{ui.num(acc / 1e6, 1)} millones** (se cargarán en el modelo).")
+    if st.button("Usar estos estados financieros", type="primary", icon=":material/check:", key="yf_usar"):
+        if acc:
+            st.session_state["val_acciones"] = float(round(acc / 1e6, 2))
+        _usar(tabla, nombre, f"Yahoo Finance · {t}" + (f" · convertido de {moneda}" if moneda and moneda != "COP" else ""),
+              None, avisos)
 
 
 def _panel_supersociedades() -> None:
@@ -173,10 +238,13 @@ def _panel_manual() -> None:
 with pasos[0]:
     fuente = st.segmented_control(
         "¿De dónde traes los estados financieros?",
-        ["Base de datos Supersociedades", "Cargar archivo (Excel o CSV)", "Ejemplo o ingreso manual"],
-        default="Base de datos Supersociedades", key="val_fuente")
+        ["Empresas en bolsa (Yahoo Finance)", "Base de datos Supersociedades", "Cargar archivo (Excel o CSV)",
+         "Ejemplo o ingreso manual"],
+        default="Empresas en bolsa (Yahoo Finance)", key="val_fuente")
     with st.container(border=True):
-        if fuente == "Base de datos Supersociedades":
+        if fuente == "Empresas en bolsa (Yahoo Finance)":
+            _panel_yahoo()
+        elif fuente == "Base de datos Supersociedades":
             _panel_supersociedades()
         elif fuente == "Cargar archivo (Excel o CSV)":
             _panel_archivo()
@@ -198,8 +266,8 @@ with pasos[0]:
     nombre = c_nom.text_input("Nombre de la empresa", key="val_nombre")
     st.session_state["_mem_val_nombre"] = nombre
     acciones = c_acc.number_input("Acciones en circulación (millones)", value=120.0, step=1.0, key="val_acciones",
-                                  help="No está en la base de la Supersociedades: consúltalo en el certificado "
-                                       "de existencia o en las notas a los estados financieros.")
+                                  help="Con Yahoo Finance se carga solo. Para Supersociedades o un archivo propio, "
+                                       "consúltalo en el certificado de existencia o en las notas a los estados financieros.")
 
 # ===================================== ② ESCENARIO ===================================
 with pasos[1]:
@@ -233,14 +301,17 @@ with pasos[3]:
     with b.container(border=True):
         st.markdown("**Rentabilidad e inversión**")
         margen_hist = float(diag.loc["Margen EBITDA", ultimo])
-        margen = st.slider("Margen EBITDA al final del horizonte (%)", 0.0, 50.0,
-                           round(margen_hist * 100, 1), 0.5, key="val_margen",
+        margen = st.slider("Margen EBITDA al final del horizonte (%)", -20.0, 70.0,
+                           _acotar(round(margen_hist * 100, 1), -20.0, 70.0, 15.0), 0.5, key="val_margen",
                            help=f"Último histórico: {ui.pct(margen_hist, 1)}. Converge linealmente.") / 100
-        capex = st.slider("CAPEX / ventas (%)", 0.0, 20.0, round(float(diag.loc['CAPEX / ventas'].mean()) * 100, 1),
+        capex = st.slider("CAPEX / ventas (%)", 0.0, 40.0,
+                          _acotar(round(float(diag.loc['CAPEX / ventas'].mean()) * 100, 1), 0.0, 40.0, 5.0),
                           0.1, key="val_capex") / 100
-        dya = st.slider("D&A / ventas (%)", 0.0, 15.0, round(float(diag.loc['D&A / ventas'].mean()) * 100, 1),
+        dya = st.slider("D&A / ventas (%)", 0.0, 30.0,
+                        _acotar(round(float(diag.loc['D&A / ventas'].mean()) * 100, 1), 0.0, 30.0, 3.0),
                         0.1, key="val_dya") / 100
-        ktno = st.slider("KTNO / ventas (%)", 0.0, 40.0, round(float(diag.loc['KTNO / ventas'].mean()) * 100, 1),
+        ktno = st.slider("KTNO / ventas (%)", -30.0, 60.0,
+                         _acotar(round(float(diag.loc['KTNO / ventas'].mean()) * 100, 1), -30.0, 60.0, 15.0),
                          0.5, key="val_ktno") / 100
     with c.container(border=True):
         st.markdown("**Valor terminal**")
