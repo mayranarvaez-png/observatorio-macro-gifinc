@@ -12,7 +12,7 @@ from nucleo import portafolio as pf
 tema.encabezado(
     "Comparador de acciones",
     "Elige acciones de Colombia, Latinoamérica o cualquier mercado y compáralas con **indicadores clave**: retorno, "
-    "riesgo, valoración y solidez financiera. Cada bloque trae una lectura automática de lo que muestran los datos.",
+    "riesgo, valoración y solidez financiera. Cada bloque trae un análisis automático de lo que muestran los datos.",
     seccion="Inversión", chips=["Fuente: Yahoo Finance", "Barras semanales ajustadas por dividendos", "Material académico"])
 
 sel = seleccion.selector("acc", min_tickers=1)
@@ -214,7 +214,7 @@ with tab_val:
     for c in v.columns:
         v[c] = pd.to_numeric(v[c], errors="coerce")
     pts, tono = lecturas.valoracion(v, {t: perfiles.get(t) for t in tickers})
-    tema.lectura(pts, titulo="Lectura de valoración y solidez", tono=tono)
+    tema.lectura(pts, titulo="Análisis de valoración y solidez", tono=tono)
 
     metricas = [("P/E", "Precio / utilidad (veces)", f1x, False), ("P/B", "Precio / valor en libros (veces)", f1x, False),
                 ("EV/EBITDA", "EV / EBITDA (veces)", f1x, False), ("Dividendo", "Rentabilidad por dividendo", pct, True),

@@ -292,7 +292,7 @@ with t6:
         ("La corrida usa el tipo de cambio corregido (TRM oficial), de modo que Colombia sí aporta sus acciones líquidas (pestaña ④)."
          if co_inc >= 10 else
          "Antes de sacar conclusiones, hay que repetir la corrida con el tipo de cambio corregido: hoy Colombia casi no aporta acciones (pestaña ④)."),
-    ], titulo="Lectura de los resultados", tono="neutro")
+    ], titulo="Análisis de los resultados", tono="neutro")
 
     c1, c2 = st.columns(2, gap="large")
     with c1:

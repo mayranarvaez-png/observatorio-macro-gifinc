@@ -141,7 +141,7 @@ with der:
                f"D/V = {ui.pct(r['peso_deuda'], 1)} · Kd después de impuestos = {ui.pct(r['kd_neto'])}")
 
     pts_ke, tono_ke = lecturas.ke(r, s, f_beta, mercado.opciones_kd_base()["TES 10A + spread"])
-    tema.lectura(pts_ke, titulo="Lectura del costo de capital", tono=tono_ke)
+    tema.lectura(pts_ke, titulo="Análisis del costo de capital", tono=tono_ke)
 
     # Construcción del Ke (cascada)
     ajuste_fisher = r["ke_cop"] - r["ke_usd"]

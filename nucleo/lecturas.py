@@ -10,7 +10,7 @@ import pandas as pd
 
 from . import ui
 
-NOTA_ESTADISTICA = ("Lectura estadística con datos históricos de Yahoo Finance; el pasado no garantiza resultados "
+NOTA_ESTADISTICA = ("Análisis estadístico con datos históricos de Yahoo Finance; el pasado no garantiza resultados "
                     "futuros y esto no es una recomendación de inversión.")
 
 

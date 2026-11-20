@@ -153,7 +153,7 @@ with t3:
         f"La ruta por CDS da una prima **{ui.num((pais['crp_cds'] - pais['crp_calificacion']) * 100)} puntos mayor** que la de calificación: "
         "el mercado está cobrando hoy más riesgo del que refleja la calificación.",
         "Por eso conviene reportar el Ke con las dos rutas, como un rango, y no como una cifra única.",
-    ], titulo="Lectura", tono="alerta" if pais["crp_cds"] > pais["crp_calificacion"] * 1.3 else "neutro")
+    ], titulo="Interpretación", tono="alerta" if pais["crp_cds"] > pais["crp_calificacion"] * 1.3 else "neutro")
 
 # =============================== ④ ARMAR EL KE ======================================
 with t4:

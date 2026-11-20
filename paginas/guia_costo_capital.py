@@ -200,7 +200,7 @@ else:
                       "económico: suele indicar que la inflación supuesta para Colombia (la meta del BanRep) es menor que la que "
                       "descuenta el mercado. Es el aviso amarillo que aparece en Valoración y Proyectos.")
         tono = "alerta"
-    tema.lectura(puntos, titulo="Cómo leer el resultado", tono=tono)
+    tema.lectura(puntos, titulo="Interpretación del resultado", tono=tono)
 
 # =============================== 6. QUÉ HACE EL TABLERO =============================
 st.subheader("6. Cómo encaja cada parte del tablero")

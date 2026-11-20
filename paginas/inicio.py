@@ -8,7 +8,7 @@ from nucleo.catalogo import POR_ID
 
 tema.encabezado("Coyuntura macro-financiera de Colombia",
                 "Los indicadores que mueven el costo de capital y las decisiones de inversión, con su variación frente a hace "
-                "12 meses y una **lectura automática** de la coyuntura. Pasa el cursor sobre ⓘ para ver la fuente de cada tarjeta.",
+                "12 meses y un **análisis automático** de la coyuntura. Pasa el cursor sobre ⓘ para ver la fuente de cada tarjeta.",
                 seccion="Monitoreo", chips=["Banco de la República", "DANE / OCDE", "FRED", "Damodaran"])
 
 # --- Tarjetas -----------------------------------------------------------------------
@@ -46,8 +46,8 @@ with st.container(horizontal=True, gap="small"):
             if st.button("Ver gráfico", key=f"ver_{id_serie}", icon=":material/open_in_full:", type="tertiary", width="stretch"):
                 abrir_grafico(id_serie, etiqueta)
 
-# --- Lectura de coyuntura -----------------------------------------------------------
-st.subheader("Lectura rápida")
+# --- Análisis de coyuntura -----------------------------------------------------------
+st.subheader("Análisis de la coyuntura")
 _, ipc = ui.ultimo("ipc_anual")
 _, tpm = ui.ultimo("tpm")
 _, tes1 = ui.ultimo("tes_1")
@@ -83,8 +83,8 @@ if trm and trm_prev:
     var = trm / trm_prev - 1
     puntos.append(f"**Tipo de cambio:** el peso se ha {'depreciado' if var > 0 else 'apreciado'} {ui.pct(abs(var), 1)} "
                   "frente al dólar en 12 meses; afecta el costo de la deuda en dólares y los ingresos de los exportadores.")
-tema.lectura(puntos or ["Sin datos suficientes."], titulo="Lectura de la coyuntura", tono=tono_coy,
-             nota="Lectura generada con reglas fijas a partir de los datos; no reemplaza el análisis del grupo.")
+tema.lectura(puntos or ["Sin datos suficientes."], titulo="Interpretación de los indicadores", tono=tono_coy,
+             nota="Análisis generado con reglas fijas a partir de los datos; no reemplaza el criterio del grupo.")
 
 # --- Costo de capital de referencia -------------------------------------------------
 st.subheader("Costo de capital de referencia")

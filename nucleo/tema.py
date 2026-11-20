@@ -64,7 +64,7 @@ button[data-baseweb="tab"] {{ font-weight: 600; }}
 button[data-baseweb="tab"][aria-selected="true"] {{ color: {ROJO}; }}
 [data-baseweb="tab-highlight"] {{ background-color: {ROJO} !important; height: 3px !important; }}
 
-/* Lectura del analista */
+/* Tarjeta de análisis */
 .gif-lectura {{ border-radius: 12px; padding: 14px 18px 10px 18px; margin: 10px 0 16px 0;
   background: rgba(128,128,128,.08); border: 1px solid rgba(128,128,128,.22); border-left-width: 6px; }}
 .gif-lectura .gif-lt {{ font-weight: 750; letter-spacing: .02em; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }}
@@ -139,7 +139,7 @@ def encabezado(titulo: str, subtitulo: str = "", seccion: str = "", chips: list[
 ICONOS = {"neutro": "◆", "ok": "✔", "alerta": "▲", "riesgo": "●"}
 
 
-def lectura(puntos: list[str], titulo: str = "Lectura del analista", tono: str = "neutro", nota: str = "") -> None:
+def lectura(puntos: list[str], titulo: str = "Análisis", tono: str = "neutro", nota: str = "") -> None:
     """Tarjeta con una interpretación en viñetas. El tono cambia el color del borde y el símbolo (no solo el color)."""
     if not puntos:
         return

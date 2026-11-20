@@ -91,7 +91,7 @@ contrib = pf.contribucion_riesgo(cov, w)
 
 # =============================== RESULTADOS =========================================
 pts, tono = lecturas.portafolio(res, tickers, w, contrib, est, est_ref, sel.nombre_ref, sel.rf)
-tema.lectura(pts, titulo="Lectura del portafolio", tono=tono, nota=lecturas.NOTA_ESTADISTICA)
+tema.lectura(pts, titulo="Análisis del portafolio", tono=tono, nota=lecturas.NOTA_ESTADISTICA)
 
 k = ui.tarjetas(6, ancho=200)
 k[0].metric("Retorno anual", pct(res["Retorno anual"]), border=True, help=f"Compuesto, en {base_txt}, con rebalanceo semanal.")
@@ -219,7 +219,7 @@ with tab_corr:
     tema.lectura([f"Correlación promedio: **{ui.num(float(m.mean()))}**. Más alta: {tickers[i]}–{tickers[j]} ({ui.num(corr.iloc[i, j])}). "
                   f"Más baja: {tickers[k2]}–{tickers[l2]} ({ui.num(corr.iloc[k2, l2])}).",
                   "Las correlaciones **suben en las crisis**: la diversificación que se ve en periodos tranquilos suele ser menor justo cuando más se necesita."],
-                 titulo="Lectura de correlaciones", tono="alerta" if float(m.mean()) > 0.7 else "neutro")
+                 titulo="Análisis de correlaciones", tono="alerta" if float(m.mean()) > 0.7 else "neutro")
     st.caption("Calculada con retornos semanales del periodo común. Con acciones de distintas monedas, parte de la correlación viene del tipo de cambio.")
 
 # =============================== FRONTERA EFICIENTE =================================

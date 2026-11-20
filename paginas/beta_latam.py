@@ -149,7 +149,7 @@ with tab_cmp:
             f"**{len(fuera)}** de ellas quedan fuera del intervalo de confianza del beta propio: ahí la diferencia no es solo ruido de muestreo.",
             f"La mayor diferencia es en **{mayor['industria']}** (propio {ui.num(mayor['bu_propio'])}, Damodaran {ui.num(mayor['bu_dam_em'])}).",
             "Con menos de 5 firmas el beta propio es poco confiable; en ese caso el combinado se acerca a Damodaran.",
-        ], titulo="Lectura de la comparación", tono="alerta" if len(fuera) > len(ref) / 3 else "neutro")
+        ], titulo="Análisis de la comparación", tono="alerta" if len(fuera) > len(ref) / 3 else "neutro")
     m = ui.tarjetas(4)
     m[0].metric("Industrias mostradas", len(v), border=True)
     m[1].metric("Con 5+ firmas (no financieras)", len(ref), border=True)
@@ -168,7 +168,7 @@ with tab_cmp:
                    "bu_comb", "peso_propio", "dif", "confianza", "lectura"]]
     tabla.columns = ["Industria", "Firmas propias", "Países", "βU Damodaran emerg.", "βU Damodaran global",
                      "βU propio", "IC 95 % bajo", "IC 95 % alto", "βU combinado", "Peso del propio",
-                     "Propio − Damodaran", "Confianza", "Lectura"]
+                     "Propio − Damodaran", "Confianza", "Interpretación"]
     num2 = st.column_config.NumberColumn(format="%.2f")
     st.dataframe(tabla, hide_index=True, width="stretch", height=430, column_config={
         "Firmas propias": st.column_config.NumberColumn(format="%d"),
