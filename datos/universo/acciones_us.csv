@@ -5958,7 +5958,7 @@ JOBC,Corgi JOBY 2x Daily ETF,Cboe BZX,False,False,,,ETF
 JOBX,Tradr 2X Long JOBY Daily ETF,Cboe BZX,False,False,,,ETF
 JOBY,"Joby Aviation, Inc.",NYSE,False,False,,,Acción
 JOE,St. Joe Company (The),NYSE,False,False,,,Acción
-JOET,Virtus Terranova U.S. Quality Momentum ETF,NYSE Arca,False,False,,,ETF
+JOET,Virtus NYSE Terranova U.S. Quality Momentum ETF,NYSE Arca,False,False,,,ETF
 JOF,Japan Smaller Capitalization Fund Inc,NYSE,False,False,,,Acción
 JOJO,ATAC Credit Rotation ETF,NYSE Arca,False,False,,,ETF
 JONE,Jones Ventures INTL Acquisition1 Corp,Nasdaq,False,False,,,Acción
@@ -6725,7 +6725,6 @@ MEMS,Matthews Emerging Markets Discovery Active ETF,Nasdaq,False,False,,,ETF
 MEMX,Matthews Emerging Markets ex China Active ETF,NYSE Arca,False,False,,,ETF
 MENS,Jyong Biotech Ltd.,Nasdaq,False,False,,,Acción
 MEOH,Methanex Corporation,Nasdaq,False,False,,,Acción
-MERC,Mercer International Inc.,Nasdaq,False,False,,,Acción
 MESH,Meshflow Acquisition Corp.,Nasdaq,False,False,,,Acción
 MESO,Mesoblast Limited,Nasdaq,False,False,,,Acción
 METC,"Ramaco Resources, Inc.",Nasdaq,False,False,,,Acción
@@ -7747,7 +7746,6 @@ OOMA,"Ooma, Inc.",NYSE,False,False,,,Acción
 OOSP,Obra Opportunistic Structured Products ETF,NYSE Arca,False,False,,,ETF
 OPAD,Offerpad Solutions Inc.,Nasdaq,False,False,,,Acción
 OPAL,OPAL Fuels Inc.,Nasdaq,False,False,,,Acción
-OPAY,OPay Limited,NYSE,False,False,,,Acción
 OPBK,OP Bancorp,Nasdaq,False,False,,,Acción
 OPCH,"Option Care Health, Inc.",Nasdaq,False,False,,,Acción
 OPEN,Opendoor Technologies Inc,Nasdaq,False,False,,,Acción
@@ -10716,7 +10714,6 @@ UTMD,"Utah Medical Products, Inc.",Nasdaq,False,False,,,Acción
 UTSI,UTStarcom Holdings Corp,Nasdaq,False,False,,,Acción
 UTSL,Direxion Daily Utilities Bull 3X ETF,NYSE Arca,False,False,,,ETF
 UTWY,US Treasury 20 Year Bond ETF,Nasdaq,False,False,,,ETF
-UTZ,Utz Brands Inc,NYSE,False,False,,,Acción
 UUP,Invesco DB USD Index Bullish Fund ETF,NYSE Arca,False,False,,,ETF
 UUPP,Principal CLO ETF,Cboe BZX,False,False,,,ETF
 UUUC,Corgi UUUU 2x Daily ETF,Cboe BZX,False,False,,,ETF
@@ -11549,6 +11546,7 @@ YJ,Yunji Inc. - American Depository Shares,Nasdaq,False,False,,,Acción
 YJUN,FT Vest International Equity Moderate Buffer ETF - June,Cboe BZX,False,False,,,ETF
 YLD,Principal Active High Yield ETF,NYSE Arca,False,False,,,ETF
 YLDE,Franklin ClearBridge Enhanced Income ETF,Nasdaq,False,False,,,ETF
+YLDS,Harbor Arena Structured Income ETF,NYSE Arca,False,False,,,ETF
 YLDW,Westwood Enhanced Income Opportunity ETF,NYSE Arca,False,False,,,ETF
 YLDY,Horizon High Income ETF,Cboe BZX,False,False,,,ETF
 YMAG,YieldMax Magnificent 7 Fund of Option Income ETFs,NYSE Arca,False,False,,,ETF
