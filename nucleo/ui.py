@@ -136,7 +136,7 @@ def lineas(series: dict[str, pd.DataFrame], unidad: str, colores: list[str] | No
     return _estilo(fig, altura, unidad)
 
 
-TAMANO_LETRA_GRAFICOS = 14
+TAMANO_LETRA_GRAFICOS = 16
 
 
 def _ejes_enteros(fig: go.Figure) -> None:

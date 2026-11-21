@@ -22,7 +22,10 @@ ROJO, GRIS, TINTA = ui.ROJO, ui.GRIS, "#2B2B2E"
 _CSS = f"""
 <style>
 :root {{ --gif-rojo:{ROJO}; --gif-gris:{GRIS}; --gif-tinta:{TINTA}; }}
-.block-container {{ padding-top: 2.2rem; max-width: 100%; padding-left: clamp(1rem, 3vw, 3rem); padding-right: clamp(1rem, 3vw, 3rem); }}
+.block-container {{ padding-top: 2.2rem; max-width: 1600px; padding-left: clamp(1rem, 3vw, 3rem); padding-right: clamp(1rem, 3vw, 3rem); }}
+/* Pantallas grandes: todo un poco más grande, para que no se vea diminuto ni disperso. */
+@media (min-width: 1800px) {{ html {{ font-size: 20px !important; }} .block-container {{ max-width: 1750px; }} }}
+@media (min-width: 2300px) {{ html {{ font-size: 22px !important; }} .block-container {{ max-width: 1950px; }} }}
 
 /* Encabezado de página */
 .gif-banner {{
