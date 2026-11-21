@@ -353,3 +353,35 @@ def estados_anuales(ticker: str) -> tuple[pd.DataFrame, str | None] | None:
     except (ValueError, KeyError, TypeError):
         return None
     return (crudo, moneda) if not crudo.empty and "TotalRevenue" in crudo.index else None
+
+
+@st.cache_data(ttl=6 * 3600, show_spinner=False)
+def acciones_y_precio(ticker: str) -> dict:
+    """Acciones en circulación (último reporte trimestral o anual) y último precio, con APIs que no piden «crumb».
+    Devuelve {"acciones", "fecha_acciones", "precio", "moneda"}; los que no estén quedan en None."""
+    out = {"acciones": None, "fecha_acciones": None, "precio": None, "moneda": None}
+    r = _get(f"{BASE}/ws/fundamentals-timeseries/v1/finance/timeseries/{ticker}",
+             {"type": "quarterlyOrdinarySharesNumber,annualOrdinarySharesNumber,annualShareIssued",
+              "period1": 1577836800, "period2": int(time.time())})
+    if r is not None and r.status_code == 200:
+        try:
+            candidatos = []
+            for item in r.json()["timeseries"]["result"] or []:
+                clave = (item.get("meta", {}).get("type") or [""])[0]
+                for v in item.get(clave) or []:
+                    if v and v.get("reportedValue"):
+                        prioridad = 0 if "Ordinary" in clave else 1
+                        candidatos.append((v["asOfDate"], -prioridad, v["reportedValue"]["raw"]))
+            if candidatos:
+                fecha, _, valor = max(candidatos)
+                out.update(acciones=float(valor), fecha_acciones=fecha)
+        except (ValueError, KeyError, TypeError):
+            pass
+    r = _get(f"{BASE}/v8/finance/chart/{ticker}", {"range": "5d", "interval": "1d"})
+    if r is not None and r.status_code == 200:
+        try:
+            meta = r.json()["chart"]["result"][0]["meta"]
+            out.update(precio=meta.get("regularMarketPrice"), moneda=meta.get("currency"))
+        except (ValueError, KeyError, TypeError, IndexError):
+            pass
+    return out

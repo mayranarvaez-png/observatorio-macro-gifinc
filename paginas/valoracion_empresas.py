@@ -50,6 +50,8 @@ def _usar(tabla: pd.DataFrame, nombre: str, origen: str, traza: pd.DataFrame | N
     st.session_state["_mem_val_nombre"] = nombre
     st.session_state["_val_origen"] = {"origen": origen, "traza": traza, "avisos": avisos or []}
     st.session_state.pop("val_editor", None)
+    if not origen.startswith("Yahoo Finance"):
+        st.session_state.pop("_val_mercado", None)        # el precio de bolsa solo aplica a empresas cargadas de Yahoo
     # Los supuestos por defecto salen del histórico: se reinician para la nueva empresa.
     for k in ("val_margen", "val_capex", "val_dya", "val_ktno"):
         st.session_state.pop(k, None)
@@ -108,12 +110,32 @@ def _panel_yahoo() -> None:
     st.dataframe(tabla.style.format(lambda x: ui.num(x, 1)), width="stretch")
     for a in avisos:
         st.caption(f":orange[⚠ {a}]")
-    acc = perfil.get("acciones_circulacion")
+    mercado = yahoo.acciones_y_precio(t)
+    acc = mercado.get("acciones") or perfil.get("acciones_circulacion")
+    precio, moneda_px = mercado.get("precio"), mercado.get("moneda")
+    es_adr_colombiano = "." not in t and t in set(acciones.loc[acciones["pais"] == "Colombia", "ticker"])
+    # Solo se compara con el precio cuando la acción cotiza en pesos: un ADR agrupa varias acciones y una empresa
+    # extranjera se está valorando con supuestos macro de Colombia, así que la comparación engañaría.
+    precio_cop = float(precio) if precio and moneda_px == "COP" and not es_adr_colombiano else None
     if acc:
-        st.caption(f"Acciones en circulación según Yahoo: **{ui.num(acc / 1e6, 1)} millones** (se cargarán en el modelo).")
+        st.caption(f"Acciones en circulación según Yahoo: **{ui.num(acc / 1e6, 1)} millones**"
+                   + (f" (reporte de {mercado['fecha_acciones']})" if mercado.get("fecha_acciones") else "")
+                   + ". Se cargarán en el modelo.")
+    else:
+        st.warning("Yahoo no informa las acciones en circulación de esta empresa: escríbelas en «Acciones en circulación "
+                   "(millones)» debajo de la tabla del modelo; sin ellas el valor por acción no es correcto.", icon=":material/warning:")
+    if precio:
+        st.caption(f"Precio en bolsa: **{ui.num(precio, 2)} {moneda_px}**.")
+    if moneda and moneda != "COP" and not es_adr_colombiano:
+        st.caption(":orange[⚠ Empresa extranjera: el modelo usa supuestos de Colombia (riesgo país, inflación y PIB), así que el "
+                   "resultado sirve como ejercicio y no se compara con su precio en bolsa.]")
+    if es_adr_colombiano:
+        st.caption(":orange[⚠ Este símbolo es un ADR que cotiza en EE. UU.: cada ADR agrupa varias acciones ordinarias, así que su precio "
+                   "no se compara directamente con el valor por acción. Para empresas colombianas usa el símbolo de la BVC (termina en .CL).]")
     if st.button("Usar estos estados financieros", type="primary", icon=":material/check:", key="yf_usar"):
         if acc:
             st.session_state["val_acciones"] = float(round(acc / 1e6, 2))
+        st.session_state["_val_mercado"] = {"ticker": t, "precio_cop": precio_cop, "precio": precio, "moneda": moneda_px}
         _usar(tabla, nombre, f"Yahoo Finance · {t}" + (f" · convertido de {moneda}" if moneda and moneda != "COP" else ""),
               None, avisos)
 
@@ -370,7 +392,8 @@ with pasos[4]:
     st.markdown(f"#### {nombre}")
     for tipo, texto in v["alertas"]:
         getattr(st, tipo)(texto)
-    k = ui.tarjetas(4)
+    mercado = st.session_state.get("_val_mercado")
+    k = ui.tarjetas(5 if mercado and mercado.get("precio_cop") else 4)
     k[0].metric("Valor de la empresa (EV) · millones COP", ui.num(v["ev"], 0), border=True,
                 delta=f"≈ {ui.en_palabras(v['ev'])}", delta_color="off", delta_arrow="off")
     k[1].metric("Valor del patrimonio · millones COP", ui.num(v["patrimonio"], 0), border=True,
@@ -379,6 +402,15 @@ with pasos[4]:
     k[2].metric("Valor por acción · pesos", ui.num(v["por_accion"], 0), border=True,
                 help="Valor del patrimonio (en pesos) ÷ número de acciones")
     k[3].metric("Peso del valor terminal", ui.pct(v["peso_vt"], 1), border=True)
+    if mercado and mercado.get("precio_cop"):
+        dif = v["por_accion"] / mercado["precio_cop"] - 1
+        k[4].metric("Precio en bolsa · pesos", ui.num(mercado["precio_cop"], 0), border=True,
+                    delta=f"Valor DCF {'+' if dif >= 0 else '−'}{ui.pct(abs(dif), 1)} vs. precio", delta_color="off",
+                    help=f"Último precio de {mercado['ticker']} en Yahoo Finance"
+                         + (f" ({ui.num(mercado['precio'], 2)} {mercado['moneda']}, convertido con la última TRM)"
+                            if mercado.get("moneda") != "COP" else "")
+                         + ". Una diferencia grande suele venir de los supuestos (sector del WACC, margen, crecimiento) "
+                           "o de un número de acciones equivocado.")
     st.caption("Todas las cifras de la valoración están en **millones de pesos colombianos (COP)**, "
                "excepto el valor por acción, que está en pesos.")
     st.caption(f"WACC {ui.pct(wacc)} (sector {tasa['sector']}) · g {ui.pct(g)} · ROIC LP {ui.pct(v['roic_lp'])} · "
