@@ -22,7 +22,7 @@ ROJO, GRIS, TINTA = ui.ROJO, ui.GRIS, "#2B2B2E"
 _CSS = f"""
 <style>
 :root {{ --gif-rojo:{ROJO}; --gif-gris:{GRIS}; --gif-tinta:{TINTA}; }}
-.block-container {{ padding-top: 2.2rem; max-width: 1400px; }}
+.block-container {{ padding-top: 2.2rem; max-width: 100%; padding-left: clamp(1rem, 3vw, 3rem); padding-right: clamp(1rem, 3vw, 3rem); }}
 
 /* Encabezado de página */
 .gif-banner {{

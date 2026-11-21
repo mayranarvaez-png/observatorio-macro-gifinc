@@ -67,10 +67,10 @@ def periodo_txt(f, frecuencia: str) -> str:
     return fecha_txt(f)
 
 
-def tarjetas(n: int, ancho: int = 200) -> list:
-    """n contenedores para métricas que pasan a la fila siguiente cuando no caben."""
-    fila = st.container(horizontal=True, gap="small")
-    return [fila.container(width=ancho) for _ in range(n)]
+def tarjetas(n: int, ancho: int | None = None) -> list:
+    """n columnas para tarjetas de indicadores: ocupan todo el ancho de la pantalla y se apilan en el celular.
+    `ancho` se conserva por compatibilidad; ya no fija el tamaño."""
+    return list(st.columns(n, gap="small"))
 
 
 # --- Datos -------------------------------------------------------------------------

@@ -39,9 +39,9 @@ def abrir_grafico(id_serie: str, etiqueta: str) -> None:
         ui.ficha(s)
 
 
-with st.container(horizontal=True, gap="small"):
-    for id_serie, etiqueta, dec, color in TARJETAS:
-        with st.container(width=230):
+for fila in (TARJETAS[:4], TARJETAS[4:]):
+    for col, (id_serie, etiqueta, dec, color) in zip(st.columns(4, gap="small"), fila):
+        with col:
             ui.tarjeta(id_serie, etiqueta, decimales=dec, color_delta=color)
             if st.button("Ver gráfico", key=f"ver_{id_serie}", icon=":material/open_in_full:", type="tertiary", width="stretch"):
                 abrir_grafico(id_serie, etiqueta)
@@ -104,10 +104,9 @@ else:
         ("Prima de mercado madura (ERP)", ui.pct(s.erp),
          f"Damodaran, ERP implícita del S&P 500 · archivo {pais['fecha_archivo']}"),
     ]
-    with st.container(horizontal=True, gap="small"):
-        for etiqueta, valor, ayuda in tarjetas_ref:
-            with st.container(width=230):
-                st.metric(etiqueta, valor, help=ayuda, border=True)
+    for col, (etiqueta, valor, ayuda) in zip(st.columns(len(tarjetas_ref), gap="small"), tarjetas_ref):
+        with col:
+            st.metric(etiqueta, valor, help=ayuda, border=True)
     st.page_link("paginas/costo_capital.py", label="Calcular Ke y WACC para una industria o empresa",
                  icon=":material/arrow_forward:")
 
