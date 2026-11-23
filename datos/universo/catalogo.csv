@@ -1151,6 +1151,7 @@ AAT,"American Assets Trust, Inc.",EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 AAUA,Alpha Architect US Equity 3 ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
 AAUB,Alpha Architect US Equity 4 ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
 AAUC,Allied Gold Corporation,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
+AAUD,Alpha Architect US Equity 5 ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
 AAUS,Alpha Architect US Equity ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
 AAVM,Alpha Architect Global Factor Equity ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
 AAXJ,iShares MSCI All Country Asia ex Japan ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
@@ -1493,6 +1494,7 @@ ALLR,"Allarity Therapeutics, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ALLT,Allot Ltd.,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ALLW,State Street Bridgewater All Weather ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
 ALLY,Ally Financial Inc.,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
+ALLZ,Zacks All-Cap Core ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
 ALM,Almonty Industries Inc.,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ALMR,"Alamar Biosciences, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ALMS,Alumis Inc.,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
@@ -1595,6 +1597,7 @@ AMZY,YieldMax AMZN Option Income Strategy ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. 
 AMZZ,GraniteShares 2x Long AMZN Daily ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
 AN,"AutoNation, Inc.",EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 ANAB,"AnaptysBio, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
+ANDD,Leverage Shares 2X Short Anthropic Daily ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
 ANDE,"The Andersons, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ANDG,Andersen Group Inc.,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 ANEL,Defiance Daily Target 2x Long ANET ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
@@ -1614,10 +1617,14 @@ ANNA,"AleAnna, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ANNX,"Annexon, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ANPA,Rich Sparkle Holdings Limited,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ANRO,"Alto Neuroscience, Inc.",EE. UU.,NYSE,Acción,,Nasdaq y NYSE
+ANSS,Leverage Shares 1X Short Anthropic Daily ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
 ANT,"Anthropic, PBC",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ANTA,Antalpha Platform Holding Company,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
+ANTT,Tradr 2X Long Anthropic Daily ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
 ANTW,Anthropic AI Lab Ecosystem ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 ANTX,"AN2 Therapeutics, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
+ANTZ,Tradr 2X Short Anthropic Daily ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
+ANUU,Leverage Shares 2X Long Anthropic Daily ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
 ANV,GraniteShares Autocallable NVDA ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
 ANVS,"Annovis Bio, Inc.",EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 AOA,iShares Core 80/20 Aggressive Allocation ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
@@ -1829,6 +1836,7 @@ ATGL,Alpha Technology Group Limited,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ATHE,Alterity Therapeutics Limited,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ATHM,Autohome Inc.,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 ATHR,"Aether Holdings, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
+ATHX,2x Anthropic ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
 ATI,ATI Inc.,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 ATLC,Atlanticus Holdings Corporation,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ATLO,Ames National Corporation,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
@@ -1944,6 +1952,7 @@ AVX,Avax One Technology Ltd.,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 AVXC,Avantis Emerging Markets ex-China Equity ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
 AVXL,Anavex Life Sciences Corp.,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 AVXX,Defiance Daily Target 2x Long AVAV ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
+AVZO,"Avenzo Therapeutics, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 AWAY,Amplify Travel Tech ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 AWF,Alliancebernstein Global High Income Fund,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 AWI,Armstrong World Industries Inc,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
@@ -2268,7 +2277,7 @@ BIO-B,"Bio-Rad Laboratories, Inc. Class B",EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 BIOA,"BioAge Labs, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 BIOT,Instinct Bio Technical Company Holdings Inc.,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 BIOY,GraniteShares YieldBOOST Biotech ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
-BIPC,Brookfield Infrastructure Corporation Brookfield Infrastructure Corporation,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
+BIP,Brookfield Infrastructure Partners Inc. Class A Subordinate Voting Shares,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 BIRD,"Smartbird, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 BIRK,Birkenstock Holding plc,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 BIS,ProShares UltraShort Nasdaq Biotechnology,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
@@ -2306,7 +2315,6 @@ BKEM,BNY Mellon Emerging Markets Equity ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU
 BKF,iShares MSCI BIC ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 BKFI,BNY Mellon Active Core Bond ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 BKGI,BNY Mellon Global Infrastructure Income ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
-BKHA,Black Hawk Acquisition Corporation,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 BKHY,BNY Mellon High Yield ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 BKIE,BNY Mellon International Equity ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 BKKT,"Bakkt, Inc.",EE. UU.,NYSE,Acción,,Nasdaq y NYSE
@@ -3024,6 +3032,7 @@ CJUL,Corgi U.S. Equities 15% Structured Buffer ETF - July Series,EE. UU.,Cboe BZ
 CJUN,Corgi U.S. Equities 15% Structured Buffer ETF - June Series,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
 CKX,"CKX Lands, Inc.",EE. UU.,NYSE American,Acción,,Nasdaq y NYSE
 CLAR,Clarus Corporation,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
+CLAU,T-REX 2X Long Anthropic Daily Target ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
 CLB,Core Laboratories Inc.,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 CLBK,"Columbia Financial, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 CLBR,Colombier Acquisition Corp. III,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
@@ -3467,6 +3476,7 @@ CZFS,"Citizens Financial Services, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 CZNC,Citizens & Northern Corp,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 CZR,"Caesars Entertainment, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 CZWI,"Citizens Community Bancorp, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
+CZZL,Cizzle Brands Corporation,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 DAAQ,Digital Asset Acquisition Corp.,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 DABS,DoubleLine Asset-Backed Securities ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 DAC,Danaos Corporation,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
@@ -3695,6 +3705,7 @@ DISK,Tema Memory ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 DISV,Dimensional International Small Cap Value ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
 DIT,AMCON Distributing Company,EE. UU.,NYSE American,Acción,,Nasdaq y NYSE
 DIV,Global X Super Dividend ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
+DIVA,AB Equity Income ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 DIVB,iShares Core Dividend ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
 DIVD,Altrius Global Dividend ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
 DIVE,Dana Concentrated Dividend ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
@@ -4347,6 +4358,7 @@ EVNT,AltShares Event-Driven ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 EVO,Evotec SE,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 EVOX,Evolution Global Acquisition Corp,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 EVR,Evercore Inc.,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
+EVRL,Everli Global Holdings,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 EVSB,Eaton Vance Ultra-Short Income ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 EVSD,Eaton Vance Short Duration Income ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
 EVSM,Eaton Vance Short Duration Municipal Income ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
@@ -6271,6 +6283,7 @@ ISHG,iShares 1-3 Year International Treasury Bond ETF,EE. UU.,Nasdaq,ETF,,ETF de
 ISHP,First Trust S-Network E-Commerce ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
 ISMD,Inspire Small/Mid Cap ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 ISMF,iShares Managed Futures Active ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
+ISMH,xETFs International Semiconductor ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
 ISNR,Snow Rothschild Acquisition Corp.,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ISOU,IsoEnergy Ltd.,EE. UU.,NYSE American,Acción,,Nasdaq y NYSE
 ISPC,iSpecimen Inc.,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
@@ -7139,7 +7152,6 @@ M,Macy's Inc,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 MAAS,Maase Inc.,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 MAAY,GraniteShares YieldBOOST MARA ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
 MAC,Macerich Company (The),EE. UU.,NYSE,Acción,,Nasdaq y NYSE
-MACI,Melar Acquisition Corp. I,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 MADE,iShares U.S. Manufacturing ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 MAGA,Truth Social America First ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 MAGC,Roundhill China Magnificent Seven ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
@@ -9395,7 +9407,6 @@ RJMI,RJ Eagle Municipal Income ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 RJVI,RJ Eagle Vertical Income ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 RKDA,"Arcadia Biosciences, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 RKLX,Defiance Daily Target 2X Long RKLB ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
-RKNG,Defiance Retail Kings ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
 RKSG,Ruk Strategic Growth ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 RKT,"Rocket Companies, Inc.",EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 RKTO,Rocket One Inc.,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
@@ -9407,7 +9418,6 @@ RLJ,RLJ Lodging Trust,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 RLMD,"Relmada Therapeutics, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 RLTY,Cohen & Steers Real Estate Opportunities and Income Fund,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 RLY,State Street Multi-Asset Real Return ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
-RLYB,Rallybio Corporation,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 RM,Regional Management Corp.,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 RMBC,Corgi RMBS 2x Daily ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
 RMBI,"Richmond Mutual Bancorporation, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
@@ -10290,7 +10300,6 @@ SRHR,SRH REIT Covered Call ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 SRI,"Stoneridge, Inc.",EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 SRL,Scully Royalty Ltd.,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 SRLN,State Street Blackstone Senior Loan ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
-SROI,Calamos Antetokounmpo Global Sustainable Equities ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 SRPT,"Sarepta Therapeutics, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 SRRK,Scholar Rock Holding Corporation,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 SRS,ProShares UltraShort Real Estate,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
@@ -11363,6 +11372,7 @@ VERA,"Vera Therapeutics, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 VERI,"Veritone, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 VERU,Veru Inc.,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 VERX,"Vertex, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
+VESI,"Vesicor Therapeutics Holdings, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 VET,Vermilion Energy Inc. Common (Canada),EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 VETZ,Academy Veteran Bond ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 VEU,Vanguard FTSE All World Ex US ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
@@ -12130,6 +12140,7 @@ ZAPR,Innovator Equity Defined Protection ETF - 1 Yr April,EE. UU.,Cboe BZX,ETF,,
 ZAUG,Innovator Equity Defined Protection ETF - 1 Yr August,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
 ZBAO,Zhibao Technology Inc.,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ZBIO,"Zenas BioPharma, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
+ZCAP,Zacks Small-Cap Core ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
 ZCBA,Global X Zero Coupon Bond 2030 ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 ZCBB,Global X Zero Coupon Bond 2031 ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 ZCBC,Global X Zero Coupon Bond 2032 ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
@@ -12145,6 +12156,7 @@ ZDEK,Innovator Equity Defined Protection ETF - 1 Yr December,EE. UU.,Cboe BZX,ET
 ZDGE,"Zedge, Inc.",EE. UU.,NYSE American,Acción,,Nasdaq y NYSE
 ZDIS,Virtus Zevenbergen Discovery Growth ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 ZECP,Zacks Earnings Consistent Portfolio ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
+ZECX,2x ZCSH ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 ZENA,"ZenaTech, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ZEO,Zeo Energy Corporation,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ZEPP,Zepp Health Corporation,EE. UU.,NYSE,Acción,,Nasdaq y NYSE

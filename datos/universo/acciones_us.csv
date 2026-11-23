@@ -557,6 +557,7 @@ AAT,"American Assets Trust, Inc.",NYSE,False,False,,,Acción
 AAUA,Alpha Architect US Equity 3 ETF,Cboe BZX,False,False,,,ETF
 AAUB,Alpha Architect US Equity 4 ETF,Nasdaq,False,False,,,ETF
 AAUC,Allied Gold Corporation,NYSE,False,False,,,Acción
+AAUD,Alpha Architect US Equity 5 ETF,Nasdaq,False,False,,,ETF
 AAUS,Alpha Architect US Equity ETF,Nasdaq,False,False,,,ETF
 AAVM,Alpha Architect Global Factor Equity ETF,Nasdaq,False,False,,,ETF
 AAXJ,iShares MSCI All Country Asia ex Japan ETF,Nasdaq,False,False,,,ETF
@@ -901,6 +902,7 @@ ALLR,"Allarity Therapeutics, Inc.",Nasdaq,False,False,,,Acción
 ALLT,Allot Ltd.,Nasdaq,False,False,,,Acción
 ALLW,State Street Bridgewater All Weather ETF,Nasdaq,False,False,,,ETF
 ALLY,Ally Financial Inc.,NYSE,False,False,,,Acción
+ALLZ,Zacks All-Cap Core ETF,Cboe BZX,False,False,,,ETF
 ALM,Almonty Industries Inc.,Nasdaq,False,False,,,Acción
 ALMR,"Alamar Biosciences, Inc.",Nasdaq,False,False,,,Acción
 ALMS,Alumis Inc.,Nasdaq,False,False,,,Acción
@@ -1003,6 +1005,7 @@ AMZY,YieldMax AMZN Option Income Strategy ETF,NYSE Arca,False,False,,,ETF
 AMZZ,GraniteShares 2x Long AMZN Daily ETF,Nasdaq,False,False,,,ETF
 AN,"AutoNation, Inc.",NYSE,False,False,,,Acción
 ANAB,"AnaptysBio, Inc.",Nasdaq,False,False,,,Acción
+ANDD,Leverage Shares 2X Short Anthropic Daily ETF,Cboe BZX,False,False,,,ETF
 ANDE,"The Andersons, Inc.",Nasdaq,False,False,,,Acción
 ANDG,Andersen Group Inc.,NYSE,False,False,,,Acción
 ANEL,Defiance Daily Target 2x Long ANET ETF,Nasdaq,False,False,,,ETF
@@ -1022,10 +1025,14 @@ ANNA,"AleAnna, Inc.",Nasdaq,False,False,,,Acción
 ANNX,"Annexon, Inc.",Nasdaq,False,False,,,Acción
 ANPA,Rich Sparkle Holdings Limited,Nasdaq,False,False,,,Acción
 ANRO,"Alto Neuroscience, Inc.",NYSE,False,False,,,Acción
+ANSS,Leverage Shares 1X Short Anthropic Daily ETF,Cboe BZX,False,False,,,ETF
 ANT,"Anthropic, PBC",Nasdaq,False,False,,,Acción
 ANTA,Antalpha Platform Holding Company,Nasdaq,False,False,,,Acción
+ANTT,Tradr 2X Long Anthropic Daily ETF,Cboe BZX,False,False,,,ETF
 ANTW,Anthropic AI Lab Ecosystem ETF,NYSE Arca,False,False,,,ETF
 ANTX,"AN2 Therapeutics, Inc.",Nasdaq,False,False,,,Acción
+ANTZ,Tradr 2X Short Anthropic Daily ETF,Cboe BZX,False,False,,,ETF
+ANUU,Leverage Shares 2X Long Anthropic Daily ETF,Cboe BZX,False,False,,,ETF
 ANV,GraniteShares Autocallable NVDA ETF,Nasdaq,False,False,,,ETF
 ANVS,"Annovis Bio, Inc.",NYSE,False,False,,,Acción
 AOA,iShares Core 80/20 Aggressive Allocation ETF,NYSE Arca,False,False,,,ETF
@@ -1239,6 +1246,7 @@ ATGL,Alpha Technology Group Limited,Nasdaq,False,False,,,Acción
 ATHE,Alterity Therapeutics Limited,Nasdaq,False,False,,,Acción
 ATHM,Autohome Inc.,NYSE,False,False,,,Acción
 ATHR,"Aether Holdings, Inc.",Nasdaq,False,False,,,Acción
+ATHX,2x Anthropic ETF,Cboe BZX,False,False,,,ETF
 ATI,ATI Inc.,NYSE,False,False,,,Acción
 ATLC,Atlanticus Holdings Corporation,Nasdaq,False,False,,,Acción
 ATLO,Ames National Corporation,Nasdaq,False,False,,,Acción
@@ -1355,6 +1363,7 @@ AVX,Avax One Technology Ltd.,Nasdaq,False,False,,,Acción
 AVXC,Avantis Emerging Markets ex-China Equity ETF,Nasdaq,False,False,,,ETF
 AVXL,Anavex Life Sciences Corp.,Nasdaq,False,False,,,Acción
 AVXX,Defiance Daily Target 2x Long AVAV ETF,Nasdaq,False,False,,,ETF
+AVZO,"Avenzo Therapeutics, Inc.",Nasdaq,False,False,,,Acción
 AWAY,Amplify Travel Tech ETF,NYSE Arca,False,False,,,ETF
 AWF,Alliancebernstein Global High Income Fund,NYSE,False,False,,,Acción
 AWI,Armstrong World Industries Inc,NYSE,False,False,,,Acción
@@ -1682,7 +1691,7 @@ BIOA,"BioAge Labs, Inc.",Nasdaq,False,False,,,Acción
 BIOT,Instinct Bio Technical Company Holdings Inc.,Nasdaq,False,False,,,Acción
 BIOX,Bioceres Crop Solutions Corp.,Nasdaq,False,False,,,Acción
 BIOY,GraniteShares YieldBOOST Biotech ETF,Nasdaq,False,False,,,ETF
-BIPC,Brookfield Infrastructure Corporation Brookfield Infrastructure Corporation,NYSE,False,False,,,Acción
+BIP,Brookfield Infrastructure Partners Inc. Class A Subordinate Voting Shares,NYSE,False,False,,,Acción
 BIRD,"Smartbird, Inc.",Nasdaq,False,False,,,Acción
 BIRK,Birkenstock Holding plc,NYSE,False,False,,,Acción
 BIS,ProShares UltraShort Nasdaq Biotechnology,Nasdaq,False,False,,,ETF
@@ -1720,7 +1729,6 @@ BKEM,BNY Mellon Emerging Markets Equity ETF,NYSE Arca,False,False,,,ETF
 BKF,iShares MSCI BIC ETF,NYSE Arca,False,False,,,ETF
 BKFI,BNY Mellon Active Core Bond ETF,NYSE Arca,False,False,,,ETF
 BKGI,BNY Mellon Global Infrastructure Income ETF,Cboe BZX,False,False,,,ETF
-BKHA,Black Hawk Acquisition Corporation,Nasdaq,False,False,,,Acción
 BKHY,BNY Mellon High Yield ETF,NYSE Arca,False,False,,,ETF
 BKIE,BNY Mellon International Equity ETF,NYSE Arca,False,False,,,ETF
 BKKT,"Bakkt, Inc.",NYSE,False,False,,,Acción
@@ -2443,6 +2451,7 @@ CJUL,Corgi U.S. Equities 15% Structured Buffer ETF - July Series,Cboe BZX,False,
 CJUN,Corgi U.S. Equities 15% Structured Buffer ETF - June Series,Cboe BZX,False,False,,,ETF
 CKX,"CKX Lands, Inc.",NYSE American,False,False,,,Acción
 CLAR,Clarus Corporation,Nasdaq,False,False,,,Acción
+CLAU,T-REX 2X Long Anthropic Daily Target ETF,Cboe BZX,False,False,,,ETF
 CLB,Core Laboratories Inc.,NYSE,False,False,,,Acción
 CLBK,"Columbia Financial, Inc.",Nasdaq,False,False,,,Acción
 CLBR,Colombier Acquisition Corp. III,NYSE,False,False,,,Acción
@@ -2890,6 +2899,7 @@ CZFS,"Citizens Financial Services, Inc.",Nasdaq,False,False,,,Acción
 CZNC,Citizens & Northern Corp,Nasdaq,False,False,,,Acción
 CZR,"Caesars Entertainment, Inc.",Nasdaq,False,False,,,Acción
 CZWI,"Citizens Community Bancorp, Inc.",Nasdaq,False,False,,,Acción
+CZZL,Cizzle Brands Corporation,Nasdaq,False,False,,,Acción
 DAAQ,Digital Asset Acquisition Corp.,Nasdaq,False,False,,,Acción
 DABS,DoubleLine Asset-Backed Securities ETF,NYSE Arca,False,False,,,ETF
 DAC,Danaos Corporation,NYSE,False,False,,,Acción
@@ -3119,6 +3129,7 @@ DISK,Tema Memory ETF,NYSE Arca,False,False,,,ETF
 DISV,Dimensional International Small Cap Value ETF,Cboe BZX,False,False,,,ETF
 DIT,AMCON Distributing Company,NYSE American,False,False,,,Acción
 DIV,Global X Super Dividend ETF,NYSE Arca,False,False,,,ETF
+DIVA,AB Equity Income ETF,NYSE Arca,False,False,,,ETF
 DIVB,iShares Core Dividend ETF,Cboe BZX,False,False,,,ETF
 DIVD,Altrius Global Dividend ETF,Nasdaq,False,False,,,ETF
 DIVE,Dana Concentrated Dividend ETF,NYSE Arca,False,False,,,ETF
@@ -3775,6 +3786,7 @@ EVNT,AltShares Event-Driven ETF,NYSE Arca,False,False,,,ETF
 EVO,Evotec SE,Nasdaq,False,False,,,Acción
 EVOX,Evolution Global Acquisition Corp,Nasdaq,False,False,,,Acción
 EVR,Evercore Inc.,NYSE,False,False,,,Acción
+EVRL,Everli Global Holdings,Nasdaq,False,False,,,Acción
 EVSB,Eaton Vance Ultra-Short Income ETF,NYSE Arca,False,False,,,ETF
 EVSD,Eaton Vance Short Duration Income ETF,Nasdaq,False,False,,,ETF
 EVSM,Eaton Vance Short Duration Municipal Income ETF,NYSE Arca,False,False,,,ETF
@@ -5708,6 +5720,7 @@ ISHG,iShares 1-3 Year International Treasury Bond ETF,Nasdaq,False,False,,,ETF
 ISHP,First Trust S-Network E-Commerce ETF,Nasdaq,False,False,,,ETF
 ISMD,Inspire Small/Mid Cap ETF,NYSE Arca,False,False,,,ETF
 ISMF,iShares Managed Futures Active ETF,Cboe BZX,False,False,,,ETF
+ISMH,xETFs International Semiconductor ETF,Nasdaq,False,False,,,ETF
 ISNR,Snow Rothschild Acquisition Corp.,Nasdaq,False,False,,,Acción
 ISOU,IsoEnergy Ltd.,NYSE American,False,False,,,Acción
 ISPC,iSpecimen Inc.,Nasdaq,False,False,,,Acción
@@ -6578,7 +6591,6 @@ M,Macy's Inc,NYSE,False,False,,,Acción
 MAAS,Maase Inc.,Nasdaq,False,False,,,Acción
 MAAY,GraniteShares YieldBOOST MARA ETF,Nasdaq,False,False,,,ETF
 MAC,Macerich Company (The),NYSE,False,False,,,Acción
-MACI,Melar Acquisition Corp. I,Nasdaq,False,False,,,Acción
 MADE,iShares U.S. Manufacturing ETF,NYSE Arca,False,False,,,ETF
 MAGA,Truth Social America First ETF,NYSE Arca,False,False,,,ETF
 MAGC,Roundhill China Magnificent Seven ETF,Cboe BZX,False,False,,,ETF
@@ -8842,7 +8854,6 @@ RJMI,RJ Eagle Municipal Income ETF,NYSE Arca,False,False,,,ETF
 RJVI,RJ Eagle Vertical Income ETF,NYSE Arca,False,False,,,ETF
 RKDA,"Arcadia Biosciences, Inc.",Nasdaq,False,False,,,Acción
 RKLX,Defiance Daily Target 2X Long RKLB ETF,Nasdaq,False,False,,,ETF
-RKNG,Defiance Retail Kings ETF,Nasdaq,False,False,,,ETF
 RKSG,Ruk Strategic Growth ETF,NYSE Arca,False,False,,,ETF
 RKT,"Rocket Companies, Inc.",NYSE,False,False,,,Acción
 RKTO,Rocket One Inc.,Nasdaq,False,False,,,Acción
@@ -8854,7 +8865,6 @@ RLJ,RLJ Lodging Trust,NYSE,False,False,,,Acción
 RLMD,"Relmada Therapeutics, Inc.",Nasdaq,False,False,,,Acción
 RLTY,Cohen & Steers Real Estate Opportunities and Income Fund,NYSE,False,False,,,Acción
 RLY,State Street Multi-Asset Real Return ETF,NYSE Arca,False,False,,,ETF
-RLYB,Rallybio Corporation,Nasdaq,False,False,,,Acción
 RM,Regional Management Corp.,NYSE,False,False,,,Acción
 RMBC,Corgi RMBS 2x Daily ETF,Cboe BZX,False,False,,,ETF
 RMBI,"Richmond Mutual Bancorporation, Inc.",Nasdaq,False,False,,,Acción
@@ -9743,7 +9753,6 @@ SRHR,SRH REIT Covered Call ETF,NYSE Arca,False,False,,,ETF
 SRI,"Stoneridge, Inc.",NYSE,False,False,,,Acción
 SRL,Scully Royalty Ltd.,NYSE,False,False,,,Acción
 SRLN,State Street Blackstone Senior Loan ETF,NYSE Arca,False,False,,,ETF
-SROI,Calamos Antetokounmpo Global Sustainable Equities ETF,NYSE Arca,False,False,,,ETF
 SRPT,"Sarepta Therapeutics, Inc.",Nasdaq,False,False,,,Acción
 SRRK,Scholar Rock Holding Corporation,Nasdaq,False,False,,,Acción
 SRS,ProShares UltraShort Real Estate,NYSE Arca,False,False,,,ETF
@@ -10821,6 +10830,7 @@ VERA,"Vera Therapeutics, Inc.",Nasdaq,False,False,,,Acción
 VERI,"Veritone, Inc.",Nasdaq,False,False,,,Acción
 VERU,Veru Inc.,Nasdaq,False,False,,,Acción
 VERX,"Vertex, Inc.",Nasdaq,False,False,,,Acción
+VESI,"Vesicor Therapeutics Holdings, Inc.",Nasdaq,False,False,,,Acción
 VET,Vermilion Energy Inc. Common (Canada),NYSE,False,False,,,Acción
 VETZ,Academy Veteran Bond ETF,NYSE Arca,False,False,,,ETF
 VEU,Vanguard FTSE All World Ex US ETF,NYSE Arca,False,False,,,ETF
@@ -11592,6 +11602,7 @@ ZAPR,Innovator Equity Defined Protection ETF - 1 Yr April,Cboe BZX,False,False,,
 ZAUG,Innovator Equity Defined Protection ETF - 1 Yr August,Cboe BZX,False,False,,,ETF
 ZBAO,Zhibao Technology Inc.,Nasdaq,False,False,,,Acción
 ZBIO,"Zenas BioPharma, Inc.",Nasdaq,False,False,,,Acción
+ZCAP,Zacks Small-Cap Core ETF,Cboe BZX,False,False,,,ETF
 ZCBA,Global X Zero Coupon Bond 2030 ETF,NYSE Arca,False,False,,,ETF
 ZCBB,Global X Zero Coupon Bond 2031 ETF,NYSE Arca,False,False,,,ETF
 ZCBC,Global X Zero Coupon Bond 2032 ETF,NYSE Arca,False,False,,,ETF
@@ -11607,6 +11618,7 @@ ZDEK,Innovator Equity Defined Protection ETF - 1 Yr December,Cboe BZX,False,Fals
 ZDGE,"Zedge, Inc.",NYSE American,False,False,,,Acción
 ZDIS,Virtus Zevenbergen Discovery Growth ETF,NYSE Arca,False,False,,,ETF
 ZECP,Zacks Earnings Consistent Portfolio ETF,Cboe BZX,False,False,,,ETF
+ZECX,2x ZCSH ETF,NYSE Arca,False,False,,,ETF
 ZENA,"ZenaTech, Inc.",Nasdaq,False,False,,,Acción
 ZEO,Zeo Energy Corporation,Nasdaq,False,False,,,Acción
 ZEPP,Zepp Health Corporation,NYSE,False,False,,,Acción
