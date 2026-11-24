@@ -1,127 +1,127 @@
 {
   "pib_var_anual": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:51",
+    "actualizado": "2026-11-24 12:52",
     "ultimo_dato": "2026-07-01",
     "observaciones": 83
   },
   "desempleo": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:51",
+    "actualizado": "2026-11-24 12:52",
     "ultimo_dato": "2026-09-01",
     "observaciones": 237
   },
   "ipc_anual": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:52",
-    "ultimo_dato": "2026-10-01",
-    "observaciones": 262
+    "actualizado": "2026-11-24 12:52",
+    "ultimo_dato": "2026-09-01",
+    "observaciones": 261
   },
   "ipc_nucleo": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:52",
-    "ultimo_dato": "2026-10-01",
-    "observaciones": 262
+    "actualizado": "2026-11-24 12:52",
+    "ultimo_dato": "2026-09-01",
+    "observaciones": 261
   },
   "tpm": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:52",
-    "ultimo_dato": "2026-11-23",
-    "observaciones": 7996
+    "actualizado": "2026-11-24 12:52",
+    "ultimo_dato": "2026-11-24",
+    "observaciones": 7997
   },
   "ibr_on": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:52",
-    "ultimo_dato": "2026-11-20",
-    "observaciones": 4605
+    "actualizado": "2026-11-24 12:52",
+    "ultimo_dato": "2026-11-23",
+    "observaciones": 4606
   },
   "ibr_3m": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:52",
-    "ultimo_dato": "2026-11-20",
-    "observaciones": 3486
+    "actualizado": "2026-11-24 12:52",
+    "ultimo_dato": "2026-11-23",
+    "observaciones": 3487
   },
   "tes_1": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:52",
+    "actualizado": "2026-11-24 12:52",
     "ultimo_dato": "2026-10-01",
     "observaciones": 261
   },
   "tes_5": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:52",
+    "actualizado": "2026-11-24 12:53",
     "ultimo_dato": "2026-10-01",
     "observaciones": 261
   },
   "tes_10": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:52",
+    "actualizado": "2026-11-24 12:53",
     "ultimo_dato": "2026-10-01",
     "observaciones": 261
   },
   "colcap": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:53",
+    "actualizado": "2026-11-24 12:53",
     "ultimo_dato": "2026-10-01",
     "observaciones": 226
   },
   "trm": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:53",
-    "ultimo_dato": "2026-11-21",
-    "observaciones": 5187
+    "actualizado": "2026-11-24 12:53",
+    "ultimo_dato": "2026-11-24",
+    "observaciones": 5188
   },
   "cuenta_corriente": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:53",
+    "actualizado": "2026-11-24 12:53",
     "ultimo_dato": "2025-01-01",
     "observaciones": 21
   },
   "ied": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:53",
+    "actualizado": "2026-11-24 12:53",
     "ultimo_dato": "2025-01-01",
     "observaciones": 21
   },
   "deuda_gobierno": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:53",
+    "actualizado": "2026-11-24 12:53",
     "ultimo_dato": "2024-01-01",
     "observaciones": 17
   },
   "balance_fiscal": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:53",
+    "actualizado": "2026-11-24 12:53",
     "ultimo_dato": "2024-01-01",
     "observaciones": 17
   },
   "ust_10": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:53",
-    "ultimo_dato": "2026-11-19",
-    "observaciones": 5475
-  },
-  "breakeven_10": {
-    "estado": "ok",
-    "actualizado": "2026-11-23 12:53",
+    "actualizado": "2026-11-24 12:53",
     "ultimo_dato": "2026-11-20",
     "observaciones": 5476
   },
+  "breakeven_10": {
+    "estado": "ok",
+    "actualizado": "2026-11-24 12:53",
+    "ultimo_dato": "2026-11-23",
+    "observaciones": 5477
+  },
   "ipc_usa": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:53",
+    "actualizado": "2026-11-24 12:53",
     "ultimo_dato": "2026-10-01",
     "observaciones": 249
   },
   "spread_tes_ust": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:53",
+    "actualizado": "2026-11-24 12:53",
     "ultimo_dato": "2026-10-01",
     "observaciones": 261
   },
   "damodaran": {
     "estado": "ok",
-    "actualizado": "2026-11-23 12:53",
+    "actualizado": "2026-11-24 12:53",
     "ultimo_dato": "2026-01-01"
   }
 }
