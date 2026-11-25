@@ -1618,6 +1618,7 @@ BFIX,Build Bond Innovation ETF,NYSE Arca,False,False,,,ETF
 BFJA,FT Vest Bitcoin Strategy Floor15 ETF - January,NYSE Arca,False,False,,,ETF
 BFJL,FT Vest Bitcoin Strategy Floor15 ETF July,NYSE Arca,False,False,,,ETF
 BFLB,BufferLABS US Equity Dynamic Buffer ETF,Cboe BZX,False,False,,,ETF
+BFLR,"BlueFlare, Inc.",Nasdaq,False,False,,,Acción
 BFLX,iShares Flexible Equity Active ETF,Nasdaq,False,False,,,ETF
 BFLY,"Butterfly Network, Inc.",NYSE,False,False,,,Acción
 BFOC,FT Vest Bitcoin Strategy Floor15 ETF - October,NYSE Arca,False,False,,,ETF
@@ -4241,7 +4242,6 @@ FNG,Leverage Shares 2X Long FN Daily ETF,Cboe BZX,False,False,,,ETF
 FNGD,"MicroSectors FANG  Index -3X Inverse Leveraged ETNs due January 8, 2038",NYSE Arca,False,False,,,Acción
 FNGG,Direxion Daily NYSE FANG+ Bull 2X ETF,NYSE Arca,False,False,,,ETF
 FNGO,"MicroSectors FANG  Index 2X Leveraged ETNs due January 8, 2038",NYSE Arca,False,False,,,Acción
-FNGR,"FingerMotion, Inc.",Nasdaq,False,False,,,Acción
 FNGS,"MicroSectors FANG  ETNs due January 8, 2038",NYSE Arca,False,False,,,ETF
 FNGU,MicroSectors FANG+ 3X Leveraged ETNs,NYSE Arca,False,False,,,ETF
 FNK,First Trust Mid Cap Value AlphaDEX Fund,Nasdaq,False,False,,,ETF
@@ -7334,7 +7334,7 @@ NHYM,Nuveen High Yield Municipal Income ETF,NYSE Arca,False,False,,,ETF
 NIC,Nicolet Bankshares Inc.,NYSE,False,False,,,Acción
 NICE,NICE Ltd,Nasdaq,False,False,,,Acción
 NICM,Nicola Mining Inc.,Nasdaq,False,False,,,Acción
-NICO,Hexis Active Nicotine Engagement ETF,NYSE Arca,False,False,,,ETF
+NICO,Hexis Active Nicotine Engagement ETF,Otra,False,False,,,ETF
 NIE,Virtus Equity & Convertible Income Fund,NYSE,False,False,,,Acción
 NIHI,NEOS MSCI EAFE High Income ETF,Cboe BZX,False,False,,,ETF
 NIKI,"Niki BioSolutions, Inc.",Nasdaq,False,False,,,Acción
@@ -7906,7 +7906,6 @@ PAR,PAR Technology Corporation,NYSE,False,False,,,Acción
 PARA,"Parabolic Technologies, Inc.",Nasdaq,False,False,,,Acción
 PARK,"Park Dental Partners, Inc.",Nasdaq,False,False,,,Acción
 PARR,"Par Pacific Holdings, Inc.",NYSE,False,False,,,Acción
-PASG,"Passage Bio, Inc.",Nasdaq,False,False,,,Acción
 PASW,"Ping An Biomedical Co., Ltd.",Nasdaq,False,False,,,Acción
 PATH,"UiPath, Inc.",NYSE,False,False,,,Acción
 PATK,"Patrick Industries, Inc.",Nasdaq,False,False,,,Acción
@@ -8895,6 +8894,7 @@ RMRC,ARMOR Core Risk-Managed ETF,NYSE Arca,False,False,,,ETF
 RMSG,Real Messenger Corporation,Nasdaq,False,False,,,Acción
 RMT,"Royce Micro-Cap Trust, Inc.",NYSE,False,False,,,Acción
 RMTI,"Rockwell Medical, Inc.",Nasdaq,False,False,,,Acción
+RMTX,"Remix Therapeutics, Inc.",Nasdaq,False,False,,,Acción
 RNA,"Atrium Therapeutics, Inc.",Nasdaq,False,False,,,Acción
 RNAC,"Cartesian Therapeutics, Inc.",Nasdaq,False,False,,,Acción
 RNAQ,Rainier Acquisition Corporation,Nasdaq,False,False,,,Acción
@@ -9073,7 +9073,6 @@ SACH,Sachem Capital Corp.,NYSE American,False,False,,,Acción
 SAEN,Genenta Science S.p.A.,Nasdaq,False,False,,,Acción
 SAFE,Safehold Inc. New,NYSE,False,False,,,Acción
 SAFT,"Safety Insurance Group, Inc.",Nasdaq,False,False,,,Acción
-SAFX,"XCF Global, Inc.",Nasdaq,False,False,,,Acción
 SAGP,Strategas Global Policy Opportunities ETF,NYSE Arca,False,False,,,ETF
 SAGT,SAGTEC GLOBAL LIMITED,Nasdaq,False,False,,,Acción
 SAGU,Shreya Acquisition Group,NYSE,False,False,,,Acción

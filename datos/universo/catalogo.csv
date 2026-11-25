@@ -2205,6 +2205,7 @@ BFIX,Build Bond Innovation ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 BFJA,FT Vest Bitcoin Strategy Floor15 ETF - January,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 BFJL,FT Vest Bitcoin Strategy Floor15 ETF July,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 BFLB,BufferLABS US Equity Dynamic Buffer ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
+BFLR,"BlueFlare, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 BFLX,iShares Flexible Equity Active ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
 BFLY,"Butterfly Network, Inc.",EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 BFOC,FT Vest Bitcoin Strategy Floor15 ETF - October,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
@@ -4811,7 +4812,6 @@ FNG,Leverage Shares 2X Long FN Daily ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
 FNGD,"MicroSectors FANG  Index -3X Inverse Leveraged ETNs due January 8, 2038",EE. UU.,NYSE Arca,Acción,,Nasdaq y NYSE
 FNGG,Direxion Daily NYSE FANG+ Bull 2X ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 FNGO,"MicroSectors FANG  Index 2X Leveraged ETNs due January 8, 2038",EE. UU.,NYSE Arca,Acción,,Nasdaq y NYSE
-FNGR,"FingerMotion, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 FNGS,"MicroSectors FANG  ETNs due January 8, 2038",EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 FNGU,MicroSectors FANG+ 3X Leveraged ETNs,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 FNK,First Trust Mid Cap Value AlphaDEX Fund,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
@@ -7893,7 +7893,7 @@ NHYM,Nuveen High Yield Municipal Income ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU
 NIC,Nicolet Bankshares Inc.,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 NICE,NICE Ltd,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 NICM,Nicola Mining Inc.,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
-NICO,Hexis Active Nicotine Engagement ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
+NICO,Hexis Active Nicotine Engagement ETF,EE. UU.,Otra,ETF,,ETF de EE. UU.
 NIE,Virtus Equity & Convertible Income Fund,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 NIHI,NEOS MSCI EAFE High Income ETF,EE. UU.,Cboe BZX,ETF,,ETF de EE. UU.
 NIKI,"Niki BioSolutions, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
@@ -8460,7 +8460,6 @@ PAR,PAR Technology Corporation,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 PARA,"Parabolic Technologies, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 PARK,"Park Dental Partners, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 PARR,"Par Pacific Holdings, Inc.",EE. UU.,NYSE,Acción,,Nasdaq y NYSE
-PASG,"Passage Bio, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 PASW,"Ping An Biomedical Co., Ltd.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 PATH,"UiPath, Inc.",EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 PATK,"Patrick Industries, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
@@ -9448,6 +9447,7 @@ RMRC,ARMOR Core Risk-Managed ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 RMSG,Real Messenger Corporation,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 RMT,"Royce Micro-Cap Trust, Inc.",EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 RMTI,"Rockwell Medical, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
+RMTX,"Remix Therapeutics, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 RNA,"Atrium Therapeutics, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 RNAC,"Cartesian Therapeutics, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 RNAQ,Rainier Acquisition Corporation,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
@@ -9625,7 +9625,6 @@ SACH,Sachem Capital Corp.,EE. UU.,NYSE American,Acción,,Nasdaq y NYSE
 SAEN,Genenta Science S.p.A.,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 SAFE,Safehold Inc. New,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 SAFT,"Safety Insurance Group, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
-SAFX,"XCF Global, Inc.",EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 SAGP,Strategas Global Policy Opportunities ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 SAGT,SAGTEC GLOBAL LIMITED,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 SAGU,Shreya Acquisition Group,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
