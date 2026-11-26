@@ -3232,6 +3232,7 @@ CPER,United States Copper Index Fund ETV,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 CPF,Central Pacific Financial Corp New,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 CPHC,Canterbury Park Holding Corporation,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 CPHI,"China Pharma Holdings, Inc.",EE. UU.,NYSE American,Acción,,Nasdaq y NYSE
+CPHY,F/m Compoundr High Yield Bond ETF,EE. UU.,Nasdaq,ETF,,ETF de EE. UU.
 CPII,American Beacon Ionic Inflation Protection ETF,EE. UU.,NYSE Arca,ETF,,ETF de EE. UU.
 CPIX,Cumberland Pharmaceuticals Inc.,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 CPK,Chesapeake Utilities Corporation,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
@@ -12223,449 +12224,53 @@ ZWS,Zurn Elkay Water Solutions Corporation,EE. UU.,NYSE,Acción,,Nasdaq y NYSE
 ZYBT,Zhengye Biotechnology Holding Limited,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ZYME,Zymeworks Inc.,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
 ZYN,PTL LTD,EE. UU.,Nasdaq,Acción,,Nasdaq y NYSE
-0001.HK,CK Hutchison Holdings Limited,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0002.HK,CLP Holdings Limited,Hong Kong,Hong Kong,Acción,Utilities,Hang Seng
-0003.HK,Hong Kong and China Gas Company Limited,Hong Kong,Hong Kong,Acción,Utilities,Hang Seng
-0005.HK,HSBC Holdings plc,Hong Kong,Hong Kong,Acción,Finance,Hang Seng
-0006.HK,Power Assets Holdings Limited,Hong Kong,Hong Kong,Acción,Utilities,Hang Seng
-0012.HK,Henderson Land Development Company Limited,Hong Kong,Hong Kong,Acción,Properties,Hang Seng
-0016.HK,Sun Hung Kai Properties Limited,Hong Kong,Hong Kong,Acción,Properties,Hang Seng
-0027.HK,Galaxy Entertainment Group Ltd.,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0066.HK,MTR Corporation Ltd,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0101.HK,Hang Lung Properties Limited,Hong Kong,Hong Kong,Acción,Properties,Hang Seng
-0175.HK,Geely Auto,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0241.HK,Alibaba Health,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0267.HK,CITIC Limited,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0285.HK,BYD Electronics,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0288.HK,WH Group,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0291.HK,China Resources Beer,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0300.HK,Midea Group,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0316.HK,Orient Overseas (International) Limited,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0322.HK,Tingyi,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0386.HK,Sinopec Corp,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0388.HK,HKEx Limited,Hong Kong,Hong Kong,Acción,Finance,Hang Seng
-0669.HK,Techtronic Industries,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0688.HK,China Overseas Land & Investment Limited,Hong Kong,Hong Kong,Acción,Properties,Hang Seng
-0700.HK,Tencent Holdings Limited,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0762.HK,China Unicom,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0823.HK,Link REIT,Hong Kong,Hong Kong,Acción,Properties,Hang Seng
-0836.HK,China Resources Power,Hong Kong,Hong Kong,Acción,Utilities,Hang Seng
-0857.HK,PetroChina Company Limited,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0868.HK,Xinyi Glass,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0881.HK,Zhongsheng Group,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0883.HK,CNOOC Limited,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0939.HK,China Construction Bank,Hong Kong,Hong Kong,Acción,Finance,Hang Seng
-0941.HK,China Mobile Ltd,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0960.HK,Longfor Properties,Hong Kong,Hong Kong,Acción,Properties,Hang Seng
-0968.HK,Xinyi Solar,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0981.HK,Semiconductor Manufacturing International Corporation,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-0992.HK,Lenovo,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-1024.HK,Kuaishou,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-1038.HK,Cheung Kong Infrastructure Holdings Limited,Hong Kong,Hong Kong,Acción,Utilities,Hang Seng
-1044.HK,Hengan International Group Co. Ltd,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-1088.HK,China Shenhua Energy,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-1093.HK,CSPC Pharmaceutical Group,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-1099.HK,Sinopharm Group,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-1109.HK,China Resources Land Limited,Hong Kong,Hong Kong,Acción,Properties,Hang Seng
-1113.HK,CK Asset Holdings,Hong Kong,Hong Kong,Acción,Properties,Hang Seng
-1177.HK,Sino Biopharm,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-1209.HK,China Resources Mixc Lifestyle,Hong Kong,Hong Kong,Acción,Properties,Hang Seng
-1211.HK,BYD Company,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-1299.HK,AIA Group Limited,Hong Kong,Hong Kong,Acción,Finance,Hang Seng
-1378.HK,China Hongqiao Group,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-1398.HK,Industrial and Commercial Bank of China,Hong Kong,Hong Kong,Acción,Finance,Hang Seng
-1810.HK,Xiaomi,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-1876.HK,Budweiser Brewing Company APAC,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-1928.HK,Sands China,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-1929.HK,Chow Tai Fook,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-1997.HK,Wharf Real Estate Investment Company Limited,Hong Kong,Hong Kong,Acción,Properties,Hang Seng
-2015.HK,Li Auto,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-2020.HK,Anta Sports,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-2057.HK,ZTO Express,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-2269.HK,WuXi Biologics,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-2313.HK,Shenzhou International,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-2318.HK,Ping An Insurance,Hong Kong,Hong Kong,Acción,Finance,Hang Seng
-2319.HK,Mengniu Dairy,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-2331.HK,Li-Ning,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-2359.HK,WuXi AppTec,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-2382.HK,Sunny Optical,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-2388.HK,BOC Hong Kong (Holdings) Ltd,Hong Kong,Hong Kong,Acción,Finance,Hang Seng
-2618.HK,JD Logistics,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-2628.HK,China Life,Hong Kong,Hong Kong,Acción,Finance,Hang Seng
-2688.HK,ENN Energy,Hong Kong,Hong Kong,Acción,Utilities,Hang Seng
-2899.HK,Zijin Mining,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-3690.HK,Meituan,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-3692.HK,Hansoh Pharmaceutical Group,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-3968.HK,China Merchants Bank,Hong Kong,Hong Kong,Acción,Finance,Hang Seng
-3988.HK,Bank of China Ltd,Hong Kong,Hong Kong,Acción,Finance,Hang Seng
-6618.HK,JD Health,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-6690.HK,Haier,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-6862.HK,Haidilao,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-9618.HK,JD.com,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-9633.HK,Nongfu Spring,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-9888.HK,Baidu,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-9961.HK,Trip.com Group,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-9988.HK,Alibaba Group,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-9992.HK,Pop Mart,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-9999.HK,NetEase,Hong Kong,Hong Kong,Acción,Commerce & Industry,Hang Seng
-A2A.MI,A2A,Italia,Borsa Italiana,Acción,Utilities,FTSE MIB
-AAF.L,Airtel Africa,Reino Unido,Londres,Acción,Telecommunications Service Providers,FTSE 100
-AAL.L,Anglo American plc,Reino Unido,Londres,Acción,Industrial Metals and Mining,FTSE 100
-ABBN.SW,ABB Ltd,Suiza,SIX Suiza,Acción,Industrials,SMI
-ABDN.L,Aberdeen Group,Reino Unido,Londres,Acción,Investment Banking and Brokerage Services,FTSE 100
-ABF.L,Associated British Foods,Reino Unido,Londres,Acción,Food Producers,FTSE 100
 ABI.BR,Anheuser-Busch InBev,Bélgica,Euronext Bruselas,Acción,Consumer Staples,Euro Stoxx 50
-ABN.AS,ABN AMRO,Países Bajos,Euronext Ámsterdam,Acción,Financials,AEX
-ABX.TO,Barrick Mining Corporation,Canadá,Toronto,Acción,Basic Materials,S&P/TSX 60
-AC.PA,Accor,Francia,Euronext París,Acción,Consumer Services,CAC 40
-ACA.PA,Crédit Agricole,Francia,Euronext París,Acción,Financial Services,CAC 40
-ACS.MC,ACS,España,BME Madrid,Acción,Construction,IBEX 35
-ACX.MC,Acerinox,España,BME Madrid,Acción,Steel,IBEX 35
-AD.AS,Ahold Delhaize,Países Bajos,Euronext Ámsterdam,Acción,Consumer Staples,Euro Stoxx 50|AEX
-ADM.L,Admiral Group,Reino Unido,Londres,Acción,Non-life Insurance,FTSE 100
-ADS.DE,Adidas,Alemania,Xetra,Acción,Apparel,DAX|Euro Stoxx 50
-ADYEN.AS,Adyen,Países Bajos,Euronext Ámsterdam,Acción,Financials,Euro Stoxx 50|AEX
-AEM.TO,Agnico Eagle Mines Limited,Canadá,Toronto,Acción,Basic Materials,S&P/TSX 60
-AENA.MC,AENA,España,BME Madrid,Acción,Aviation,IBEX 35
-AGN.AS,Aegon,Países Bajos,Euronext Ámsterdam,Acción,Financials,AEX
-AI.PA,Air Liquide,Francia,Euronext París,Acción,Basic Materials,CAC 40|Euro Stoxx 50
-AIR.PA,Airbus,Francia,Euronext París,Acción,Aerospace & Defence,DAX|CAC 40|Euro Stoxx 50
-AKZA.AS,AkzoNobel,Países Bajos,Euronext Ámsterdam,Acción,Basic Materials,AEX
-ALC.SW,Alcon Inc,Suiza,SIX Suiza,Acción,Health care,SMI
-ALV.DE,Allianz,Alemania,Xetra,Acción,Financial Services,DAX|Euro Stoxx 50
-ALW.L,Alliance Witan,Reino Unido,Londres,Acción,Closed End Investments,FTSE 100
-AMP.MI,Amplifon,Italia,Borsa Italiana,Acción,Health Care,FTSE MIB
-AMRZ.SW,Amrize AG,Suiza,SIX Suiza,Acción,Materials,SMI
-AMS.MC,Amadeus IT Group,España,BME Madrid,Acción,Tourism,IBEX 35
-ANA.MC,Acciona,España,BME Madrid,Acción,Construction,IBEX 35
-ANE.MC,Acciona Energía,España,BME Madrid,Acción,Energy,IBEX 35
-ANTO.L,Antofagasta plc,Reino Unido,Londres,Acción,Industrial Metals and Mining,FTSE 100
+AD.AS,Ahold Delhaize,Países Bajos,Euronext Ámsterdam,Acción,Consumer Staples,Euro Stoxx 50
+ADS.DE,Adidas,Alemania,Xetra,Acción,Consumer Discretionary,Euro Stoxx 50
+ADYEN.AS,Adyen,Países Bajos,Euronext Ámsterdam,Acción,Financials,Euro Stoxx 50
+AI.PA,Air Liquide,Francia,Euronext París,Acción,Materials,Euro Stoxx 50
+AIR.PA,Airbus,Francia,Euronext París,Acción,Industrials,Euro Stoxx 50
+ALV.DE,Allianz,Alemania,Xetra,Acción,Financials,Euro Stoxx 50
 ARGX.BR,Argenx,Bélgica,Euronext Bruselas,Acción,Health Care,Euro Stoxx 50
-ASM.AS,ASM International,Países Bajos,Euronext Ámsterdam,Acción,Technology,AEX
-ASML.AS,ASML Holding,Países Bajos,Euronext Ámsterdam,Acción,Information Technology,Euro Stoxx 50|AEX
-ASRNL.AS,ASR Nederland,Países Bajos,Euronext Ámsterdam,Acción,Financials,AEX
-ATD.TO,Alimentation Couche-Tard Inc.,Canadá,Toronto,Acción,Consumer Cyclical,S&P/TSX 60
-AUTO.L,Autotrader Group,Reino Unido,Londres,Acción,Software and Computer Services,FTSE 100
-AV.L,Aviva,Reino Unido,Londres,Acción,Life Insurance,FTSE 100
-AVIO.MI,Avio,Italia,Borsa Italiana,Acción,Aerospace,FTSE MIB
-AZM.MI,Azimut,Italia,Borsa Italiana,Acción,Financial Services,FTSE MIB
-AZN.L,AstraZeneca,Reino Unido,Londres,Acción,"Pharmaceuticals, Biotechnology and Marijuana Producers",FTSE 100
-BA.L,BAE Systems,Reino Unido,Londres,Acción,Aerospace and Defense,FTSE 100
-BAB.L,Babcock International,Reino Unido,Londres,Acción,Aerospace and Defense,FTSE 100
-BAM.TO,Brookfield Asset Management Ltd.,Canadá,Toronto,Acción,Financial Services,S&P/TSX 60
-BAMI.MI,Banco BPM,Italia,Borsa Italiana,Acción,Banks,FTSE MIB
-BARC.L,Barclays,Reino Unido,Londres,Acción,Banks,FTSE 100
-BAS.DE,BASF,Alemania,Xetra,Acción,Chemicals,DAX|Euro Stoxx 50
-BATS.L,British American Tobacco,Reino Unido,Londres,Acción,Tobacco,FTSE 100
-BAYN.DE,Bayer,Alemania,Xetra,Acción,Pharmaceuticals,DAX|Euro Stoxx 50
-BBOX.L,Tritax Big Box REIT,Reino Unido,Londres,Acción,Real Estate Investment Trusts,FTSE 100
-BBVA.MC,BBVA,España,BME Madrid,Acción,Financials,Euro Stoxx 50|IBEX 35
-BBY.L,Balfour Beatty,Reino Unido,Londres,Acción,Construction and Materials,FTSE 100
-BC.MI,Brunello Cucinelli,Italia,Borsa Italiana,Acción,Consumer Products and Services,FTSE MIB
-BCE.TO,BCE Inc.,Canadá,Toronto,Acción,Communication Services,S&P/TSX 60
-BEI.DE,Beiersdorf,Alemania,Xetra,Acción,Consumer goods,DAX
-BESI.AS,BE Semiconductors,Países Bajos,Euronext Ámsterdam,Acción,Technology,AEX
-BGEO.L,Lion Finance Group,Reino Unido,Londres,Acción,Banks,FTSE 100
-BIP-UN.TO,Brookfield Infrastructure Partners L.P.,Canadá,Toronto,Acción,Utilities,S&P/TSX 60
-BKT.MC,Bankinter,España,BME Madrid,Acción,Financial Services,IBEX 35
-BLND.L,British Land,Reino Unido,Londres,Acción,Real Estate Investment Trusts,FTSE 100
-BMED.MI,Banca Mediolanum,Italia,Borsa Italiana,Acción,Financial Services,FTSE MIB
-BMO.TO,Bank of Montreal,Canadá,Toronto,Acción,Financial Services,S&P/TSX 60
-BMPS.MI,Banca Monte dei Paschi di Siena,Italia,Borsa Italiana,Acción,Banks,FTSE MIB
-BMW.DE,BMW,Alemania,Xetra,Acción,Automotive,DAX|Euro Stoxx 50
-BN.PA,Danone,Francia,Euronext París,Acción,Consumer Defensive,CAC 40|Euro Stoxx 50
-BN.TO,Brookfield Corporation,Canadá,Toronto,Acción,Financial Services,S&P/TSX 60
-BNP.PA,BNP Paribas,Francia,Euronext París,Acción,Financial Services,CAC 40|Euro Stoxx 50
-BNR.DE,Brenntag,Alemania,Xetra,Acción,Distribution,DAX
-BNS.TO,Bank of Nova Scotia,Canadá,Toronto,Acción,Financial Services,S&P/TSX 60
-BNZL.L,Bunzl,Reino Unido,Londres,Acción,General Industrials,FTSE 100
-BP.L,BP,Reino Unido,Londres,Acción,Non-Renewable Energy,FTSE 100
-BPE.MI,BPER Banca,Italia,Borsa Italiana,Acción,Banks,FTSE MIB
-BRBY.L,Burberry Group,Reino Unido,Londres,Acción,Personal Goods,FTSE 100
-BT-A.L,BT Group,Reino Unido,Londres,Acción,Telecommunications Service Providers,FTSE 100
-BTRW.L,Barratt Redrow,Reino Unido,Londres,Acción,Household Goods and Home Construction,FTSE 100
-BVI.PA,Bureau Veritas,Francia,Euronext París,Acción,Industrials,CAC 40
-BZU.MI,Buzzi,Italia,Borsa Italiana,Acción,Construction and Materials,FTSE MIB
-CA.PA,Carrefour,Francia,Euronext París,Acción,Consumer Defensive,CAC 40
-CABK.MC,CaixaBank,España,BME Madrid,Acción,Financial Services,IBEX 35
-CAE.TO,CAE Inc.,Canadá,Toronto,Acción,Industrials,S&P/TSX 60
-CAP.PA,Capgemini,Francia,Euronext París,Acción,Technology,CAC 40
-CBK.DE,Commerzbank,Alemania,Xetra,Acción,Financial Services,DAX
-CCC.L,Computacenter,Reino Unido,Londres,Acción,Software and Computer Services,FTSE 100
-CCEP.L,Coca-Cola Europacific Partners,Reino Unido,Londres,Acción,Beverages,FTSE 100
-CCH.L,Coca-Cola HBC,Reino Unido,Londres,Acción,Beverages,FTSE 100
-CCL-B.TO,CCL Industries Inc.,Canadá,Toronto,Acción,Consumer Cyclical,S&P/TSX 60
-CCO.TO,Cameco Corporation,Canadá,Toronto,Acción,Energy,S&P/TSX 60
-CFR.SW,Compagnie Financière Richemont SA,Suiza,SIX Suiza,Acción,Retail discretionary,SMI
-CLNX.MC,Cellnex Telecom,España,BME Madrid,Acción,Telecommunications,IBEX 35
-CLS.TO,Celestica Inc.,Canadá,Toronto,Acción,Information Technology,S&P/TSX 60
-CM.TO,Canadian Imperial Bank of Commerce,Canadá,Toronto,Acción,Financial Services,S&P/TSX 60
-CNA.L,Centrica,Reino Unido,Londres,Acción,"Gas, Water and Multi-utilities",FTSE 100
-CNQ.TO,Canadian Natural Resources Limited,Canadá,Toronto,Acción,Energy,S&P/TSX 60
-CNR.TO,Canadian National Railway Company,Canadá,Toronto,Acción,Industrials,S&P/TSX 60
-COL.MC,Inmobiliaria Colonial,España,BME Madrid,Acción,Real Estate,IBEX 35
-CON.DE,Continental,Alemania,Xetra,Acción,Automotive,DAX
-CP.TO,Canadian Pacific Kansas City Limited,Canadá,Toronto,Acción,Industrials,S&P/TSX 60
-CPG.L,Compass Group,Reino Unido,Londres,Acción,Consumer Services,FTSE 100
-CPR.MI,Campari,Italia,Borsa Italiana,Acción,"Food, Beverage and Tobacco",FTSE MIB
-CRDA.L,Croda International,Reino Unido,Londres,Acción,Chemicals,FTSE 100
-CS.PA,Axa,Francia,Euronext París,Acción,Financial Services,CAC 40|Euro Stoxx 50
-CSU.TO,Constellation Software Inc.,Canadá,Toronto,Acción,Information Technology,S&P/TSX 60
-CTC-A.TO,Canadian Tire Corporation Limited,Canadá,Toronto,Acción,Consumer Cyclical,S&P/TSX 60
-CTEC.L,Convatec,Reino Unido,Londres,Acción,Medical Equipment and Services,FTSE 100
-CVE.TO,Cenovus Energy Inc.,Canadá,Toronto,Acción,Energy,S&P/TSX 60
-DB1.DE,Deutsche Börse,Alemania,Xetra,Acción,Financial Services,DAX|Euro Stoxx 50
-DBK.DE,Deutsche Bank,Alemania,Xetra,Acción,Financial Services,DAX|Euro Stoxx 50
-DCC.L,DCC Energy,Reino Unido,Londres,Acción,Industrial Support Services,FTSE 100
-DG.PA,Vinci,Francia,Euronext París,Acción,Industrials,CAC 40|Euro Stoxx 50
-DGE.L,Diageo,Reino Unido,Londres,Acción,Beverages,FTSE 100
-DHL.DE,Deutsche Post,Alemania,Xetra,Acción,Logistics,DAX|Euro Stoxx 50
-DOL.TO,Dollarama Inc.,Canadá,Toronto,Acción,Consumer Staples,S&P/TSX 60
-DPLM.L,Diploma,Reino Unido,Londres,Acción,Industrial Support Services,FTSE 100
-DSFIR.AS,DSM Firmenich AG,Países Bajos,Euronext Ámsterdam,Acción,Consumer Staples,AEX
-DSY.PA,Dassault Systèmes,Francia,Euronext París,Acción,Technology,CAC 40
-DTE.DE,Deutsche Telekom,Alemania,Xetra,Acción,Telecommunication,DAX|Euro Stoxx 50
-DTG.DE,Daimler Truck,Alemania,Xetra,Acción,Automotive,DAX
-EDV.L,Endeavour Mining,Reino Unido,Londres,Acción,Precious Metals and Mining,FTSE 100
-EL.PA,EssilorLuxottica,Francia,Euronext París,Acción,Healthcare,CAC 40|Euro Stoxx 50
-ELE.MC,Endesa,España,BME Madrid,Acción,Energy,IBEX 35
-EMA.TO,Emera Incorporated,Canadá,Toronto,Acción,Utilities,S&P/TSX 60
-EN.PA,Bouygues,Francia,Euronext París,Acción,Industrials,CAC 40
-ENB.TO,Enbridge Inc.,Canadá,Toronto,Acción,Energy,S&P/TSX 60
-ENEL.MI,Enel,Italia,Borsa Italiana,Acción,Utilities,Euro Stoxx 50|FTSE MIB
-ENG.MC,Enagás,España,BME Madrid,Acción,Energy,IBEX 35
-ENGI.PA,Engie,Francia,Euronext París,Acción,Utilities,CAC 40|Euro Stoxx 50
-ENI.MI,Eni,Italia,Borsa Italiana,Acción,Energy,Euro Stoxx 50|FTSE MIB
-ENR.DE,Siemens Energy,Alemania,Xetra,Acción,Energy technology,DAX|Euro Stoxx 50
-ENX.PA,Euronext,Francia,Euronext París,Acción,Financial Services,CAC 40
-EOAN.DE,E.ON,Alemania,Xetra,Acción,Utilities,DAX
-ERF.PA,Eurofins Scientific,Francia,Euronext París,Acción,Healthcare,CAC 40
-EXO.AS,Exor,Países Bajos,Euronext Ámsterdam,Acción,Financials,AEX
-EXPN.L,Experian,Reino Unido,Londres,Acción,Industrial Support Services,FTSE 100
-EZJ.L,EasyJet,Reino Unido,Londres,Acción,Travel and Leisure,FTSE 100
-FBK.MI,FinecoBank,Italia,Borsa Italiana,Acción,Banks,FTSE MIB
-FCIT.L,F & C Investment Trust,Reino Unido,Londres,Acción,Closed End Investments,FTSE 100
-FCT.MI,Fincantieri,Italia,Borsa Italiana,Acción,Shipbuilding,FTSE MIB
-FDR.MC,Fluidra,España,BME Madrid,Acción,Manufacturing,IBEX 35
-FER.MC,Ferrovial,España,BME Madrid,Acción,Infrastructure,IBEX 35
-FFH.TO,Fairfax Financial Holdings Limited,Canadá,Toronto,Acción,Financial Services,S&P/TSX 60
-FGR.PA,Eiffage,Francia,Euronext París,Acción,Industrials,CAC 40
-FM.TO,First Quantum Minerals Ltd.,Canadá,Toronto,Acción,Basic Materials,S&P/TSX 60
-FME.DE,Fresenius Medical Care,Alemania,Xetra,Acción,Healthcare,DAX
-FNV.TO,Franco-Nevada Corporation,Canadá,Toronto,Acción,Basic Materials,S&P/TSX 60
-FRE.DE,Fresenius,Alemania,Xetra,Acción,Healthcare,DAX
-FRES.L,Fresnillo plc,Reino Unido,Londres,Acción,Precious Metals and Mining,FTSE 100
-FSV.TO,FirstService Corporation,Canadá,Toronto,Acción,Real Estate,S&P/TSX 60
-FTS.TO,Fortis Inc.,Canadá,Toronto,Acción,Utilities,S&P/TSX 60
-G.MI,Generali,Italia,Borsa Italiana,Acción,Insurance,FTSE MIB
-G1A.DE,GEA Group,Alemania,Xetra,Acción,Mechanical Engineering,DAX
-G24.DE,Scout24,Alemania,Xetra,Acción,E-Commerce,DAX
-GALD.SW,Galderma,Suiza,SIX Suiza,Acción,Healthcare,SMI
-GAW.L,Games Workshop,Reino Unido,Londres,Acción,Leisure Goods,FTSE 100
-GEBN.SW,Geberit AG,Suiza,SIX Suiza,Acción,Industrials,SMI
-GIB-A.TO,CGI Inc.,Canadá,Toronto,Acción,Information Technology,S&P/TSX 60
-GIL.TO,Gildan Activewear Inc.,Canadá,Toronto,Acción,Consumer Cyclical,S&P/TSX 60
-GIVN.SW,Givaudan SA,Suiza,SIX Suiza,Acción,Materials,SMI
-GLE.PA,Société Générale,Francia,Euronext París,Acción,Financial Services,CAC 40
-GLEN.L,Glencore,Reino Unido,Londres,Acción,Industrial Metals and Mining,FTSE 100
-GRF.MC,Grifols,España,BME Madrid,Acción,Pharmaceuticals,IBEX 35
-GSK.L,GSK plc,Reino Unido,Londres,Acción,"Pharmaceuticals, Biotechnology and Marijuana Producers",FTSE 100
-H.TO,Hydro One Limited,Canadá,Toronto,Acción,Utilities,S&P/TSX 60
-HEI.DE,Heidelberg Materials,Alemania,Xetra,Acción,Construction Materials,DAX
-HEIA.AS,Heineken,Países Bajos,Euronext Ámsterdam,Acción,Consumer Staples,AEX
-HEN3.DE,Henkel,Alemania,Xetra,Acción,Consumer Goods,DAX
-HER.MI,Hera,Italia,Borsa Italiana,Acción,Utilities,FTSE MIB
-HLMA.L,Halma plc,Reino Unido,Londres,Acción,Electronic and Electrical Equipment,FTSE 100
-HLN.L,Haleon,Reino Unido,Londres,Acción,"Pharmaceuticals, Biotechnology and Marijuana Producers",FTSE 100
-HNR1.DE,Hannover Re,Alemania,Xetra,Acción,Insurance,DAX
-HO.PA,Thales,Francia,Euronext París,Acción,Industrials,CAC 40
-HOLN.SW,Holcim Limited,Suiza,SIX Suiza,Acción,Materials,SMI
-HSBA.L,HSBC,Reino Unido,Londres,Acción,Banks,FTSE 100
-HSX.L,Hiscox,Reino Unido,Londres,Acción,Non-life Insurance,FTSE 100
-HWDN.L,Howdens Joinery,Reino Unido,Londres,Acción,Retailers,FTSE 100
-IAG.L,International Airlines Group,Reino Unido,Londres,Acción,Travel and Leisure,FTSE 100
-IAG.MC,International Airlines Group,España,BME Madrid,Acción,Aviation,IBEX 35
-IBE.MC,Iberdrola,España,BME Madrid,Acción,Utilities,Euro Stoxx 50|IBEX 35
-ICG.L,ICG,Reino Unido,Londres,Acción,Investment Banking and Brokerage Services,FTSE 100
-IDR.MC,Indra,España,BME Madrid,Acción,Information Technology,IBEX 35
-IFC.TO,Intact Financial Corporation,Canadá,Toronto,Acción,Financial Services,S&P/TSX 60
-IFX.DE,Infineon Technologies,Alemania,Xetra,Acción,Technology,DAX|Euro Stoxx 50
-IG.MI,Italgas,Italia,Borsa Italiana,Acción,Utilities,FTSE MIB
-IGG.L,IG Group,Reino Unido,Londres,Acción,Investment Banking and Brokerage Services,FTSE 100
-IHG.L,IHG Hotels & Resorts,Reino Unido,Londres,Acción,Travel and Leisure,FTSE 100
-III.L,3i,Reino Unido,Londres,Acción,Investment Banking and Brokerage Services,FTSE 100
-IMB.L,Imperial Brands,Reino Unido,Londres,Acción,Tobacco,FTSE 100
-IMCD.AS,IMCD,Países Bajos,Euronext Ámsterdam,Acción,Basic Materials,AEX
-IMI.L,IMI,Reino Unido,Londres,Acción,Electronic and Electrical Equipment,FTSE 100
-IMO.TO,Imperial Oil Limited,Canadá,Toronto,Acción,Energy,S&P/TSX 60
-INF.L,Informa,Reino Unido,Londres,Acción,Media,FTSE 100
-INGA.AS,ING Group,Países Bajos,Euronext Ámsterdam,Acción,Financials,Euro Stoxx 50|AEX
-INVP.L,Investec,Reino Unido,Londres,Acción,Banks,FTSE 100
-INW.MI,INWIT,Italia,Borsa Italiana,Acción,Telecommunications,FTSE MIB
-ISP.MI,Intesa Sanpaolo,Italia,Borsa Italiana,Acción,Financials,Euro Stoxx 50|FTSE MIB
-ITH.L,Ithaca Energy,Reino Unido,Londres,Acción,Non-Renewable Energy,FTSE 100
-ITRK.L,Intertek,Reino Unido,Londres,Acción,Industrial Support Services,FTSE 100
-ITX.MC,Inditex,España,BME Madrid,Acción,Consumer Discretionary,Euro Stoxx 50|IBEX 35
-IVG.MI,Iveco,Italia,Borsa Italiana,Acción,Industrial Goods and Services,FTSE MIB
-JD.L,JD Sports,Reino Unido,Londres,Acción,Retailers,FTSE 100
-K.TO,Kinross Gold Corporation,Canadá,Toronto,Acción,Basic Materials,S&P/TSX 60
-KER.PA,Kering,Francia,Euronext París,Acción,Consumer Cyclical,CAC 40
-KGF.L,Kingfisher plc,Reino Unido,Londres,Acción,Retailers,FTSE 100
-KPN.AS,KPN,Países Bajos,Euronext Ámsterdam,Acción,Telecommunications,AEX
-L.TO,Loblaw Companies Limited,Canadá,Toronto,Acción,Consumer Staples,S&P/TSX 60
-LAND.L,Land Securities,Reino Unido,Londres,Acción,Real Estate Investment Trusts,FTSE 100
-LDO.MI,Leonardo,Italia,Borsa Italiana,Acción,Industrial Goods and Services,FTSE MIB
-LGEN.L,Legal & General,Reino Unido,Londres,Acción,Life Insurance,FTSE 100
-LLOY.L,Lloyds Banking Group,Reino Unido,Londres,Acción,Banks,FTSE 100
-LMP.L,LondonMetric Property,Reino Unido,Londres,Acción,Real Estate Investment Trusts,FTSE 100
-LOG.MC,Logista,España,BME Madrid,Acción,Logistics,IBEX 35
-LOGN.SW,Logitech International SA,Suiza,SIX Suiza,Acción,Information technology,SMI
-LONN.SW,Lonza Group AG,Suiza,SIX Suiza,Acción,Healthcare,SMI
-LR.PA,Legrand,Francia,Euronext París,Acción,Industrials,CAC 40
-LSEG.L,London Stock Exchange Group,Reino Unido,Londres,Acción,Finance and Credit Services,FTSE 100
-LTMC.MI,Lottomatica Group,Italia,Borsa Italiana,Acción,Gambling,FTSE MIB
-MAP.MC,Mapfre,España,BME Madrid,Acción,Insurance,IBEX 35
-MB.MI,Mediobanca,Italia,Borsa Italiana,Acción,Banks,FTSE MIB
-MBG.DE,Mercedes-Benz Group,Alemania,Xetra,Acción,Automotive,DAX|Euro Stoxx 50
-MC.PA,LVMH,Francia,Euronext París,Acción,Consumer Cyclical,CAC 40|Euro Stoxx 50
-MFC.TO,Manulife Financial Corporation,Canadá,Toronto,Acción,Financial Services,S&P/TSX 60
-MG.TO,Magna International Inc.,Canadá,Toronto,Acción,Consumer Cyclical,S&P/TSX 60
-MKS.L,Marks & Spencer,Reino Unido,Londres,Acción,"Personal Care, Drug and Grocery Stores",FTSE 100
-ML.PA,Michelin,Francia,Euronext París,Acción,Industrials,CAC 40
-MNG.L,M&G,Reino Unido,Londres,Acción,Investment Banking and Brokerage Services,FTSE 100
-MONC.MI,Moncler,Italia,Borsa Italiana,Acción,Consumer Products and Services,FTSE MIB
-MRK.DE,Merck,Alemania,Xetra,Acción,Pharmaceuticals,DAX
-MRL.MC,Merlin Properties,España,BME Madrid,Acción,Real Estate,IBEX 35
-MRO.L,Melrose Industries,Reino Unido,Londres,Acción,Aerospace and Defense,FTSE 100
-MRU.TO,Metro Inc.,Canadá,Toronto,Acción,Consumer Staples,S&P/TSX 60
-MT.AS,ArcelorMittal,Países Bajos,Euronext Ámsterdam,Acción,Basic Materials,CAC 40|AEX
-MTLN.L,Metlen Energy & Metals,Reino Unido,Londres,Acción,"Gas, Water and Multi-utilities",FTSE 100
-MTS.MC,ArcelorMittal,España,BME Madrid,Acción,Steel,IBEX 35
-MTX.DE,MTU Aero Engines,Alemania,Xetra,Acción,Aerospace & Defence,DAX
-MUV2.DE,Munich Re,Alemania,Xetra,Acción,Financial Services,DAX|Euro Stoxx 50
+ASML.AS,ASML Holding,Países Bajos,Euronext Ámsterdam,Acción,Information Technology,Euro Stoxx 50
+BAS.DE,BASF,Alemania,Xetra,Acción,Materials,Euro Stoxx 50
+BAYN.DE,Bayer,Alemania,Xetra,Acción,Health Care,Euro Stoxx 50
+BBVA.MC,BBVA,España,BME Madrid,Acción,Financials,Euro Stoxx 50
+BMW.DE,BMW,Alemania,Xetra,Acción,Consumer Discretionary,Euro Stoxx 50
+BN.PA,Danone,Francia,Euronext París,Acción,Consumer Staples,Euro Stoxx 50
+BNP.PA,BNP Paribas,Francia,Euronext París,Acción,Financials,Euro Stoxx 50
+CS.PA,Axa,Francia,Euronext París,Acción,Financials,Euro Stoxx 50
+DB1.DE,Deutsche Börse,Alemania,Xetra,Acción,Financials,Euro Stoxx 50
+DBK.DE,Deutsche Bank,Alemania,Xetra,Acción,Financials,Euro Stoxx 50
+DG.PA,Vinci SA,Francia,Euronext París,Acción,Industrials,Euro Stoxx 50
+DHL.DE,Deutsche Post,Alemania,Xetra,Acción,Industrials,Euro Stoxx 50
+DTE.DE,Deutsche Telekom,Alemania,Xetra,Acción,Communication,Euro Stoxx 50
+EL.PA,EssilorLuxottica,Francia,Euronext París,Acción,Health Care,Euro Stoxx 50
+ENEL.MI,Enel,Italia,Borsa Italiana,Acción,Utilities,Euro Stoxx 50
+ENGI.PA,Engie,Francia,Euronext París,Acción,Utilities,Euro Stoxx 50
+ENI.MI,Eni,Italia,Borsa Italiana,Acción,Energy,Euro Stoxx 50
+ENR.DE,Siemens Energy,Alemania,Xetra,Acción,Industrials,Euro Stoxx 50
+IBE.MC,Iberdrola,España,BME Madrid,Acción,Utilities,Euro Stoxx 50
+IFX.DE,Infineon Technologies,Alemania,Xetra,Acción,Information Technology,Euro Stoxx 50
+INGA.AS,ING Group,Países Bajos,Euronext Ámsterdam,Acción,Financials,Euro Stoxx 50
+ISP.MI,Intesa Sanpaolo,Italia,Borsa Italiana,Acción,Financials,Euro Stoxx 50
+ITX.MC,Inditex,España,BME Madrid,Acción,Consumer Discretionary,Euro Stoxx 50
+MBG.DE,Mercedes-Benz Group,Alemania,Xetra,Acción,Consumer Discretionary,Euro Stoxx 50
+MC.PA,LVMH Moët Hennessy Louis Vuitton,Francia,Euronext París,Acción,Consumer Discretionary,Euro Stoxx 50
+MUV2.DE,Munich Re,Alemania,Xetra,Acción,Financials,Euro Stoxx 50
 NDA-FI.HE,Nordea,Finlandia,Nasdaq Helsinki,Acción,Financials,Euro Stoxx 50
-NESN.SW,Nestlé SA,Suiza,SIX Suiza,Acción,Retail staples,SMI
-NEXI.MI,Nexi,Italia,Borsa Italiana,Acción,Industrial Goods and Services,FTSE MIB
-NG.L,National Grid plc,Reino Unido,Londres,Acción,"Gas, Water and Multi-utilities",FTSE 100
-NN.AS,NN Group,Países Bajos,Euronext Ámsterdam,Acción,Financials,AEX
 NOKIA.HE,Nokia,Finlandia,Nasdaq Helsinki,Acción,Information Technology,Euro Stoxx 50
-NOVN.SW,Novartis International AG,Suiza,SIX Suiza,Acción,Health care,SMI
-NTGY.MC,Naturgy,España,BME Madrid,Acción,Energy,IBEX 35
-NTR.TO,Nutrien Ltd.,Canadá,Toronto,Acción,Basic Materials,S&P/TSX 60
-NWG.L,NatWest Group,Reino Unido,Londres,Acción,Banks,FTSE 100
-NXT.L,Next plc,Reino Unido,Londres,Acción,Retailers,FTSE 100
-OR.PA,L'Oréal,Francia,Euronext París,Acción,Consumer Defensive,CAC 40|Euro Stoxx 50
-ORA.PA,Orange,Francia,Euronext París,Acción,Communication Services,CAC 40
-OTEX.TO,Open Text Corporation,Canadá,Toronto,Acción,Information Technology,S&P/TSX 60
-PAH3.DE,Porsche SE,Alemania,Xetra,Acción,Automotive,DAX
-PCT.L,Polar Capital Technology Trust,Reino Unido,Londres,Acción,Closed End Investments,FTSE 100
-PGHN.SW,Partners Group Holding AG,Suiza,SIX Suiza,Acción,Financials,SMI
-PHIA.AS,Philips,Países Bajos,Euronext Ámsterdam,Acción,Health Care,AEX
-POW.TO,Power Corporation of Canada,Canadá,Toronto,Acción,Financial Services,S&P/TSX 60
-PPL.TO,Pembina Pipeline Corporation,Canadá,Toronto,Acción,Energy,S&P/TSX 60
-PRU.L,Prudential plc,Reino Unido,Londres,Acción,Life Insurance,FTSE 100
-PRX.AS,Prosus,Países Bajos,Euronext Ámsterdam,Acción,Consumer Discretionary,Euro Stoxx 50|AEX
-PRY.MI,Prysmian,Italia,Borsa Italiana,Acción,Industrial Goods and Services,FTSE MIB
-PSH.L,Pershing Square Holdings,Reino Unido,Londres,Acción,Closed End Investments,FTSE 100
-PSON.L,Pearson plc,Reino Unido,Londres,Acción,Media,FTSE 100
-PST.MI,Poste italiane,Italia,Borsa Italiana,Acción,Financial Services,FTSE MIB
-PUB.PA,Publicis,Francia,Euronext París,Acción,Communication Services,CAC 40
-PUIG.MC,Puig,España,BME Madrid,Acción,Clothes and Cosmetics,IBEX 35
-QIA.DE,Qiagen,Alemania,Xetra,Acción,Biotech,DAX
-QSR.TO,Restaurant Brands International Inc.,Canadá,Toronto,Acción,Consumer Cyclical,S&P/TSX 60
-RACE.MI,Ferrari,Italia,Borsa Italiana,Acción,Consumer Discretionary,Euro Stoxx 50|FTSE MIB
-RAND.AS,Randstad,Países Bajos,Euronext Ámsterdam,Acción,Industrials,AEX
-RCI-B.TO,Rogers Communications Inc.,Canadá,Toronto,Acción,Communication Services,S&P/TSX 60
-REC.MI,Recordati,Italia,Borsa Italiana,Acción,Health Care,FTSE MIB
-RED.MC,Redeia Corporación,España,BME Madrid,Acción,Energy,IBEX 35
-REL.L,RELX,Reino Unido,Londres,Acción,Software and Computer Services,FTSE 100
-REN.AS,RELX,Países Bajos,Euronext Ámsterdam,Acción,Consumer Discretionary,AEX
-REP.MC,Repsol,España,BME Madrid,Acción,Oil and Gas,IBEX 35
-RHM.DE,Rheinmetall,Alemania,Xetra,Acción,Aerospace & Defence,DAX|Euro Stoxx 50
-RI.PA,Pernod Ricard,Francia,Euronext París,Acción,Consumer Defensive,CAC 40
-RIO.L,Rio Tinto,Reino Unido,Londres,Acción,Industrial Metals and Mining,FTSE 100
-RKT.L,Reckitt,Reino Unido,Londres,Acción,"Personal Care, Drug and Grocery Stores",FTSE 100
-RMS.PA,Hermès,Francia,Euronext París,Acción,Consumer Cyclical,CAC 40|Euro Stoxx 50
-RNO.PA,Renault,Francia,Euronext París,Acción,Consumer Cyclical,CAC 40
-ROP.SW,Roche Holding AG,Suiza,SIX Suiza,Acción,Health care,SMI
-ROVI.MC,Laboratorios Rovi [es],España,BME Madrid,Acción,Pharmaceuticals,IBEX 35
-RR.L,Rolls-Royce Holdings,Reino Unido,Londres,Acción,Aerospace and Defense,FTSE 100
-RTO.L,Rentokil Initial,Reino Unido,Londres,Acción,Industrial Support Services,FTSE 100
-RWE.DE,RWE,Alemania,Xetra,Acción,Utilities,DAX
-RY.TO,Royal Bank of Canada,Canadá,Toronto,Acción,Financial Services,S&P/TSX 60
-SAB.MC,Banco Sabadell,España,BME Madrid,Acción,Financial Services,IBEX 35
-SAF.PA,Safran,Francia,Euronext París,Acción,Industrials,CAC 40|Euro Stoxx 50
-SAN.MC,Banco Santander,España,BME Madrid,Acción,Financials,Euro Stoxx 50|IBEX 35
-SAN.PA,Sanofi,Francia,Euronext París,Acción,Healthcare,CAC 40|Euro Stoxx 50
-SAP.DE,SAP,Alemania,Xetra,Acción,Technology,DAX|Euro Stoxx 50
-SAP.TO,Saputo Inc.,Canadá,Toronto,Acción,Consumer Staples,S&P/TSX 60
-SBRY.L,Sainsbury's,Reino Unido,Londres,Acción,"Personal Care, Drug and Grocery Stores",FTSE 100
-SCYR.MC,Sacyr,España,BME Madrid,Acción,Construction,IBEX 35
-SDLF.L,Standard Life,Reino Unido,Londres,Acción,Life Insurance,FTSE 100
-SDZ.SW,Sandoz,Suiza,SIX Suiza,Acción,Healthcare,SMI
-SGE.L,Sage Group,Reino Unido,Londres,Acción,Software and Computer Services,FTSE 100
-SGO.PA,Saint-Gobain,Francia,Euronext París,Acción,Industrials,CAC 40|Euro Stoxx 50
-SGRO.L,Segro,Reino Unido,Londres,Acción,Real Estate Investment Trusts,FTSE 100
-SHEL.L,Shell plc,Reino Unido,Londres,Acción,Non-Renewable Energy,FTSE 100
-SHELL.AS,Shell plc,Países Bajos,Euronext Ámsterdam,Acción,Energy,AEX
-SHL.DE,Siemens Healthineers,Alemania,Xetra,Acción,Medical Equipment,DAX
-SHOP.TO,Shopify Inc.,Canadá,Toronto,Acción,Information Technology,S&P/TSX 60
-SIE.DE,Siemens,Alemania,Xetra,Acción,Industrials,DAX|Euro Stoxx 50
-SIKA.SW,Sika AG,Suiza,SIX Suiza,Acción,Materials,SMI
-SLF.TO,Sun Life Financial Inc.,Canadá,Toronto,Acción,Financial Services,S&P/TSX 60
-SLHN.SW,Swiss Life Holding AG,Suiza,SIX Suiza,Acción,Financials,SMI
-SLR.MC,Solaria,España,BME Madrid,Acción,Solar Energy,IBEX 35
-SMIN.L,Smiths Group,Reino Unido,Londres,Acción,General Industrials,FTSE 100
-SMT.L,Scottish Mortgage Investment Trust,Reino Unido,Londres,Acción,Closed End Investments,FTSE 100
-SN.L,Smith & Nephew,Reino Unido,Londres,Acción,Medical Equipment and Services,FTSE 100
-SPM.MI,Saipem,Italia,Borsa Italiana,Acción,Energy,FTSE MIB
-SPX.L,Spirax Group,Reino Unido,Londres,Acción,Industrial Engineering,FTSE 100
-SREN.SW,Swiss Reinsurance Company Ltd,Suiza,SIX Suiza,Acción,Financials,SMI
-SRG.MI,Snam,Italia,Borsa Italiana,Acción,Energy,FTSE MIB
-SSE.L,SSE plc,Reino Unido,Londres,Acción,Electricity,FTSE 100
-STAN.L,Standard Chartered,Reino Unido,Londres,Acción,Banks,FTSE 100
-STJ.L,St. James's Place,Reino Unido,Londres,Acción,Investment Banking and Brokerage Services,FTSE 100
-STLAM.MI,Stellantis,Italia,Borsa Italiana,Acción,Automobiles and Parts,FTSE MIB
-STLAP.PA,Stellantis,Francia,Euronext París,Acción,Consumer Cyclical,CAC 40
-STMMI.MI,STMicroelectronics,Italia,Borsa Italiana,Acción,Technology,FTSE MIB
-STMPA.PA,STMicroelectronics,Francia,Euronext París,Acción,Technology,CAC 40
-SU.PA,Schneider Electric,Francia,Euronext París,Acción,Industrials,CAC 40|Euro Stoxx 50
-SU.TO,Suncor Energy Inc.,Canadá,Toronto,Acción,Energy,S&P/TSX 60
-SVT.L,Severn Trent,Reino Unido,Londres,Acción,"Gas, Water and Multi-utilities",FTSE 100
-SY1.DE,Symrise,Alemania,Xetra,Acción,Chemicals,DAX
-T.TO,Telus Corporation,Canadá,Toronto,Acción,Communication Services,S&P/TSX 60
-TD.TO,Toronto-Dominion Bank,Canadá,Toronto,Acción,Financial Services,S&P/TSX 60
-TECK-B.TO,Teck Resources Limited,Canadá,Toronto,Acción,Basic Materials,S&P/TSX 60
-TEF.MC,Telefónica,España,BME Madrid,Acción,Telecommunications,IBEX 35
-TEN.MI,Tenaris,Italia,Borsa Italiana,Acción,Energy,FTSE MIB
-TIT.MI,Telecom Italia,Italia,Borsa Italiana,Acción,Telecommunications,FTSE MIB
-TOU.TO,Tourmaline Oil Corp.,Canadá,Toronto,Acción,Energy,S&P/TSX 60
-TPRO.MI,Technoprobe,Italia,Borsa Italiana,Acción,Technology,FTSE MIB
-TRI.TO,Thomson Reuters Corporation,Canadá,Toronto,Acción,Industrials,S&P/TSX 60
-TRN.MI,Terna,Italia,Borsa Italiana,Acción,Utilities,FTSE MIB
-TRP.TO,TC Energy Corporation,Canadá,Toronto,Acción,Energy,S&P/TSX 60
-TSCO.L,Tesco,Reino Unido,Londres,Acción,"Personal Care, Drug and Grocery Stores",FTSE 100
-TTE.PA,TotalEnergies,Francia,Euronext París,Acción,Energy,CAC 40|Euro Stoxx 50
-UBSG.SW,UBS Group AG,Suiza,SIX Suiza,Acción,Financials,SMI
-UCG.MI,UniCredit,Italia,Borsa Italiana,Acción,Financials,Euro Stoxx 50|FTSE MIB
-ULVR.L,Unilever,Reino Unido,Londres,Acción,"Personal Care, Drug and Grocery Stores",FTSE 100
-UMG.AS,Universal Music Group,Países Bajos,Euronext Ámsterdam,Acción,Consumer Discretionary,AEX
-UNA.AS,Unilever,Países Bajos,Euronext Ámsterdam,Acción,Consumer Staples,AEX
-UNI.MC,Unicaja,España,BME Madrid,Acción,Financial Services,IBEX 35
-UNI.MI,Unipol,Italia,Borsa Italiana,Acción,Insurance,FTSE MIB
-URW.PA,Unibail-Rodamco-Westfield,Francia,Euronext París,Acción,Real Estate,CAC 40
-UU.L,United Utilities,Reino Unido,Londres,Acción,"Gas, Water and Multi-utilities",FTSE 100
-VIE.PA,Veolia,Francia,Euronext París,Acción,Industrials,CAC 40
-VNA.DE,Vonovia,Alemania,Xetra,Acción,Real Estate,DAX
-VOD.L,Vodafone Group,Reino Unido,Londres,Acción,Telecommunications Service Providers,FTSE 100
-VOW3.DE,Volkswagen Group,Alemania,Xetra,Acción,Automotive,DAX
-WCN.TO,Waste Connections Inc.,Canadá,Toronto,Acción,Industrials,S&P/TSX 60
-WEIR.L,Weir,Reino Unido,Londres,Acción,Industrial Engineering,FTSE 100
-WKL.AS,Wolters Kluwer,Países Bajos,Euronext Ámsterdam,Acción,Consumer Discretionary,AEX
-WN.TO,George Weston Limited,Canadá,Toronto,Acción,Consumer Staples,S&P/TSX 60
-WPM.TO,Wheaton Precious Metals Corp.,Canadá,Toronto,Acción,Basic Materials,S&P/TSX 60
-WPP.L,WPP,Reino Unido,Londres,Acción,Media,FTSE 100
-WSP.TO,WSP Global Inc.,Canadá,Toronto,Acción,Industrials,S&P/TSX 60
-WTB.L,Whitbread,Reino Unido,Londres,Acción,Travel and Leisure,FTSE 100
-ZAL.DE,Zalando,Alemania,Xetra,Acción,E-Commerce,DAX
-ZURN.SW,Zurich Insurance Group AG,Suiza,SIX Suiza,Acción,Financials,SMI
+OR.PA,L'Oréal,Francia,Euronext París,Acción,Consumer Staples,Euro Stoxx 50
+PRX.AS,Prosus,Países Bajos,Euronext Ámsterdam,Acción,Consumer Discretionary,Euro Stoxx 50
+RACE.MI,Ferrari,Italia,Borsa Italiana,Acción,Consumer Discretionary,Euro Stoxx 50
+RHM.DE,Rheinmetall,Alemania,Xetra,Acción,Industrials,Euro Stoxx 50
+RMS.PA,Hermès,Francia,Euronext París,Acción,Consumer Discretionary,Euro Stoxx 50
+SAF.PA,Safran,Francia,Euronext París,Acción,Industrials,Euro Stoxx 50
+SAN.MC,Banco Santander,España,BME Madrid,Acción,Financials,Euro Stoxx 50
+SAN.PA,Sanofi,Francia,Euronext París,Acción,Health Care,Euro Stoxx 50
+SAP.DE,SAP,Alemania,Xetra,Acción,Information Technology,Euro Stoxx 50
+SGO.PA,Saint-Gobain,Francia,Euronext París,Acción,Industrials,Euro Stoxx 50
+SIE.DE,Siemens,Alemania,Xetra,Acción,Industrials,Euro Stoxx 50
+SU.PA,Schneider Electric,Francia,Euronext París,Acción,Industrials,Euro Stoxx 50
+TTE.PA,TotalEnergies,Francia,Euronext París,Acción,Energy,Euro Stoxx 50
+UCG.MI,UniCredit,Italia,Borsa Italiana,Acción,Financials,Euro Stoxx 50
